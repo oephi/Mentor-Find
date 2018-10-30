@@ -3,7 +3,7 @@
 <div class="container">
     <% @sample.each do |user| %>
     <div class="user-card">
-        <%= image_tag(user.avatar) %>
+        <%= link_to image_tag(user.avatar), profile_path %>
         <h3><%= link_to user.name, profile_path %></h3>
         <span>25$/h</span>
     </div>

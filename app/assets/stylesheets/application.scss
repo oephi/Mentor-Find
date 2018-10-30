@@ -14,11 +14,15 @@
 *= require_self
 */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
+
 @import "bootstrap";
 
+.container {
+    display: flex;
+    flex-wrap: wrap; }
 
-
- .container {
-     display: flex;
-     flex-wrap: wrap;
- }
+.navbar {
+    a:hover {
+        background-color: #F8F9FA;
+    }
+}
