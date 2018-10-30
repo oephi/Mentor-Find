@@ -33,13 +33,6 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= form_with(url: feeds_path, method: "post") do |form| %>
-      <% if current_user %>
-        <%= search_field :search, :term, placeholder: "Mentor category..." %>
-      <% end %>
-      <%= submit_tag nil, style: "display: none;" %>
-    <% end %>
-
     <%= yield %>
   </body>
 </html>
