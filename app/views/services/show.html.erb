@@ -4,35 +4,38 @@
   <%= image_tag @service.user.avatar %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @service.user %>
-</p> 
+<div class="services-show">
+  <!-- <p>
+    <strong>User:</strong>
+    <%= @service.user %>
+  </p> -->
 
-<p>
-  <strong>Name:</strong>
-  <%= @service.user.name %>
-</p>
- 
-<p>
-  <strong>Skill:</strong>
-  <%= @service.skill.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @service.user.name %>
+  </p>
+  
+  <p>
+    <strong>Skill:</strong>
+    <%= @service.skill.name %>
+  </p>
 
-<p>
-  <strong>Experience:</strong>
-  <%= @service.experience %>
-</p>
+  <p>
+    <strong>Experience:</strong>
+    <%= @service.experience %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @service.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @service.description %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @service.price %>
-</p>
+  <p>
+    <strong>Price:</strong>
+    <%= @service.price %>
+  </p>
 
-<%= link_to 'Edit', edit_service_path(@service) %> |
-<%= link_to 'Back', services_path %>
+  <%= link_to 'Edit', edit_service_path(@service) %> |
+  <%= link_to 'Back', services_path %>
+
+</div>
