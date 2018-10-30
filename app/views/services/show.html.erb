@@ -1,10 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @service.user %>
+  <%= image_tag @service.user.avatar %>
 </p>
 
+<p>
+  <strong>User:</strong>
+  <%= @service.user %>
+</p> 
+
+ 
 <p>
   <strong>Skill:</strong>
   <%= @service.skill %>
