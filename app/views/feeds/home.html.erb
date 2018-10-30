@@ -4,7 +4,7 @@
     <% @sample.each do |user| %>
     <div class="user-card">
         <%= image_tag(user.avatar) %>
-        <h3><%= user.name %></h3>
+        <h3><%= link_to user.name, profile_path %></h3>
         <span>25$/h</span>
     </div>
 <% end %>
