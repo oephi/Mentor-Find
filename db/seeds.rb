@@ -10,7 +10,7 @@
 for i in 1..100 do
     User.create( 
         name: Faker::FunnyName.two_word_name, 
-        avatar: Faker::LoremFlickr.image("50x60"),
+        avatar: Faker::LoremFlickr.image("250x200"),
         city: Faker::Address.full_address, 
         phone: Faker::PhoneNumber.phone_number,
         email: Faker::Internet.email,

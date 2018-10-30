@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :services
   resources :skills
   resources :reviews
+  resources :feeds
   devise_for :users
 
   root to: "feeds#home" # For Devise to work, ensure you have defined root_url to *something*.
