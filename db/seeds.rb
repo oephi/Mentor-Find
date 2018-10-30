@@ -8,13 +8,12 @@
 
 100.times do
     User.create( 
-        avatar: Faker::LoremFlickr.image("50x60"),
         name: Faker::FunnyName.two_word_name, 
+        avatar: Faker::LoremFlickr.image("50x60"),
         city: Faker::Address.full_address, 
         phone: Faker::PhoneNumber.phone_number,
         email: Faker::Internet.email,
-        description: Faker::Lorem.paragraph(2)
-        
-
+        description: Faker::Lorem.paragraph(2),
+        password: Faker::Lorem.characters(10)
     )
 end 
