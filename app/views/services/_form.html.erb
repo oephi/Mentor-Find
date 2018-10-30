@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= current_user %> 
   </div>
 
   <div class="field">
@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :experience %>
-    <%= form.number_field :experience %>
+    <%= form.collection_radio_buttons :experience, Service.experiences, :second, :first %>
   </div>
 
   <div class="field">

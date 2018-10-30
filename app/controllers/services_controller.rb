@@ -14,17 +14,18 @@ class ServicesController < ApplicationController
 
   # GET /services/new
   def new
-    @service = Service.new
+    @service = Service.new(user_id: current_user)
   end
-
+  
   # GET /services/1/edit
   def edit
   end
-
+  
   # POST /services
   # POST /services.json
   def create
     @service = Service.new(service_params)
+    
 
     respond_to do |format|
       if @service.save
