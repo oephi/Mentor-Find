@@ -35,7 +35,23 @@
     <%= @service.price %>
   </p>
 
-  <%= link_to 'Edit', edit_service_path(@service) %> |
-  <%= link_to 'Back', services_path %>
+  <%#= link_to 'Edit', edit_service_path(@service) %> 
+  <%#= link_to 'Back', services_path %>
 
+<div class="reviews-card-container">
+<h1>Reviews</h1>
+
+<% @reviews.each do |review| %>
+<div class="reviews-card">
+  <div class="card">
+    <div class="card-header">
+      <a href = "#" ><%= review.service.user.name%></a> |
+      <%= review.service.skill.name %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= review.content %></h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary"><%= review.user.name %></a>
+  </div>
 </div>
+<% end %>
