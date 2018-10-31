@@ -4,13 +4,13 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true  %>
   </div>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
   <div class="field">
@@ -19,8 +19,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :cellphone %><br />
-    <%= f.text_field :phone %>
+    <%= f.label :number %><br />
+    <%= f.telephone_field :phone %>
   </div>
 
   <div class="field">
