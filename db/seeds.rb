@@ -6,14 +6,27 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-100.times do
+
+for i in 1..100 do
     User.create( 
         name: Faker::FunnyName.two_word_name, 
-        avatar: Faker::LoremFlickr.image("50x60"),
+        avatar: Faker::LoremFlickr.image("250x200"),
         city: Faker::Address.full_address, 
         phone: Faker::PhoneNumber.phone_number,
         email: Faker::Internet.email,
         description: Faker::Lorem.paragraph(2),
         password: Faker::Lorem.characters(10)
     )
+    
+    Skill.create(
+        name: Faker::ProgrammingLanguage.name
+    )
+    Service.create(
+        user_id: User.find(i).id,
+        skill_id: Skill.find(i).id,
+        experience: rand(4),
+        description: Faker::Lorem.paragraph(2),
+        price: rand(50)
+        
+    )    
 end 

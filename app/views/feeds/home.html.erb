@@ -1,1 +1,12 @@
-<h1>We are live</h1>
+<h1 class="mentor-heading">Mentor Category Will Go Here</h1>
+
+<div class="container">
+    <% @sample.each do |user| %>
+    <div class="user-card">
+        <%= image_tag(user.avatar) %>
+        <h3><%= link_to user.name, profile_path %></h3>
+        <span>25$/h</span>
+    </div>
+<% end %>
+
+</div>
