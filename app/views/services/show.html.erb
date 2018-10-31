@@ -45,7 +45,7 @@
 <div class="reviews-card">
   <div class="card">
     <div class="card-header">
-      <a href = "#" ><%= review.service.user.name%></a> |
+      <%= link_to review.user.name, profile_path %> |
       <%= review.service.skill.name %>
     </div>
     <div class="card-body">
