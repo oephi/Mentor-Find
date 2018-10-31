@@ -10,6 +10,8 @@ class ServicesController < ApplicationController
   # GET /services/1
   # GET /services/1.json
   def show
+    # @review = Review.new
+    @reviews = @service.reviews
   end
 
   # GET /services/new
