@@ -4,7 +4,24 @@
 
 .interests {
     display: inline-block; 
-    margin-left: 1em;
+    // margin-left: .1em;
+
+
+    li {
+        list-style-type: none;
+    }
+
+    a:hover {
+        background-color: transparent; // resets bootstrap's black background color
+        text-decoration: none; }
+
+    h2 {
+        margin-left: 1.1em; }
+
+    form {
+        margin-left: -.5em;
+        margin-bottom: 1em;
+    }
 }   
 
 .user-card  {

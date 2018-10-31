@@ -19,16 +19,17 @@
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 0; }
+
+.container1 {
+    display: flex;
 }
 
-
-.container {
+.container2 {
     display: flex;
     flex-wrap: wrap;
     margin-left: 0;
     align-items: flex-start;
-    margin: 0 auto;
 }
 
 .navbar {
