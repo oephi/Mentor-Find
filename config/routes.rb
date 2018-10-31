@@ -9,5 +9,8 @@ Rails.application.routes.draw do
 
   get '/profile', to: 'feeds#show', as: 'profile' 
 
+  #get '/profile', to: 'feeds#show', as: 'profile'
+  get '/profile', to: 'services#profile'
+
   root to: "feeds#home" # For Devise to work, ensure you have defined root_url to *something*.
 end

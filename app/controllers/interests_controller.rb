@@ -21,21 +21,15 @@ class InterestsController < ApplicationController
   def edit
   end
 
-  # POST /interests
-  # POST /interests.json
-  def create
-    @interest = Interest.new(interest_params)
 
-    respond_to do |format|
-      if @interest.save
-        format.html { redirect_to @interest, notice: 'Interest was successfully created.' }
-        format.json { render :show, status: :created, location: @interest }
-      else
-        format.html { render :new }
-        format.json { render json: @interest.errors, status: :unprocessable_entity }
-      end
-    end
+  # POST /interests
+  def create
+    @user = User.find(current_user.id)
+    @user.skills.create(name: params[:interest])
+    redirect_back fallback_location: root_path
+    # @interest = Interest.new(interest_params)
   end
+
 
   # PATCH/PUT /interests/1
   # PATCH/PUT /interests/1.json

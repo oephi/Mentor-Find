@@ -1,24 +1,51 @@
 .mentor-heading {
-    text-align: center;
-}
+    text-align: center; }
 
-.user-card {
+
+.interests {
+    display: inline-block; 
+    // position: fixed;
+    
+    // margin-left: .1em;
+
+
+    li {
+        list-style-type: none;
+    }
+
+    a:hover {
+        background-color: transparent; // resets bootstrap's black background color
+        text-decoration: none; }
+
+    h2 {
+        margin-left: 1.1em; }
+
+    form {
+        margin-left: -.5em;
+        margin-bottom: 1em;
+    }
+}   
+
+.user-card  {
     margin: .5em;
     border: 1px solid black;
 
     img {
         display: block;
-        margin: 3px;
-    }
+        margin: 3px; }
 
-    h3 {
+
+    h4 {
         display: inline;
         text-align: center;
-        margin: 3px;
+        margin: 3px; }
+
+    a:hover {
+        background-color: white;
+        text-decoration: none;
     }
+
 
     span {
         float: right;
-        margin: 3px;
-    }
-}
+        margin: 3px; }}

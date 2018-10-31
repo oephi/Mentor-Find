@@ -2,9 +2,10 @@
 
 <h1>Services</h1>
 
-<table>
-  <thead>
+<table class="table">
+  <thead class="thead-dark">
     <tr>
+      <th></th>
       <th>User</th>
       <th>Skill</th>
       <th>Experience</th>
@@ -14,17 +15,18 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="table-striped">
     <% @services.each do |service| %>
       <tr>
-        <td><%= service.user %></td>
-        <td><%= service.skill %></td>
+        <td><%= image_tag service.user.avatar %></td>
+        <td><%= service.user.name %></td>
+        <td><%= service.skill.name %></td>
         <td><%= service.experience %></td>
         <td><%= service.description %></td>
         <td><%= service.price %></td>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Show', service %></td>
+        <td><%#= link_to 'Edit', edit_service_path(service) %></td>
+        <td><%#= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

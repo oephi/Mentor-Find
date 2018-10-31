@@ -10,21 +10,24 @@ class ServicesController < ApplicationController
   # GET /services/1
   # GET /services/1.json
   def show
+    # @review = Review.new
+    @reviews = @service.reviews
   end
 
   # GET /services/new
   def new
-    @service = Service.new
+    @service = Service.new(user_id: current_user)
   end
-
+  
   # GET /services/1/edit
   def edit
   end
-
+  
   # POST /services
   # POST /services.json
   def create
     @service = Service.new(service_params)
+    
 
     respond_to do |format|
       if @service.save
@@ -59,6 +62,9 @@ class ServicesController < ApplicationController
       format.html { redirect_to services_url, notice: 'Service was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def profile
   end
 
   private
