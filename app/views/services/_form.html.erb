@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= current_user %> 
+    <%#= form.label :user_id %>
+    <%#= current_user %> 
   </div>
 
   <div class="field">
@@ -21,9 +21,9 @@
     <%= form.text_field :skill_id %>
   </div>
 
-  <div class="field">
+  <div class="field column">
     <%= form.label :experience %>
-    <%= form.collection_radio_buttons :experience, Service.experiences, :second, :first %>
+    <%= form.collection_radio_buttons :experience, Service.experiences, :second, :first, class: "radio-buttons" %>
   </div>
 
   <div class="field">
