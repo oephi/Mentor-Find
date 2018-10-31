@@ -1,5 +1,7 @@
-<h2>Sign up</h2>
+<body>
 
+<form class="text-center"  cz-shortcut-listen="true">
+  <h1 class="h3 mb-3 font-weight-normal">Get in</h1>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -37,7 +39,9 @@
   </div>
 
   <div class="actions">
+    <button class="btn-lg btn-lg btn-primary btn-block">
     <%= f.submit "Sign up" %>
+    </button>
   </div>
 
   <div>
@@ -46,5 +50,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
-
-
+</form>
+</body>
