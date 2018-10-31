@@ -2,6 +2,11 @@
     text-align: center; }
 
 
+.interests {
+    display: inline-block; 
+    margin-left: 1em;
+}   
+
 .user-card  {
     margin: .5em;
     border: 1px solid black;
@@ -11,10 +16,15 @@
         margin: 3px; }
 
 
-    h3 {
+    h4 {
         display: inline;
         text-align: center;
         margin: 3px; }
+
+    a:hover {
+        background-color: white;
+        text-decoration: none;
+    }
 
 
     span {

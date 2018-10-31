@@ -21,12 +21,17 @@ for i in 1..100 do
     Skill.create(
         name: Faker::ProgrammingLanguage.name
     )
+
+    Interest.create(
+        user_id: User.find(i).id,
+        skill_id: Skill.find(i).id, 
+    )
+
     Service.create(
         user_id: User.find(i).id,
         skill_id: Skill.find(i).id,
         experience: rand(4),
         description: Faker::Lorem.paragraph(2),
         price: rand(50)
-        
-    )    
+    ) 
 end 
