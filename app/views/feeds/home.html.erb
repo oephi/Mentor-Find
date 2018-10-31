@@ -22,10 +22,10 @@
 
 <div class="container2">
 
-    <% @sample.each do |user| %>
+    <% @sample.each do |service| %>
     <div class="user-card">
-        <%= link_to image_tag(user.avatar), profile_path %>
-        <h4><%= link_to user.name, profile_path %></h4>
+        <%= link_to image_tag(service.user.avatar), profile_path %>
+        <h4><%= link_to service.user.name, profile_path %></h4> <%# change to service_path %>
         <span>25$/h</span>
     </div>
 <% end %>

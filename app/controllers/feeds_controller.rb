@@ -1,6 +1,6 @@
 class FeedsController < ApplicationController
     def home
-        @sample = User.take(100)
+        @sample = Service.take(100) #TODO
         @interests = User.find(current_user.id).skills 
     end
 end
