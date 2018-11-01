@@ -216,11 +216,8 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
-<<<<<<< Updated upstream
   textacular (~> 5.1)
-=======
   stripe (~> 3.29)
->>>>>>> Stashed changes
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
