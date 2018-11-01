@@ -83,6 +83,10 @@ class ServicesController < ApplicationController
   def profile
   end
 
+  def purchase_history
+    @purchase = "Purchase history will be stored here"
+  end
+
   private
     def service_params
       params.require(:service).permit(:skill_id, :experience, :description, :price, :user_id)

@@ -1,4 +1,4 @@
-<h1 class="mentor-heading">Mentor Category Will Go Here</h1>
+<h1 class="mentor-heading"><%= @category.titleize %></h1>
 
 <div class="container1">
 
@@ -14,7 +14,7 @@
       <li><%= link_to "None", root_path(interest: "random") %></li>
       <li><%= link_to "All", root_path, class: "#{'active' if params[:tag] == nil} link" %></li>
       <% @interests.each do |interest| %>
-        <li><%= link_to interest.name, root_path(interest: interest.name) %></li>
+        <li><%= link_to interest.name.titleize, root_path(interest: interest.name) %></li>
       <% end %>
     </ul>
   <% end %>
@@ -27,7 +27,7 @@
     <div class="user-card">
         <%= link_to image_tag(service.user.avatar), profile_path %>
         <h4><%= link_to service.user.name, profile_path %></h4> <%# change to service_path %>
-        <span>25$/h</span>
+        <span><%= service.price %>$/h</span>
     </div>
 <% end %>
 
