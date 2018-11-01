@@ -21,9 +21,21 @@
     <%= form.text_field :skill_id %>
   </div>
 
+
   <div class="field column">
     <%= form.label :experience %>
-    <%= form.collection_radio_buttons :experience, Service.experiences, :second, :first, class: "radio-buttons" %>
+    <%= form.radio_button :experience, Service.experiences.keys[0] %>
+    <%= form.label Service.experiences.keys[0], Service.experiences.keys[0] %>
+    <%= form.radio_button :experience, Service.experiences.keys[1] %>
+    <%= form.label Service.experiences.keys[1], Service.experiences.keys[1] %>
+    <%= form.radio_button :experience, Service.experiences.keys[2] %>
+    <%= form.label Service.experiences.keys[2], Service.experiences.keys[2] %>
+    <%= form.radio_button :experience, Service.experiences.keys[3] %>
+    <%= form.label Service.experiences.keys[3], Service.experiences.keys[3] %>
+    <%= form.radio_button :experience, Service.experiences.keys[4] %>
+    <%= form.label Service.experiences.keys[4], Service.experiences.keys[4] %>
+    
+    <%#= form.collection_radio_buttons :experience, Service.experiences.keys[0] %>
   </div>
 
   <div class="field">
