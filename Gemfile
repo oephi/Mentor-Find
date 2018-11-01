@@ -61,3 +61,4 @@ gem "bootstrap", "~> 4.1"
 gem 'jquery-rails'
 
 gem "textacular", "~> 5.1"
+gem "stripe", "~> 3.29"

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :skills
   resources :reviews
   resources :feeds
+  resources :charges
   devise_for :users
 
   #get '/profile', to: 'feeds#show', as: 'profile'
