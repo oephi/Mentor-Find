@@ -5,9 +5,10 @@ class FeedsController < ApplicationController
 
         if params[:interest] # run this when interest parameter is present:
             @sample = Skill.find_by(name: params[:interest]).interests.where(user_id: current_user.id)
-            @category = params[:interest] # for the feeds h1 #TODO: Add an if/then condition for :interest/:search
+            @category = params[:interest] # for the feeds h1
         elsif params[:search] # run this when the search parameter is present:
-            @links = Link.fuzzy_search(params[:search][:term]).where(user_id: current_user.id, read: nil)
+            # @search = Skill.fuzzy_search(name: params[:search])
+            @category = "#{params[:search]} Mentors"
         else # otherwise run this if there's no parameters:
             @sample = Service.take(99)
             @category = "Mentors Near You"
