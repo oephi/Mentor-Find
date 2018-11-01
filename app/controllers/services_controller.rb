@@ -5,7 +5,9 @@ class ServicesController < ApplicationController
   # GET /services.json
   def index
     @services = Service.all
-  end
+  end 
+
+
 
   # GET /services/1
   # GET /services/1.json
@@ -79,6 +81,10 @@ class ServicesController < ApplicationController
   end
 
   def profile
+  end
+
+  def purchase_history
+    @purchase = "Purchase history will be stored here"
   end
 
   private
