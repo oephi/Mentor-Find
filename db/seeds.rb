@@ -37,5 +37,4 @@ for i in 1..100 do
         user_id: User.find(rand(1..20)).id,
         service_id: Service.find(rand(1..20)).id
     )
-   ) 
 end 
