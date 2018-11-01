@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :users 
 
   get '/profile', to: 'feeds#show', as: 'profile' 
+  get '/landing_page', to: 'landing_pages#home', as: 'landing_page'
 
   #get '/profile', to: 'feeds#show', as: 'profile'
   get '/profile', to: 'services#profile'
