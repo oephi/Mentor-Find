@@ -1,0 +1,20 @@
+<% @reviews.each do |review| %>
+<div class="card">
+  <div class="card-header">
+    <%= review.service.skill.name %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= review.content %></h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary"><%= review.user.name %></a>
+  </div>
+</div>
+<% end %>
+
+<tr>
+        <% @reviews.each do |review| %>
+      
+        <td><%= review.service.skill.name %></td>
+        <td><%= review.content %></td>
+        <td><%= review.user.name %></td>
+      </tr>

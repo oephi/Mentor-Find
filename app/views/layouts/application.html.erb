@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MentorFind2</title>
+    <title>MentorFind</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,25 +11,36 @@
 
   <body> 
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">MENTOR FIND</a>
+        <%= link_to "MENTOR FIND", root_path, class: "navbar-brand" %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        
+        <% if current_user %>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="/profile">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
+              <%= link_to "Become a Mentor", new_service_path, class: "nav-link" %>
             </li>
+            <li>
+              <%= link_to "Purchase History", '/profile', class: "nav-link" %>
+            </li>
+            
           </ul>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Find a mentor at...">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
+        <% end %>
+
         </div>
       </nav>
+
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
    
