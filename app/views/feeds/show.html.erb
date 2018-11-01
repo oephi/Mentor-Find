@@ -1,11 +1,21 @@
 
 <h1> Profile </h1>
+
 <div> 
 <strong>IMAGE</strong>
 <%= image_tag Faker::LoremFlickr.image("200x200") %>
 </div> 
+
+<p>
+<strong>Description:</strong>
+<%= current_user.description %>
+</p>
+
 <div>
 <h2>Interests:</h2>
+<% @interests.each do |interest| %>
+<%= interest.skill.name %>
+<% end %>
 
 </div>
 <div>
