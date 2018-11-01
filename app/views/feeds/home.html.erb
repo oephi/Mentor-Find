@@ -25,8 +25,8 @@
 
     <% @sample.each do |service| %>
     <div class="user-card">
-        <%= link_to image_tag(service.user.avatar), profile_path %>
-        <h4><%= link_to service.user.name, profile_path %></h4> <%# change to service_path %>
+        <%= link_to image_tag(service.user.avatar), service_path(service) %>
+        <h4><%= link_to service.user.name, service_path(service) %></h4> <%# change to service_path %>
         <span><%= service.price %>$/h</span>
     </div>
 <% end %>

@@ -31,11 +31,14 @@
             
           </ul>
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Find a mentor at...">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+          <%= form_tag(root_path, method: "get", class: "form-inline my-2 my-lg-0") do %>
+            <%= text_field_tag(:search, nil, placeholder: "Find a mentor at...", class: "form-control mr-sm-2") %>
+            <%= submit_tag("Search", class: "btn btn-outline-success my-2 my-sm-0") %>
+          <% end %>
         <% end %>
+
+        
+
 
         </div>
       </nav>

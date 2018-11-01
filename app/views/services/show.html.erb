@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <%= image_tag @service.user.avatar %>
+  <%= image_tag @service.user.avatar, class: "profile-image" %>
 </p>
 
 <div class="services-show">
@@ -32,7 +32,7 @@
 
   <p>
     <strong>Price:</strong>
-    <%= @service.price %>
+    $<%= @service.price %>/h
   </p>
 
   <%#= link_to 'Edit', edit_service_path(@service) %> 
@@ -40,6 +40,12 @@
 
 <div class="reviews-card-container">
 <h1>Reviews</h1>
+
+
+<%= form_tag("/test", method: "get") do %>
+  <%= text_field_tag(:q, nil, placeholder: "Leave a Review") %>  <%# TODO: add logic here. if paid then form %>
+  <%= submit_tag("Submit") %>
+<% end %>
 
 <% @reviews.each do |review| %>
 <div class="reviews-card">
