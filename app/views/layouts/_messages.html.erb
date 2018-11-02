@@ -1,7 +1,8 @@
 <% flash.each do |name, message| %>
   <% if message.is_a? String %>
-    <p style="color: <%= name == 'success' ? 'green' : 'lightcoral' %>" class='flash' > 
+    <p class="flash <%= name == 'success' ? 'notice' : 'alert' %>"> 
       <%= message %>
     </p>
   <% end %>
 <% end %>
+
