@@ -32,8 +32,17 @@ body {
     align-items: flex-start;
 }
 
-.navbar {
-    a:hover {
-        background-color: #F8F9FA;
-    }
+.flash {
+    border: 1px solid lightcoral;
+    border-radius: 4px;
+    padding: 1em;
+    width: 20%;
+    margin: 5em auto -4em;
+    text-align: center;
+    background-color: linen;
+}
+
+.active {
+    font-weight: 700;
+    color: #1F6ABC;
 }

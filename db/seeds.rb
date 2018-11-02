@@ -15,8 +15,11 @@ for i in 1..100 do
         phone: Faker::PhoneNumber.phone_number,
         email: Faker::Internet.email,
         description: Faker::Lorem.paragraph(2),
-        password: Faker::Lorem.characters(10)
+        password: "testing1"
     )
+end
+
+for i in 1..100 
     Skill.create(
         name: Faker::ProgrammingLanguage.name
     )
@@ -31,11 +34,12 @@ for i in 1..100 do
         description: Faker::Lorem.paragraph(2),
         price: rand(50)   
     )
+end
 
+for i in 1..100
     Review.create(
         content: Faker::Lorem.paragraph(2),
         user_id: User.find(rand(1..20)).id,
         service_id: Service.find(rand(1..20)).id
-    )
-   ) 
+    ) 
 end 

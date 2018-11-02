@@ -10,12 +10,13 @@
   </head>
 
   <body> 
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <%= link_to "MENTOR FIND", root_path, class: "navbar-brand" %>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <%# navbar begins %>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <%= link_to "MENTOR FIND", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collaps  data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="fals  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         
         <% if current_user %>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -26,23 +27,24 @@
               <%= link_to "Become a Mentor", new_service_path, class: "nav-link" %>
             </li>
             <li>
-              <%= link_to "Purchase History", '/profile', class: "nav-link" %>
+              <%= link_to "Purchase History", '/purchase_history', class: "nav-link" %>
             </li>
-            
           </ul>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Find a mentor at...">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        <% end %>
 
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          <%= form_tag(root_path, method: "get", class: "form-inline my-2 my-lg-0") do %>
+            <%= text_field_tag(:search, nil, placeholder: "Find a mentor at...", class: "form-control mr-sm-2") %>
+            <%= submit_tag("Search", class: "btn btn-outline-success my-2 my-sm-0") %>
+          <% end %>
+        <% end %>
         </div>
       </nav>
+      <%# navbar ends %>
 
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <%= render 'layouts/messages' %> <%# renders the flash messages %> 
+      <p class="notice"><%= notice %></p> <%# devise flash %>
+      <p class="alert"><%= alert %></p> <%# devise flash %>
    
     
     <div class="container">
