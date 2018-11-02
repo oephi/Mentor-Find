@@ -62,3 +62,9 @@ gem 'jquery-rails'
 
 gem "textacular", "~> 5.1"
 gem "stripe", "~> 3.29"
+
+gem "carrierwave", "~> 1.2"
+
+gem "carrierwave-aws", "~> 1.3"
+
+gem "mini_magick", "~> 4.9"

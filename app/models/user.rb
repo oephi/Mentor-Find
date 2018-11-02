@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :skills, through: :interests 
 
   validates :phone, length: {maximum: 10}
-  # validates :name, :city, :phone, presence: true #add validates to non-default devise attributes
+  # validates :name, :city, :phone, presence: true #add validates to non-default devise attributes 
+
+  mount_uploader :avatar, AvatarUploader
 
 end

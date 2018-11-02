@@ -2,10 +2,10 @@
 <h1 class= "profile-heading"> Profile </h1>
 
 <div class= "show">
-
+ 
     <div class= "show-img" > 
     <strong>IMAGE</strong>
-    <%= image_tag Faker::LoremFlickr.image("200x200") %>
+    <%= image_tag current_user.avatar_url unless current_user.avatar_url.nil? %>
     </div> 
 
     <p>
