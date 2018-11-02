@@ -29,6 +29,7 @@
 .user-card  {
     margin: .5em;
     border: 1px solid black;
+    border-radius: 5px;
 
     img {
         display: block;
@@ -48,4 +49,15 @@
 
     span {
         float: right;
-        margin: 3px; }}
+        margin: 3px; }} 
+
+
+.show-img {
+    
+    img {
+        display: block; 
+        border-radius: 50%;
+        margin: 3px; } 
+    
+    
+}

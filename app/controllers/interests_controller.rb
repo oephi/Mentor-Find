@@ -48,12 +48,13 @@ class InterestsController < ApplicationController
   # DELETE /interests/1
   # DELETE /interests/1.json
   def destroy
-    @interest.destroy
+    Interest.find_by(user_id: current_user.id, skill_id: params[:id]).destroy
+    #s@interest.destroy
     respond_to do |format|
-      format.html { redirect_to interests_url, notice: 'Interest was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Interest was successfully deleted.' }
       format.json { head :no_content }
     end
-  end
+    end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -1,24 +1,34 @@
 
-<h1> Profile </h1>
+<h1 class= "profile-heading"> Profile </h1>
 
-<div> 
-<strong>IMAGE</strong>
-<%= image_tag Faker::LoremFlickr.image("200x200") %>
-</div> 
+<div class= "show">
 
-<p>
-<strong>Description:</strong>
-<%= current_user.description %>
-</p>
+    <div class= "show-img" > 
+    <strong>IMAGE</strong>
+    <%= image_tag Faker::LoremFlickr.image("200x200") %>
+    </div> 
 
-<div>
-<h2>Interests:</h2>
-<% @interests.each do |interest| %>
+    <p>
+    <strong>Description:</strong>
+    <%= current_user.description %>
+    </p>
+
+    <div>
+    <h2>Interests:</h2>
+    <% @interests.each do |interest| %>
     <%= interest.skill.name %>
-<% end %>
-</div>
-<div>
-<p> Reviews </p>
+    <% end %>
+
+    </div>
+    <div>
+    <p> Reviews </p> 
+    <% current_user.reviews.each do |review|%> 
+        <%= review.content%>
+    <% end %>
+    </div> 
+
+    <%=link_to "Edit", edit_user_registration_path, class:"btn btn-outline-primary" %> 
+
 </div>
 
 

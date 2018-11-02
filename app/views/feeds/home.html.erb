@@ -1,4 +1,4 @@
-<h1 class="mentor-heading">Mentor Category Will Go Here</h1>
+<h1 class="mentor-heading"><%= @category.titleize %></h1>
 
 <div class="container1">
 
@@ -6,27 +6,38 @@
   <% if current_user %>
     <h2>Interests</h2>
     <ul>
-      <%= form_with(url: interests_path, method: "post") do %> <%# path should work %>
+      <%= form_with(url: interests_path, method: "post") do %>
         <%= text_field_tag :link, nil, name: "interest", placeholder: "Add an Interest" %>
         <%= submit_tag nil, style: "display: none;" %> 
       <% end %>
 
-      <li><%= link_to "None", feeds_path %></li>
-      <li><%= link_to "All", 'http://google.com' %></li>
+      <li>
+        <%= link_to "None", root_path(interest: "random"), class: "#{'active' if params[:interest] == 'random'}" %>
+      </li>
+      
+      <li>
+        <%= link_to "All", root_path(interest: "all"), class: "#{'active' if params[:interest] == 'all'}" %>
+      </li>
+
       <% @interests.each do |interest| %>
-        <li><%= link_to interest.name, 'http://google.com' %></li>
+        <li>
+          <%= link_to interest.name.titleize, root_path(interest: interest.name), class: "#{'active' if params[:interest] == interest.name}" %><%= link_to(" x", interest_path(interest), method: :delete, data: { confirm: "Are you sure that you want to remove #{interest.name} from your interests?" }) %>
+        </li>
       <% end %>
     </ul>
   <% end %>
 </div>
 
+
 <div class="container2">
 
     <% @sample.each do |service| %>
     <div class="user-card">
-        <%= link_to image_tag(service.user.avatar), profile_path %>
-        <h4><%= link_to service.user.name, profile_path %></h4> <%# change to service_path %>
-        <span>25$/h</span>
+        <%= link_to image_tag(service.user.avatar), service_path(service) %>
+        <h4><%#= link_to service.name, service_path(service) %>
+            <%= link_to service.user.name, service_path(service) %>
+            </h4> <%# change to service_path %>
+        <span><%= service.price %>$/h</span>
     </div>
 <% end %>
 

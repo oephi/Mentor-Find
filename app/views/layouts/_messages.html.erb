@@ -1,0 +1,8 @@
+<% flash.each do |name, message| %>
+  <% if message.is_a? String %>
+    <p class="flash <%= name == 'success' ? 'notice' : 'alert' %>"> 
+      <%= message %>
+    </p>
+  <% end %>
+<% end %>
+
