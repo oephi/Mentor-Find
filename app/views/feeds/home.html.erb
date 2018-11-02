@@ -12,7 +12,7 @@
       <% end %>
 
       <li><%= link_to "None", root_path(interest: "random") %></li>
-      <li><%= link_to "All", root_path, class: "#{'active' if params[:tag] == nil} link" %></li>
+      <li><%= link_to "All", root_path(interest: "all") %></li>
       <% @interests.each do |interest| %>
         <li><%= link_to interest.name.titleize, root_path(interest: interest.name) %></li>
       <% end %>
