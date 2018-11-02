@@ -15,7 +15,7 @@ for i in 1..100 do
         phone: Faker::PhoneNumber.phone_number,
         email: Faker::Internet.email,
         description: Faker::Lorem.paragraph(2),
-        password: Faker::Lorem.characters(10)
+        password: "testing1"
     )
 end
 

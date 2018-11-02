@@ -20,4 +20,9 @@ class FeedsController < ApplicationController
 
         #TODO: add the `all` tag logic
     end
+
+    def show
+        @interests = current_user.interests 
+        @reviews = current_user.services
+    end
 end
