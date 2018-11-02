@@ -18,11 +18,12 @@
 @import "bootstrap";
 
 body {
-    margin: 0;
+    margin: 100px 0 0 0;
     padding: 0; }
 
 .container1 {
     display: flex;
+
 }
 
 .container2 {
@@ -32,13 +33,27 @@ body {
     align-items: flex-start;
 }
 
+
+
 .flash {
-    border: 1px solid lightcoral;
-    border-radius: 4px;
-    padding: 1em;
-    width: 20%;
-    margin: 5em auto -4em;
-    text-align: center;
-    background-color: linen;
+            border-radius: 4px;
+            padding: 1em;
+            width: 20%;
+            margin: 5em auto 0;
+            text-align: center;
+            border: 1px solid lightcoral;
+            color: lightcoral;
+            background-color: linen;
 }
 
+// .alert {
+//     border: 1px solid lightcoral;
+//     color: lightcoral;
+//     background-color: linen;
+// }
+
+// .notice {
+//     border: 1px solid green;
+//     color: green;
+//     background: lightgreenl
+// }
