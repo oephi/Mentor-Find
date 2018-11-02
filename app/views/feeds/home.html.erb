@@ -6,19 +6,20 @@
   <% if current_user %>
     <h2>Interests</h2>
     <ul>
-      <%= form_with(url: interests_path, method: "post") do %> <%# path should work %>
+      <%= form_with(url: interests_path, method: "post") do %>
         <%= text_field_tag :link, nil, name: "interest", placeholder: "Add an Interest" %>
         <%= submit_tag nil, style: "display: none;" %> 
       <% end %>
 
       <li><%= link_to("x ", root_path, method: :delete) %>
-      <%= link_to "None", root_path(interest: "random") %></li>
+      <%= link_to "None", root_path(interest: "random"), class: "#{'active' if params[:interest] == 'random'}" %></li>
       
       <li><%= link_to("x ", root_path, method: :delete) %>
-      <%= link_to "All", root_path(interest: "all") %></li>
+      <%= link_to "All", root_path(interest: "all"), class: "#{'active' if params[:interest] == 'all'}" %></li>
       <% @interests.each do |interest| %>
         <li>
-        <%= link_to("x ", root_path, method: :delete) %><%= link_to interest.name.titleize, root_path(interest: interest.name) %></li>
+          <%= link_to("x ", root_path, method: :delete) %><%= link_to interest.name.titleize, root_path(interest: interest.name), class: "#{'active' if params[:interest] == interest.name}" %>
+        </li>
       <% end %>
     </ul>
   <% end %>

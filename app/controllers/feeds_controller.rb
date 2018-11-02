@@ -21,13 +21,12 @@ class FeedsController < ApplicationController
             @search = Skill.fuzzy_search(params[:search])
 
             if @search.empty?
-                @sample = Service.take(99)
-                flash.now[:error] = "Sorry there are no mentors for that category yet."
+                # @sample = Service.take(99)
+                flash[:error] = "Sorry there are no mentors for that category yet."
+                redirect_to root_path(interest: "random")
             else
                 @sample = Service.where(skill_id: @search[0].id)
             end
-
-            # byebug
 
         else # otherwise run this if there's no parameters:
             @sample = Service.take(99) #TODO: make this only for current user 

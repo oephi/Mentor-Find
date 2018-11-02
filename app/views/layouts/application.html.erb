@@ -29,8 +29,8 @@
             <li>
               <%= link_to "Purchase History", '/purchase_history', class: "nav-link" %>
             </li>
-            
           </ul>
+
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
           <%= form_tag(root_path, method: "get", class: "form-inline my-2 my-lg-0") do %>
             <%= text_field_tag(:search, nil, placeholder: "Find a mentor at...", class: "form-control mr-sm-2") %>
@@ -42,7 +42,7 @@
       <%# navbar ends %>
 
 
-      <%= render 'layouts/messages' %>    <%# renders the flash messages %> 
+      <%= render 'layouts/messages' %> <%# renders the flash messages %> 
       <p class="notice"><%= notice %></p> <%# devise flash %>
       <p class="alert"><%= alert %></p> <%# devise flash %>
    
