@@ -11,10 +11,14 @@
         <%= submit_tag nil, style: "display: none;" %> 
       <% end %>
 
-      <li><%= link_to "None", root_path(interest: "random") %></li>
-      <li><%= link_to "All", root_path(interest: "all") %></li>
+      <li><%= link_to("x ", root_path, method: :delete) %>
+      <%= link_to "None", root_path(interest: "random") %></li>
+      
+      <li><%= link_to("x ", root_path, method: :delete) %>
+      <%= link_to "All", root_path(interest: "all") %></li>
       <% @interests.each do |interest| %>
-        <li><%= link_to interest.name.titleize, root_path(interest: interest.name) %></li>
+        <li>
+        <%= link_to("x ", root_path, method: :delete) %><%= link_to interest.name.titleize, root_path(interest: interest.name) %></li>
       <% end %>
     </ul>
   <% end %>

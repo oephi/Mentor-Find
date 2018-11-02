@@ -10,12 +10,13 @@
   </head>
 
   <body> 
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <%= link_to "MENTOR FIND", root_path, class: "navbar-brand" %>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <%# navbar begins %>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <%= link_to "MENTOR FIND", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collaps  data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="fals  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         
         <% if current_user %>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -36,16 +37,14 @@
             <%= submit_tag("Search", class: "btn btn-outline-success my-2 my-sm-0") %>
           <% end %>
         <% end %>
-
-        
-
-
         </div>
       </nav>
+      <%# navbar ends %>
 
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <%= render 'layouts/messages' %>    <%# renders the flash messages %> 
+      <p class="notice"><%= notice %></p> <%# devise flash %>
+      <p class="alert"><%= alert %></p> <%# devise flash %>
    
     
     <div class="container">
