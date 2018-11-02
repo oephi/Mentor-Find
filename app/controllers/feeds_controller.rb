@@ -34,4 +34,9 @@ class FeedsController < ApplicationController
         end
 
     end
+
+    def show
+        @interests = current_user.interests 
+        @reviews = current_user.services
+    end
 end
