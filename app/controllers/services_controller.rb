@@ -20,6 +20,7 @@ class ServicesController < ApplicationController
   # GET /services/new
   def new
     @service = Service.new(user_id: current_user)
+    
   end
   
   # GET /services/1/edit
