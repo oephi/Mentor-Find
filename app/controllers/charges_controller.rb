@@ -6,18 +6,17 @@ class ChargesController < ApplicationController
       # Amount in cents
       @amount = 500
     
-      # customer = Stripe::Customer.create(
-      #   :email => params[:stripeEmail],
-      #   :source  => params[:stripeToken]
-      # )
+      customer = Stripe::Customer.retrieve(current_user.customer_id)
+      customer.source = params[:stripeToken]
+      customer.save
 
       charge = Stripe::Charge.create(
-        # :customer    => customer.id,
+        :customer    => current_user.customer_id,
         :amount      => @amount,
         :description => 'Rails Stripe customer',
-        :currency    => 'aud',
-        :source      =>  params[:stripeToken]
+        :currency    => 'aud'
       )
+        
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
