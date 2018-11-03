@@ -33,30 +33,12 @@ body {
     align-items: flex-start;
 }
 
+.alert {
+    width: 25%;
+    margin: 5em auto 1em;
+    text-align: center;
 
-
-.flash {
-            border-radius: 4px;
-            padding: 1em;
-            width: 20%;
-            margin: 5em auto 0;
-            text-align: center;
-            border: 1px solid lightcoral;
-            color: lightcoral;
-            background-color: linen;
 }
-
-// .alert {
-//     border: 1px solid lightcoral;
-//     color: lightcoral;
-//     background-color: linen;
-// }
-
-// .notice {
-//     border: 1px solid green;
-//     color: green;
-//     background: lightgreenl
-// }
 
 .devise-container, .form-group {
     margin: 0 auto; 
