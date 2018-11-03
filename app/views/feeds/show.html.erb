@@ -3,7 +3,7 @@
 
 <div class= "show">
     <div> 
-        <%= image_tag Faker::LoremFlickr.image("250x250"), class: "profile-image" %>
+        <%= image_tag User.find(current_user.id).avatar, class: "profile-image" %>
     </div> 
 
     <p>
