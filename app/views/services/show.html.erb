@@ -1,5 +1,4 @@
 <div class="profile-container">
-<p id="notice"><%= notice %></p>
 
 <p>
   <%= image_tag @service.user.avatar, class: "profile-image" %>
@@ -26,7 +25,7 @@
     <%= @service.experience.titleize %>
   </p>
 
-  <p>
+  <p class="description">
     <strong>Description:</strong>
     <%= @service.description %>
   </p>
@@ -38,27 +37,6 @@
 
 <% if @service.user_id == current_user.id %>
   <%= link_to 'Edit Service', edit_service_path(@service), class:"btn btn-outline-primary" %>
-<% else %>
-    <%= form_with url: "/charges" do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <label class="amount">
-      <span>Amount: $5.00</span>
-    </label>
-  </article>
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.application.credentials.stripe[:publishable] %>"
-          data-description="A month's subscription"
-          data-amount="500"
-          data-locale="auto"
-          data-email=<%= current_user.email %>></script>
-<% end %>
-  
 <% end %>
   <%#= link_to 'Back', services_path %>
 
@@ -67,24 +45,29 @@
 
 
 <% if @service.user_id != current_user.id %>
-  <%= form_tag("/test", method: "get") do %>
-    <%= text_area_tag(:q, nil, class: "form-control", placeholder: "Leave a Review", rows: 2) %>  <%# TODO: add logic here. if paid then form %>
-    <%= submit_tag("Submit", class: "btn btn-lg btn-primary btn-block margin-bottom") %>
-  <% end %>
+  <%= render 'reviews/leave_review', review: @review %>
 <% end %>
 
 <% @reviews.each do |review| %>
 <div class="reviews-card">
   <div class="card">
     <div class="card-header">
-      <a href = "#" ><%= review.service.user.name%></a> |
-      <%= review.service.skill.name %>
+      <a href = "#" >
+        <%= review.user.name.titleize %>
+      </a>
+      <span class="float-right"><%= 'Posted on ' + review.created_at.to_date.to_s%></span>
+
     </div>
     <div class="card-body">
-      <h5 class="card-title"><%= review.content %></h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary"><%= review.user.name %></a>
+      <p class="card-text"><%= review.content %></p>
+      <% if review.user.id == current_user.id %>
+        <p class="float-right">
+          <%= link_to 'Edit Review', edit_review_path(review) %> | 
+          <%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
+      <% end %>
   </div>
 </div>
 <% end %>
 </div>
+  

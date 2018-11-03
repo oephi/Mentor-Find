@@ -14,6 +14,7 @@ class ServicesController < ApplicationController
   def show
     # @review = Review.new
     @reviews = @service.reviews
+    @review = Review.new
   end
 
   # GET /services/new

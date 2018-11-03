@@ -9,8 +9,8 @@ class FeedsController < ApplicationController
         
         elsif params[:interest] == "all"
             @category = "Mentors From My Interests"
-            interests = User.find(current_user.id).interests.pluck(:skill_id)
-            @sample = Service.where(skill_id: interests).sample(99)
+            
+            @sample = Service.where(skill_id: User.find(current_user.id).interests.pluck(:skill_id)).sample(99)
 
         elsif params[:interest] # run this when interest parameter is present:
             @sample = Service.where(skill_id: Skill.find_by(name: params[:interest]).id)
@@ -29,9 +29,11 @@ class FeedsController < ApplicationController
             end
 
         else # otherwise run this if there's no parameters:
-            @sample = Service.take(99) #TODO: make this only for current user 
-            @category = "Your Mentors Near You"
+            @sample = Service.all.sample(99) # old: order("RANDOM()").take(99)
+            @category = "Mentors From All Categories"
+            @class = 'active'
         end
+        # TODO: DRY the else and first conditions out.
 
     end
 
