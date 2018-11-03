@@ -15,7 +15,7 @@
         <h2>My Services Provided</h2>
         <ul>
         <% @services.each do |service| %>
-            <li><%= link_to service.skill.name, service_path(service) %></li>
+            <li><%= link_to service.skill.name.titleize, service_path(service) %></li>
         <% end %>
         </ul>
     </div>

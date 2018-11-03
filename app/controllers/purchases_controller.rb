@@ -5,7 +5,7 @@ class PurchasesController < ApplicationController
   # GET /purchases.json
   def index
     #@purchases = Purchase.all
-    @purchases = [1, 2, 3, 4, 5]
+    @purchases = Purchase.where(user_id: current_user.id)
 
   end
 

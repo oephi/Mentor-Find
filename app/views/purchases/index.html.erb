@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-
 <% if current_user %>
     <h1>Your Mentor History</h1>
     <ul>
         <% @purchases.each do |purchase| %>
-        <li>
-            <%= "Put purchase mentor here | Followed by purchase price | Followed by contact number" %> 
+        <li class="purchases">
+            <%= link_to "Category here | #{Service.find(purchase.service_id).user.name} | $#{purchase.price}/h | Followed by contact number", service_path(Service.find(purchase.service_id)) %>
+            <%# TODO: remove the logic out of the view here %>
         </li>
         <% end %>
     </ul>
