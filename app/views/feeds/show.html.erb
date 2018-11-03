@@ -1,5 +1,5 @@
-
-<h1 class= "profile-heading"> Profile </h1>
+<div class="profile-container">
+<h1 class= "profile-heading">My Profile</h1>
 
 <div class= "show">
     <div> 
@@ -7,26 +7,36 @@
     </div> 
 
     <p>
-    <strong>Description:</strong>
-    <%= current_user.description %>
+        <h2>About Me</h2>
+        <%= current_user.description %>
     </p>
 
     <div>
-    <h2>Interests:</h2>
-    <% @interests.each do |interest| %>
-    <%= interest.skill.name %>
-    <% end %>
-
+        <h2>My Services Provided</h2>
+        <ul>
+        <% @services.each do |service| %>
+            <li><%= link_to service.skill.name, service_path(service) %></li>
+        <% end %>
+        </ul>
     </div>
+
     <div>
-    <p> Reviews </p> 
-    <% current_user.reviews.each do |review|%> 
-        <%= review.content%>
-    <% end %>
+        <h2>Reviews Received</h2>
+        <% current_user.reviews.each do |review|%> 
+            <%= review.content%>
+        <% end %>
+    </div>
+
+    <div>
+        <h2>Reviews Left</h2>
+        <% current_user.reviews.each do |review|%> 
+            <%= review.content%>
+        <% end %>
     </div> 
 
-    <%=link_to "Edit", edit_user_registration_path, class:"btn btn-outline-primary" %> 
+    <%=link_to "Edit Profile", edit_user_registration_path, class: "btn btn-outline-primary" %> 
 
+</div>
 </div>
 
 

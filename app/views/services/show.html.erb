@@ -1,3 +1,4 @@
+<div class="profile-container">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -22,7 +23,7 @@
 
   <p>
     <strong>Experience:</strong>
-    <%= @service.experience %>
+    <%= @service.experience.titleize %>
   </p>
 
   <p>
@@ -35,16 +36,20 @@
     $<%= @service.price %>/h
   </p>
 
-  <%#= link_to 'Edit', edit_service_path(@service) %> 
+<% if @service.user_id == current_user.id %>
+  <%= link_to 'Edit Service', edit_service_path(@service), class:"btn btn-outline-primary" %>
+<% end %>
   <%#= link_to 'Back', services_path %>
 
 <div class="reviews-card-container">
 <h1>Reviews</h1>
 
 
-<%= form_tag("/test", method: "get") do %>
-  <%= text_field_tag(:q, nil, placeholder: "Leave a Review") %>  <%# TODO: add logic here. if paid then form %>
-  <%= submit_tag("Submit") %>
+<% if @service.user_id != current_user.id %>
+  <%= form_tag("/test", method: "get") do %>
+    <%= text_area_tag(:q, nil, class: "form-control", placeholder: "Leave a Review", rows: 2) %>  <%# TODO: add logic here. if paid then form %>
+    <%= submit_tag("Submit", class: "btn btn-lg btn-primary btn-block margin-bottom") %>
+  <% end %>
 <% end %>
 
 <% @reviews.each do |review| %>
@@ -61,3 +66,4 @@
   </div>
 </div>
 <% end %>
+</div>

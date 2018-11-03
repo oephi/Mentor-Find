@@ -36,7 +36,8 @@ class FeedsController < ApplicationController
     end
 
     def show
-        @interests = current_user.interests 
-        @reviews = current_user.services
+        @interests = current_user.interests #? 
+        @reviews = current_user.services #?
+        @services = Service.where(user_id: current_user.id)
     end
 end
