@@ -1,11 +1,15 @@
 class PurchasesController < ApplicationController
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
 
-  # GET /purchases
-  # GET /purchases.json
   def index
     #@purchases = Purchase.all
     @purchases = Purchase.where(user_id: current_user.id)
+
+    # if purchases.empty?
+    #   @purchases = 
+    # else
+    #   @purchases = purchases
+    # end
 
   end
 
