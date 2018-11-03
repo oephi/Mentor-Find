@@ -1,5 +1,4 @@
 <div class="profile-container">
-<p id="notice"><%= notice %></p>
 
 <p>
   <%= image_tag @service.user.avatar, class: "profile-image" %>
@@ -46,23 +45,17 @@
 
 
 <% if @service.user_id != current_user.id %>
-  <%= form_tag("/test", method: "get") do %>
-    <%= text_area_tag(:q, nil, class: "form-control", placeholder: "Leave a Review", rows: 2) %>  <%# TODO: add logic here. if paid then form %>
-    <%= submit_tag("Submit", class: "btn btn-lg btn-primary btn-block margin-bottom") %>
-  <% end %>
+  <%= render 'reviews/form', review: @review %>
 <% end %>
 
 <% @reviews.each do |review| %>
 <div class="reviews-card">
   <div class="card">
     <div class="card-header">
-      <a href = "#" ><%= review.service.user.name%></a> |
-      <%= review.service.skill.name %>
+      <a href = "#" ><%= review.user.name.titleize %></a>
     </div>
     <div class="card-body">
-      <h5 class="card-title"><%= review.content %></h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary"><%= review.user.name %></a>
+      <p class="card-text"><%= review.content %></p>
   </div>
 </div>
 <% end %>
