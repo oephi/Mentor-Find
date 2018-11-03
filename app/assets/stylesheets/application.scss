@@ -21,9 +21,9 @@ body {
     margin: 100px 0 0 0;
     padding: 0; }
 
-.container1 {
+.feed-container {
     display: flex;
-
+    margin-bottom: 1em;
 }
 
 .container2 {
@@ -58,10 +58,13 @@ body {
     margin-bottom: 1em;
 }
 
+.card {
+    width: 100px;
+}
 
 .mx-auto {
-    margin: .25em auto 0;
+    margin: 0 auto;
     text-align: center;
-    width: 250px;
+    width: 100%;
     height: 250px;
 }

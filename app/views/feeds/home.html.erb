@@ -1,6 +1,6 @@
 <h1 class="mentor-heading"><%= @category.titleize %></h1>
 
-<div class="container1">
+<div class="feed-container">
 
 <div class="interests">
   <% if current_user %>
@@ -32,13 +32,11 @@
 <div class="container2">
 
     <% @sample.each do |service| %>
-
-
     <div class="card m-1" style="width: 18rem;">
-      <%= link_to image_tag(service.user.avatar), service_path(service), class: "card-img-top mx-auto" %>
+      <%= link_to image_tag(service.user.avatar, class: "card-img-top mx-auto"), service_path(service) %>
       <div class="card-body">
         <h4><%= link_to service.user.name, service_path(service), class: "card-title" %></h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text"><%= truncate(service.description, length: 200) %></p>
       </div>
     </div>
 <% end %>
