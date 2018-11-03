@@ -32,12 +32,14 @@
 <div class="container2">
 
     <% @sample.each do |service| %>
-    <div class="user-card">
-        <%= link_to image_tag(service.user.avatar), service_path(service) %>
-        <h4><%#= link_to service.name, service_path(service) %>
-            <%= link_to service.user.name, service_path(service) %>
-            </h4> <%# change to service_path %>
-        <span><%= service.price %>$/h</span>
+
+
+    <div class="card m-1" style="width: 18rem;">
+      <%= link_to image_tag(service.user.avatar), service_path(service), class: "card-img-top mx-auto" %>
+      <div class="card-body">
+        <h4><%= link_to service.user.name, service_path(service), class: "card-title" %></h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
     </div>
 <% end %>
 
