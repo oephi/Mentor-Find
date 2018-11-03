@@ -16,13 +16,16 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+@import url('https://fonts.googleapis.com/css?family=Questrial');
 
 body {
-    margin: 0;
+    margin: 100px 0 0 0;
     padding: 0; }
 
-.container1 {
+.feed-container {
     display: flex;
+    margin-bottom: 1em;
 }
 
 .container2 {
@@ -32,17 +35,40 @@ body {
     align-items: flex-start;
 }
 
-.flash {
-    border: 1px solid lightcoral;
-    border-radius: 4px;
-    padding: 1em;
-    width: 20%;
-    margin: 5em auto -4em;
+.alert {
+    width: 25%;
+    margin: 5em auto 1em;
     text-align: center;
-    background-color: linen;
+
 }
 
-.active {
-    font-weight: 700;
-    color: #1F6ABC;
+.devise-container, .form-group {
+    margin: 0 auto; 
+    width: 35%;
+}
+
+.profile-container {
+        margin: 0 auto 1em auto; 
+        width: 50%;
+
+        p {
+            font-size: 18px;
+        }
+}
+
+.margin-bottom {
+    margin-bottom: 1em;
+}
+
+
+
+.mx-auto {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 250px;
+}
+
+.interest-heading {
+    font-family: 'Questrial', sans-serif;
 }

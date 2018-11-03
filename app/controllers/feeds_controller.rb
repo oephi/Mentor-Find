@@ -4,17 +4,17 @@ class FeedsController < ApplicationController
 
         if params[:interest] == "random"
             @sample = Service.all.sample(99) # old: order("RANDOM()").take(99)
-            @category = "Mentors in Everything Near You"
+            @category = "Mentors From All Categories"
             @class = 'active'
         
         elsif params[:interest] == "all"
-            @category = "Your Mentors Near You"
-            interests = User.find(current_user.id).skills.pluck(:id)
-            @sample = Service.where(skill_id:interests).sample(99)
+            @category = "Mentors From My Interests"
+            interests = User.find(current_user.id).interests.pluck(:skill_id)
+            @sample = Service.where(skill_id: interests).sample(99)
 
         elsif params[:interest] # run this when interest parameter is present:
             @sample = Service.where(skill_id: Skill.find_by(name: params[:interest]).id)
-            @category = params[:interest] # for the feeds h1
+            @category = "#{params[:interest].titleize} Mentors" # for the feeds h1
 
         elsif params[:search] # run this when the search parameter is present:
             @category = "#{params[:search]} Mentors"
@@ -36,7 +36,11 @@ class FeedsController < ApplicationController
     end
 
     def show
-        @interests = current_user.interests 
-        @reviews = current_user.services
+        @interests = current_user.interests #? 
+        @reviews = current_user.services #?
+        
+        @services = Service.where(user_id: current_user.id)
+        @description = User.find(current_user.id).description
+
     end
 end
