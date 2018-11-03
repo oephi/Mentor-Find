@@ -39,7 +39,6 @@ body {
     width: 25%;
     margin: 5em auto 1em;
     text-align: center;
-
 }
 
 .devise-container, .form-group {
@@ -53,6 +52,10 @@ body {
 
         p {
             font-size: 18px;
+        }
+
+        .description {
+            word-wrap: break-word;
         }
 }
 
