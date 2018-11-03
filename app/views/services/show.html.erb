@@ -52,10 +52,20 @@
 <div class="reviews-card">
   <div class="card">
     <div class="card-header">
-      <a href = "#" ><%= review.user.name.titleize %></a>
+      <a href = "#" >
+        <%= review.user.name.titleize %>
+      </a>
+      <span class="float-right"><%= 'Posted on ' + review.created_at.to_date.to_s%></span>
+
     </div>
     <div class="card-body">
       <p class="card-text"><%= review.content %></p>
+      <% if review.user.id == current_user.id %>
+        <p class="float-right">
+          <%= link_to 'Edit Review', edit_review_path(review) %> | 
+          <%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
+      <% end %>
   </div>
 </div>
 <% end %>
