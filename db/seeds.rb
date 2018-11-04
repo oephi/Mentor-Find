@@ -19,6 +19,7 @@ for i in 1..100 do
     )
 end
 
+
 for i in 1..100 
     Skill.create(
         name: Faker::ProgrammingLanguage.name
@@ -36,6 +37,7 @@ for i in 1..100
     )
 end
 
+
 for i in 1..100
     Review.create(
         content: Faker::Lorem.paragraph(2),
@@ -43,3 +45,8 @@ for i in 1..100
         service_id: Service.find(rand(1..20)).id
     ) 
 end 
+
+
+for i in 1..100
+    Purchase.create(service_id: i, user_id: i, charge_id: 123, price: rand(50))
+end
