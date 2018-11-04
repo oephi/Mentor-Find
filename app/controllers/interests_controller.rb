@@ -25,9 +25,17 @@ class InterestsController < ApplicationController
   # POST /interests
   def create
     @user = User.find(current_user.id)
-    @user.skills.create(name: params[:interest])
-    redirect_back fallback_location: root_path
+    # @user.skills.create(name: params[:interest])
     # @interest = Interest.new(interest_params)
+
+    if Skill.exists?(name: params[:interest]) then  #add strong params here
+      @skill = Skill.find_by(name: params[:interest]).id
+      @user.interests.create(skill_id: @skill)
+    else
+      @user.skills.create(name: params[:interest]).id
+    end
+
+    redirect_back fallback_location: root_path
   end
 
 
