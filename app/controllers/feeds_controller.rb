@@ -43,6 +43,5 @@ class FeedsController < ApplicationController
         
         @services = Service.where(user_id: current_user.id)
         @description = User.find(current_user.id).description
-
     end
 end
