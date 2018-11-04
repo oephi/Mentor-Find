@@ -62,3 +62,5 @@ gem 'jquery-rails'
 
 gem "textacular", "~> 5.1"
 gem "stripe", "~> 3.29"
+
+gem "bundler", "= 1.17.1"
