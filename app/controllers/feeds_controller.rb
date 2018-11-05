@@ -17,7 +17,7 @@ class FeedsController < ApplicationController
             @category = "#{params[:interest].titleize} Mentors" # for the feeds h1
 
         elsif params[:search] # run this when the search parameter is present:
-            @category = "#{params[:search]} Mentors"
+            @category = "#{params[:search].titleize} Mentors"
             @search = Skill.fuzzy_search(params[:search])
 
             if @search.empty?
