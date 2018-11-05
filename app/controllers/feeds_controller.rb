@@ -11,14 +11,13 @@ class FeedsController < ApplicationController
             @category = "Mentors From My Interests"
             # @test = User.find(current_user.id).interests.pluck(:skill_id)
             @sample = Service.where(skill_id: User.find(current_user.id).interests.pluck(:skill_id).to_a).sample(99)
-            # byebug
 
         elsif params[:interest] # run this when interest parameter is present:
             @sample = Service.where(skill_id: Skill.find_by(name: params[:interest]).id)
             @category = "#{params[:interest].titleize} Mentors" # for the feeds h1
 
         elsif params[:search] # run this when the search parameter is present:
-            @category = "#{params[:search]} Mentors"
+            @category = "#{params[:search].titleize} Mentors"
             @search = Skill.fuzzy_search(params[:search])
 
             if @search.empty?
