@@ -16,7 +16,7 @@
       </li>
       
       <li>
-        <%= link_to "All", root_path(interest: "all"), class: "#{'active' if params[:interest] == 'all'}" %>
+        <%= link_to "All", root_path(interest: "all"), class: "#{'active' if params[:interest] == 'all' || params[:interest] == nil}" %>
       </li>
 
       <% @interests.each do |interest| %>
