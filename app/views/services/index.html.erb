@@ -18,7 +18,7 @@
   <tbody class="table-striped">
     <% @services.each do |service| %>
       <tr>
-        <td><%= image_tag service.user.avatar %></td>
+        <td><%= image_tag service.user.avatar_url %></td>
         <td><%= service.user.name %></td>
         <td><%= service.skill.name %></td>
         <td><%= service.experience %></td>
