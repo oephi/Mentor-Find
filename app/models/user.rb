@@ -28,4 +28,14 @@ class User < ApplicationRecord
       self.save
     end
   end
+
+  # Adds a default avatar at registration
+  after_create_commit :add_avatar
+
+  def add_avatar
+    self.update(avatar: "default-profile")
+    self.save!
+  end
+
+
 end
