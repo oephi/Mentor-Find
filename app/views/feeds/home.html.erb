@@ -34,7 +34,7 @@
 
     <% @sample.each do |service| %>
     <div class="card m-2" style="width: 18rem;">
-      <%= link_to image_tag(service.user.avatar, class: "card-img-top mx-auto"), service_path(service) %>
+      <%= image_tag service.user.avatar_url  %>
       <div class="card-body">
         <h4><%= link_to service.user.name, service_path(service), class: "card-title" %></h4>
         <p class="card-text"><%= truncate(service.description, length: 200) %></p>
@@ -43,6 +43,7 @@
 <% end %>
 
 </div>
+
 
 
 </div>
