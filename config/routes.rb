@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/profile', to: 'profiles#index'
   #get '/profile/:id', to: 'profiles#show'
 
+  get '/landing_page', to: 'landing_pages#home', as: 'landing_page'
 
   get '/purchase_history', to: 'purchases#index'
 
