@@ -27,11 +27,6 @@ def show
   def edit
   end
 
-
-
-
-
-
   def create
     # @service = Service.new(service_params)
 
