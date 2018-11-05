@@ -1,7 +1,7 @@
 <div class="profile-container">
 
 <p>
-  <%= image_tag @service.user.avatar, class: "profile-image" %>
+  <%= image_tag @service.user.avatar_url, class: "profile-image" %>
 </p>
 
 <div class="services-show">
@@ -39,7 +39,7 @@
 <% if @service.user_id == current_user.id %>
   <%= link_to 'Edit Service', edit_service_path(@service), class:"btn btn-outline-primary" %>
 <% else %>
-  <%= form_with url: "/charges" do %>
+  <%= form_with url: "/purchases" do %>
   <article>
     <% if flash[:error].present? %>
       <div id="error_explanation">
@@ -49,10 +49,9 @@
    <!-- <label class="amount">
       <span>Amount: $<%= @service.price %></span>
     </label> -->
-    <div style="display:none">
-
-      <%= hidden_field_tag 'amount', @service.price %>
-      <%= hidden_field_tag 'service', @service.id %>
+    <div>
+      <input type="hidden" name="service_values[price]" value="<%= @service.price %>" />
+      <input type="hidden" name="service_values[id]" value="<%= @service.id %>" />
     </div>
   </article>
   </article>
@@ -61,6 +60,7 @@
           data-key="<%= Rails.application.credentials.stripe[:publishable] %>"
           data-description="A month's subscription"
           data-amount="<%= @service.price * 100 %>"
+          data-currency="aud"
           data-locale="auto"
           data-zip-code="true"
           data-email=<%= current_user.email %>></script>

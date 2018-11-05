@@ -8,19 +8,20 @@ class PurchasesController < ApplicationController
       @purchases = "It looks like you haven't made any purchases yet."
       @flash = flash.now[:error] = "It looks like you haven't made any purchases yet."
     else
-      @purchases = purchases
+      @purchases = Purchase.all
     end
+    
 
   end
 
   # GET /purchases/1
   # GET /purchases/1.json
-  def show
+  def show 
   end
 
   # GET /purchases/new
   def new
-    @purchase = Purchase.new
+    # @purchase = Purchase.new(purchase_params)
   end
 
   # GET /purchases/1/edit
@@ -30,17 +31,37 @@ class PurchasesController < ApplicationController
   # POST /purchases
   # POST /purchases.json
   def create
-    @purchase = Purchase.new(purchase_params)
+      # Amount in cents
+      @amount = (params[:service_values][:price].to_f * 100).round
+    
+      customer = Stripe::Customer.retrieve(current_user.customer_id)
+      customer.source = params[:stripeToken]
+      customer.save
 
-    respond_to do |format|
-      if @purchase.save
-        format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
-        format.json { render :show, status: :created, location: @purchase }
-      else
-        format.html { render :new }
-        format.json { render json: @purchase.errors, status: :unprocessable_entity }
-      end
-    end
+      charge = Stripe::Charge.create(
+        :customer             => current_user.customer_id,
+        :amount               => @amount,
+        :description          => 'Rails Stripe customer',
+        :currency             => 'aud',
+        :statement_descriptor => 'Custom descriptor',
+        :capture              => false,
+        :metadata             => {'service_id' => params[:service_values][:id]}
+      )
+
+       Purchase.create(
+        service_id: charge.metadata.service_id,
+        user_id: current_user.id,
+        charge_id: charge.id,
+        price: charge.amount
+        )
+        # byebug
+        
+      redirect_to root_path
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to new_charge_path
+
   end
 
   # PATCH/PUT /purchases/1

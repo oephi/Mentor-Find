@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_03_211352) do
+ActiveRecord::Schema.define(version: 2018_11_05_221822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_211352) do
   create_table "purchases", force: :cascade do |t|
     t.bigint "service_id"
     t.bigint "user_id"
-    t.integer "charge_id"
+    t.string "charge_id"
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
