@@ -9,8 +9,9 @@ class FeedsController < ApplicationController
         
         elsif params[:interest] == "all"
             @category = "Mentors From My Interests"
-            
-            @sample = Service.where(skill_id: User.find(current_user.id).interests.pluck(:skill_id)).sample(99)
+            # @test = User.find(current_user.id).interests.pluck(:skill_id)
+            @sample = Service.where(skill_id: User.find(current_user.id).interests.pluck(:skill_id).to_a).sample(99)
+            # byebug
 
         elsif params[:interest] # run this when interest parameter is present:
             @sample = Service.where(skill_id: Skill.find_by(name: params[:interest]).id)

@@ -1,7 +1,7 @@
 <div class="profile-container">
 
 <p>
-  <%= image_tag @service.user.avatar, class: "profile-image" %>
+  <%= image_tag @service.user.avatar_url, class: "profile-image" %>
 </p>
 
 <div class="services-show">
@@ -35,6 +35,7 @@
     $<%= @service.price %>/h
   </p>
 
+<!-- Stripe payments -->
 <% if @service.user_id == current_user.id %>
   <%= link_to 'Edit Service', edit_service_path(@service), class:"btn btn-outline-primary" %>
 <% else %>
@@ -45,16 +46,23 @@
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
-    <label class="amount">
-      <span>Amount: $5.00</span>
-    </label>
+   <!-- <label class="amount">
+      <span>Amount: $<%= @service.price %></span>
+    </label> -->
+    <div style="display:none">
+
+      <%= hidden_field_tag 'amount', @service.price %>
+      <%= hidden_field_tag 'service', @service.id %>
+    </div>
+  </article>
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.application.credentials.stripe[:publishable] %>"
           data-description="A month's subscription"
-          data-amount="500"
+          data-amount="<%= @service.price * 100 %>"
           data-locale="auto"
+          data-zip-code="true"
           data-email=<%= current_user.email %>></script>
   <% end %>
 <% end %>
