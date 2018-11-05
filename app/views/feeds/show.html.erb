@@ -2,8 +2,12 @@
 <h1 class= "profile-heading">My Profile</h1>
 
 <div class= "show">
+
+    
+
     <div> 
-        <%= image_tag User.find(current_user.id).avatar, class: "profile-image" %>
+        <%= image_tag(current_user.avatar_url, class:"profile-image")  unless current_user.avatar_url.nil?  %>
+
     </div> 
 
     <p>
