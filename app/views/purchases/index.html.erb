@@ -1,11 +1,10 @@
 <div class="devise-container">
-<p id="notice"><%= notice %></p>
 
 <% if current_user %>
     <h1>Your Mentor History</h1>
 
     <% if @purchases.class == String %>
-        <% flash.now[:error] = "It looks like you haven't made any purchases yet." %>
+        <% @flash %>
         <ul>
             <li>There's nothing here.</li>
         </ul>
@@ -13,7 +12,8 @@
         <ul>
             <% @purchases.each do |purchase| %>
             <li class="purchases">
-                <%= link_to "Category here | #{Service.find(purchase.service_id).user.name} | $#{purchase.price}/h | Followed by contact number", service_path(Service.find(purchase.service_id)) %>
+                <%= image_tag Service.find(purchase.service_id).user.avatar %> <br>
+                <%= link_to "Skill: #{Service.find(purchase.service_id).skill.name} | Mentor: #{Service.find(purchase.service_id).user.name} | $#{purchase.price}/h | Followed by contact number", service_path(Service.find(purchase.service_id)) %>
                 <%# TODO: remove the logic out of the view here %>
             </li>
             <% end %>
