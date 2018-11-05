@@ -6,7 +6,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   storage :aws
   
-  resize_to_fill(250, 250)
+  resize_to_fill(250, 286)
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
