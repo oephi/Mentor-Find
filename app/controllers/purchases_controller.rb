@@ -2,14 +2,14 @@ class PurchasesController < ApplicationController
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
 
   def index
-    #@purchases = Purchase.all
-    @purchases = Purchase.where(user_id: current_user.id)
+    purchases = Purchase.where(user_id: current_user.id)
 
-    # if purchases.empty?
-    #   @purchases = 
-    # else
-    #   @purchases = purchases
-    # end
+    if purchases.empty?
+      @purchases = "It looks like you haven't made any purchases yet."
+      @flash = flash.now[:error] = "It looks like you haven't made any purchases yet."
+    else
+      @purchases = purchases
+    end
 
   end
 
