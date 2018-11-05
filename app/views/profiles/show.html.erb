@@ -4,36 +4,46 @@
 <div> 
   <%= image_tag(@user.avatar_url, class:"profile-image") unless current_user.avatar_url.nil?  %>
 </div> 
-
+<br>
 <div>
   <h2>About Me</h2>
   <%= @user.description %> 
+</div><br>
+
+<div>
+    <h2>My Services Provided</h2>
+    <ul>
+    <% @services.each do |service| %>
+        <li><%= link_to service.skill.name.titleize, service_path(service) %></li>
+    <% end %>
+    </ul>
+</div><br>
+
+<div>
+    <h2>Reviews Received</h2>
+    <% if @received_error %>
+        <%= @received_error %>
+    <% else %>
+        <% @reviews_received.each do |review|%> 
+            <ul>
+                <li><%= review.content%></li>
+            </ul>
+        <% end %>
+    <% end %>
 </div>
 
-    <div>
-        <h2>My Services Provided</h2>
-        <ul>
-        <% @services.each do |service| %>
-            <li><%= link_to service.skill.name.titleize, service_path(service) %></li>
-        <% end %>
-        </ul>
-    </div>
-
-    <div>
-        <h2>Reviews Received</h2>
-        <% current_user.reviews.each do |review|%> 
+<div>
+    <h2>Reviews Left</h2>
+    <% if @left_error %>
+        <%= @left_error %>
+    <% else %>
+        <% @reviews_left.each do |review|%> 
             <%= review.content%>
         <% end %>
-    </div>
+    <% end %>
+</div> <br>
 
-    <div>
-        <h2>Reviews Left</h2>
-        <% current_user.reviews.each do |review|%> 
-            <%= review.content%>
-        <% end %>
-    </div> 
-
-    <%=link_to "Edit Profile", edit_user_registration_path, class: "btn btn-outline-primary" %> 
+<%=link_to "Edit Profile", edit_user_registration_path, class: "btn btn-outline-primary" %> 
 
 
 </div>
