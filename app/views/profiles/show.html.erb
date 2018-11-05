@@ -19,31 +19,104 @@
     </ul>
 </div><br>
 
-<div>
-    <h2>Reviews Received</h2>
-    <% if @received_error %>
-        <%= @received_error %>
-    <% else %>
-        <% @reviews_received.each do |review|%> 
-            <ul>
-                <li><%= review.content%></li>
-            </ul>
+
+
+
+
+
+
+
+
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reviews-left" aria-expanded="false" aria-controls="reviews-left">Reviews Left</button>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reviews-received" aria-expanded="false" aria-controls="reviews-received">Reviews Received</button>
+</p>
+
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="reviews-left">
+      <div class="card card-body">
+        <% if @left_error %>
+            <%= @left_error %>
+        <% else %>
+            <% @reviews_left.each do |review| %> 
+                <%= review.content%>
+
+
+                <div class="reviews-card">
+                <div class="card">
+                    <div class="card-header">
+                    <a href = "#" >
+                        <%= review.user.name.titleize %>
+                    </a>
+                    <span class="float-right"><%= 'Posted on ' + review.created_at.to_date.to_s%></span>
+
+                    </div>
+                    <div class="card-body">
+                    <p class="card-text"><%= review.content %></p>
+                    <% if review.user.id == current_user.id %>
+                        <p class="float-right">
+                        <%= link_to 'Edit Review', edit_review_path(review) %> | 
+                        <%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+                        </p>
+                    <% end %>
+                </div>
+                </div>
+
+
+
+
+
+
+
+                
+            <% end %>
         <% end %>
-    <% end %>
+      </div>
+    </div>
+  </div>
+    <div class="collapse multi-collapse" id="reviews-received">
+      <div class="card card-body">
+        <% if @received_error %>
+                <%= @received_error %>
+        <% else %>
+            <% @reviews_received.each do |review|%> 
+
+                <div class="card">
+                    <div class="card-header">
+                    <a href = "#" >
+                        <%= review.user.name.titleize %>
+                    </a>
+                    <span class="float-right"><%= 'Posted on ' + review.created_at.to_date.to_s%></span>
+
+                    </div>
+                    <div class="card-body">
+                    <p class="card-text"><%= review.content %></p>
+                    <% if review.user.id == current_user.id %>
+                        <p class="float-right">
+                        <%= link_to 'Edit Review', edit_review_path(review) %> | 
+                        <%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+                        </p>
+                    <% end %>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+            <% end %>
+         <% end %>
+    </div>
+  </div>
 </div>
 
-<div>
-    <h2>Reviews Left</h2>
-    <% if @left_error %>
-        <%= @left_error %>
-    <% else %>
-        <% @reviews_left.each do |review|%> 
-            <%= review.content%>
-        <% end %>
-    <% end %>
-</div> <br>
-
-<%=link_to "Edit Profile", edit_user_registration_path, class: "btn btn-outline-primary" %> 
+<%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-outline-primary" if @user.id == current_user.id %> 
 
 
 </div>

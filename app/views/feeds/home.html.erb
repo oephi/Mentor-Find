@@ -21,7 +21,7 @@
 
       <% @interests.each do |interest| %>
         <li>
-          <%= link_to interest.name.titleize, root_path(interest: interest.name), class: "#{'active' if params[:interest] == interest.name}" %><%= link_to(" x", interest_path(interest), method: :delete, data: { confirm: "Are you sure that you want to remove #{interest.name} from your interests?" }) %>
+          <%= link_to interest.name.titleize, root_path(interest: interest.name), class: "#{'active' if params[:interest] == interest.name}" %><%= link_to(" x", interest_path(interest), method: :delete, class: 'red-x', data: { confirm: "Are you sure that you want to remove #{interest.name} from your interests?" }) %>
         </li>
       <% end %>
     </ul>
