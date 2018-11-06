@@ -1,4 +1,4 @@
-<div class="devise-container">
+<div class="purchase-container">
 
 <% if current_user %>
     <h1>Your Purchase History</h1>
@@ -11,13 +11,25 @@
     <% else %>
         <ul>
             <% @purchases.each do |purchase| %>
-            <li class="purchases">
-                <%= image_tag Service.find(purchase.service_id).user.avatar_url %> <br>
-                <%= link_to "Skill: #{Service.find(purchase.service_id).skill.name} | Mentor: #{Service.find(purchase.service_id).user.name} | $#{purchase.price}/h | Followed by contact number", service_path(Service.find(purchase.service_id)) %>
-                <%# TODO: remove the logic out of the view here %>
+              <div class="card">
+                <div class="card-header text-white bg-success">
+                  Paid <strong><%= link_to purchase.service.user.name, service_path(purchase.service.id), class: "name" %></strong> on <strong><%= purchase.created_at.to_date %></strong>
+                </div>
+
+             <div class="card-body purchase">
+              <li class="purchases">
+                <%= image_tag purchase.service.user.avatar_url %> <br><br>
+                <strong>Skill</strong>: <%= purchase.service.skill.name %><br>
+                <strong>Price</strong>: $<%= purchase.price %>/h<br>
+                <strong>Number</strong>: number hehre
+
             </li>
+            </div>
+        </div><br>
             <% end %>
         </ul>
     <% end %>
 <% end %>
 </div>
+
+
