@@ -36,6 +36,8 @@
       <div class="card-body">
         <h4><%= link_to service.user.name, service_path(service), class: "card-title" %></h4>
         <p class="card-text"><%= truncate(service.description, length: 200) %></p>
+        <p class="price">$<%= service.price %>/h</p>
+
       </div>
     </div>
   <% end %>
