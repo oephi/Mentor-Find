@@ -8,10 +8,10 @@ class PurchasesController < ApplicationController
       @purchases = "It looks like you haven't made any purchases yet."
       @flash = flash.now[:error] = "It looks like you haven't made any purchases yet."
     else
-      @purchases = Purchase.all
-    end
-    
+      @purchases = Purchase.where(user_id: current_user.id)
+    end    
 
+  
   end
 
   # GET /purchases/1
@@ -21,7 +21,7 @@ class PurchasesController < ApplicationController
 
   # GET /purchases/new
   def new
-    # @purchase = Purchase.new(purchase_params)
+    @service = Service.new(skill_id: params[:service_id])    
   end
 
   # GET /purchases/1/edit
@@ -52,7 +52,7 @@ class PurchasesController < ApplicationController
         service_id: charge.metadata.service_id,
         user_id: current_user.id,
         charge_id: charge.id,
-        price: charge.amount
+        price: (charge.amount / 100)
         )
         # byebug
         

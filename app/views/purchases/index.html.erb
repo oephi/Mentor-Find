@@ -13,7 +13,7 @@
             <% @purchases.each do |purchase| %>
             <li class="purchases">
                 <%= image_tag Service.find(purchase.service_id).user.avatar_url %> <br>
-                <%= link_to "Skill: #{Service.find(purchase.service_id).skill.name} | Mentor: #{Service.find(purchase.service_id).user.name} | $#{purchase.price}/h | Followed by contact number", service_path(Service.find(purchase.service_id)) %>
+                <%= link_to "Skill: #{purchase.service.skill.name} | Mentor: #{purchase.service.user.name} | $#{purchase.price}/h ", service_path(purchase.service.id) %>
                 <%# TODO: remove the logic out of the view here %>
             </li>
             <% end %>
