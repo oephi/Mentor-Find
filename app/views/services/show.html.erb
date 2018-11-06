@@ -81,9 +81,7 @@
 <div class="reviews-card">
   <div class="card">
     <div class="card-header">
-      <a href = "#" >
-        <%= review.user.name.titleize %>
-      </a>
+      <%= link_to review.user.name.titleize, profile_path(review.user.id) %>
       <span class="float-right"><%= 'Posted on ' + review.created_at.to_date.to_s%></span>
 
     </div>
