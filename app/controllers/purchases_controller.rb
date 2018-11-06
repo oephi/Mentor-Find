@@ -42,19 +42,22 @@ class PurchasesController < ApplicationController
         :description          => 'Rails Stripe customer',
         :currency             => 'aud',
         :statement_descriptor => 'Custom descriptor',
-        :capture              => false,
+        :receipt_email        => current_user.email,
         :metadata             => {'service_id' => params[:service_values][:id]}
       )
 
-       Purchase.create(
+       @purchase = Purchase.create(
         service_id: charge.metadata.service_id,
         user_id: current_user.id,
         charge_id: charge.id,
         price: (charge.amount / 100)
-        )
-        # byebug
+        )  
+      
+        @purchase.save
         
-      redirect_to root_path
+        flash[:notice] = "Your payment to #{ @purchase.service.user.name } was successful!  Your Mentor will be in touch with you shortly."
+      redirect_to purchase_history_path
+
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
