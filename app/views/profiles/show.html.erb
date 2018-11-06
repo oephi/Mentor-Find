@@ -66,7 +66,9 @@
           <% @reviews_received.each do |review| %> 
             <div class="card">
               <div class="card-header">
-                <span>By <a href = "#" ><%= review.user.name.titleize %></a></span> for <%= review.service.skill.name %>
+                <span>By <%= link_to review.user.name, profile_path(review.user.id) %></span> 
+                for
+                 <%= link_to review.service.skill.name, service_path(review.service_id) %>
                 <span class="float-right"><%= 'Posted on ' + review.created_at.to_date.to_s%></span>
               </div>
 
