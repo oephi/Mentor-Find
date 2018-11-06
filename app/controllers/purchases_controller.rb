@@ -10,8 +10,6 @@ class PurchasesController < ApplicationController
     else
       @purchases = Purchase.where(user_id: current_user.id)
     end    
-
-  
   end
 
   # GET /purchases/1
