@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
         @service_ids = Service.where(user_id: @user.id).pluck(:id)
         @reviews_received = Review.where(service_id: @service_ids)
         if @reviews_received.empty?
-            @received_error = "You haven't received any."
+            @received_error = "They haven't received any."
         else
             @reviews_received
         end
@@ -22,7 +22,7 @@ class ProfilesController < ApplicationController
 
         # byebug
         if @user.reviews.empty?
-            @left_error = "You haven't left any."
+            @left_error = "They haven't left any."
         else
             @reviews_left = @user.reviews
         end
