@@ -8,13 +8,13 @@
         <% if current_user %>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <%= link_to "Profile", "/profile", class: "nav-link #{'active' if current_page?("/profile")}" %>
+              <%= link_to "Profile", profile_path(current_user.id), class: "nav-link #{'active' if current_page?("/profile")}" %>
             </li>
             <li class="nav-item">
               <%= link_to "Become a Mentor", new_service_path, class: "nav-link #{'active' if current_page?("/services/new")}" %>
             </li>
             <li>
-              <%= link_to "Purchase History", '/purchase_history', class: "nav-link #{'active' if current_page?("/purchase_history")}" %>
+              <%= link_to "Purchase History", purchases_path, class: "nav-link #{'active' if current_page?("/purchase_history")}" %>
             </li>
           </ul>
 

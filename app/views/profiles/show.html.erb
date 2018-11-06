@@ -1,5 +1,6 @@
 <div class="profile-container">
-  <h1 class= "profile-heading"><%= @user.name %></h1>
+  <h1 class= "profile-heading inline"><%= @user.name %></h1> 
+  <div class="inline edit-profile"><%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-outline-primary" if @user.id == current_user.id %></div>
 
   <div> 
     <%= image_tag(@user.avatar_url, class:"profile-image") unless current_user.avatar_url.nil?  %>
@@ -101,9 +102,9 @@
 
 
 
+  
 
 
-  <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-outline-primary" if @user.id == current_user.id %> 
 
 </div>
 
