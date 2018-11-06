@@ -8,7 +8,7 @@ class PurchasesController < ApplicationController
       @purchases = "It looks like you haven't made any purchases yet."
       @flash = flash.now[:error] = "It looks like you haven't made any purchases yet."
     else
-      @purchases = Purchase.all
+      @purchases = Purchase.where(user_id: current_user.id)
     end
     
 

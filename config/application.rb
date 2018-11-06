@@ -29,5 +29,9 @@ module MentorFind2
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+
+    # fixes heroku push error
+    config.assets.initialize_on_precompile = false
   end
 end
