@@ -31,7 +31,7 @@ def show
     # @service = Service.new(service_params)
 
     if Skill.exists?(name: service_params[:skill_id]) then
-      @skill = Skill.find_by(name: service_params[:skill_id])
+      @skill = Skill.find_by(name: service_params[:skill_id]).id
     else
       @skill = Skill.create(name: service_params[:skill_id]).id
     end
