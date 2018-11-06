@@ -56,7 +56,7 @@ class PurchasesController < ApplicationController
         @purchase.save
         
         flash[:notice] = "Your payment to #{ @purchase.service.user.name } was successful!  Your Mentor will be in touch with you shortly."
-      redirect_to purchase_history_path
+      redirect_to purchases_path
 
 
     rescue Stripe::CardError => e
