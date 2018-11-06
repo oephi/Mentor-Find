@@ -14,8 +14,13 @@
   <body> 
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/messages' %> <%# renders the flash messages %> 
-    <div class="container">
-      <%= yield %>
-    </div>
+    <% unless current_page?("/landing_page") %>
+      <div class="container"> 
+        <%= yield %>
+      </div>
+    <% else %>
+        <%= yield %>
+    <%end%>
+      
   </body>
 </html>
