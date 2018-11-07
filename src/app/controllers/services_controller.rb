@@ -19,24 +19,25 @@ def show
 
   # GET /services/new
   def new
-    @service = Service.new(user_id: current_user)
-    
+    @service = Service.new()
+    @skill = Skill.new()
   end
   
   # GET /services/1/edit
   def edit
   end
-
+  
   def create
-    # @service = Service.new(service_params)
+    @service = current_user.services.new(service_params)
 
-    if Skill.exists?(name: service_params[:skill_id]) then
-      @skill = Skill.find_by(name: service_params[:skill_id]).id
-    else
-      @skill = Skill.create(name: service_params[:skill_id]).id
+    if Skill.where(name: params[:service][:skill_id]).present?
+      @skill = Skill.find_by(name: params[:service][:skill_id])
+    elsif !Skill.where(name: params[:service][:skill_id]).present? 
+      @skill = Skill.create(name: params[:service][:skill_id])
     end
 
-    Service.create(
+    
+    @service = Service.create(
           user_id: current_user.id, 
           experience: service_params[:experience], 
           description: service_params[:description], 
@@ -44,9 +45,18 @@ def show
           skill_id: @skill
     )
 
-    #TODO: Add a flash message here
+    @service.save
 
-    redirect_to root_path #Make this render to Service.last once the view is setup
+    #TODO: Add a flash message here
+    respond_to do |format|
+      if @service.save
+        format.html { redirect_to root_path, notice: 'Review was successfully created.' }
+      else
+        format.html { render :new }
+      end
+    end
+
+   #Make this render to Service.last once the view is setup
   end
 
 

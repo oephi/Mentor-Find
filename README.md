@@ -24,6 +24,7 @@ Traditionally to find a mentor in a skill, you would need a combination of luck,
 MentorFind aims to fill that void by giving mentors the ability to create services for multiple different skills and connect them to users interested in being mentored. The mentors receive payments for their time, and they can receive reviews to build up a reputation within that niche which no current two sided marketplace provides the ability to do.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Features
 
 
@@ -135,6 +136,8 @@ We used git and github as our Source control. There is 3 production stages of gi
 **20. Provide an overview and description of your Testing process.**
 =======
 =======
+=======
+>>>>>>> ed24bccf9dc938f9a7967fe29ea039b3f07dcce1
 # Features [#](#table-of-contents)
 The *primary* features of our app are the following:
 * Authenticated user accounts which persists their data
@@ -148,7 +151,10 @@ The *primary* features of our app are the following:
 * A purchase history with mentors numbers and details
 
 # Installation & Setup [#](#table-of-contents)
+<<<<<<< HEAD
 >>>>>>> cb53fd75f94b827dd07b0583715f1c20af527d3f
+=======
+>>>>>>> ed24bccf9dc938f9a7967fe29ea039b3f07dcce1
 If you would like to have a look at the code for this website and play around with it, feel free to download it and getting it up and running by doing the following.
 ```
 git clone git@github.com:brasscapon/Mentor-Find.git mentor-find
@@ -212,6 +218,8 @@ Here are our User Stories (in the style of Agile Methodology) which we wrote to 
 * I am a mentor/mentee and I want to be able to upload and edit a profile picture of myself so that others know what I look like.
 * I am a mentor/mentee and I want to have a profile page so that I can have an a high level list of all of my reviews left/received as well as a general non-skill/interest specific description of myself.
 * I am a mentor and I want my profile to display a list of all of my services I provide so that users can find out other skills that I'm teaching.
+
+
 
 # Tools Used & Built With [#](#table-of-contents)
 * HTML5
@@ -301,22 +309,29 @@ AWS is a secure cloud services platform that allows easy leveraging of cloud bas
 
 
 
-## MIKE
-**11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).**  
-Our data structure is similar to Airbnb Experiences, where customers can search for a service(in this case an experience) offered by a person, and charges them a fee for the service provided. Mentor Find enables customers to search for an activity, service, or skill they are interested in and find mentors whom are willing to teach for an hourly fee. 
 
 
-**12. Discuss the database relations to be implemented.   WHY PICK THEM?**  
-The database relations consit of users, skills, interests, services, purchases, and reviews. We created a user model in order for a customer to access their saved personalized data. This data has access to their interest, skill, and service models. The user can search for something they wish to be mentored in and find a mentor who has that skill. 
+#MIKE
+**11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).**
+Our data structure is similar to Airbnb Experiences, where customers can search for a service(in this case an experience) offered by a person, and charges them a fee for the service provided. Mentor Find enables customers to search for an activity, service, or skill they are interested in and find mentors whom are willing to teach for an hourly fee.  
 
 
-**13. Describe your project’s models in terms of the relationships (active record associations) they have with each other. ACTUAL RELATIONSHIP BETWEEN THEM**  
+**12. Discuss the database relations to be implemented.   WHY PICK THEM?**
+The database relations consit of users, skills, interests, services, purchases, and reviews. We created a user model in order for a customer to access their saved personalized data. This data has access to their interest, skill, and service models. A user can search for something they wish to be mentored in creating an interest. A user can become a mentor and add the skills they wish to teach others, creating skills and services. A user can purchase other user's services and then can write reviews about the purchased services. 
 
 
-**14. Provide your database schema design.**  
+**13. Describe your project’s models in terms of the relationships (active record associations) they have with each other. ACTUAL RELATIONSHIP BETWEEN THEM**
+In Mentor Find, a user has many interests, services, purchases and reviews. Therefore, interests, services, purchases and reviews all belong to a user. A user also has many skills through interests because a user who is a mentor, has the skills to offer other users seeking that interst. Therefore a skill has many interests and services. 
+So, a service we've said belongs to a user and skill, it also has many purchases and reviews because the service will be bought and reviwed by multiple users.  
 
 
-**15. Provide User stories for your App.**  
+14. Provide your database schema design.
+**LINK TO ERD
+> link to the erd
+See section x 
+
+**15. Provide User stories for your App.**
+See section x
 
 
 
@@ -333,23 +348,7 @@ We started with an idea and fallowed with planing it with mockups.Afterwards we 
 We used git and github as our Source control. There is 3 production stages of git and it helps you to verify changes with your recent code if it conflicts. In git you can keep track of your updates by update title and notes and git push time. To connect we used GitHub, we kept our main code/master there where Adam worked as admin and looked after every repository and merge request.
 
 **20. Provide an overview and description of your Testing process.**  
->>>>>>> origin/master
 
-
-
-
-<<<<<<< HEAD
-### ADAM/sorta
-21. Discuss and analyse requirements related to information system security.
-
-
-22. Discuss methods you will use to protect information and data.
-
-
-
-**23. Research what your legal obligations are in relation to handling user data.**
-MentorApp collects and records a variety of data provided by the user - such as their email addresses, names, phone numbers, and even IP addresses. As we our website deals with sensitive personal information, we are legally obliged to adhere to Australia's *Privacy Act 1988 (Privacy Act)*  
-=======
 ## ALL
 **21. Discuss and analyse requirements related to information system security.**  
 - https
@@ -359,12 +358,9 @@ MentorApp collects and records a variety of data provided by the user - such as 
 **22. Discuss methods you will use to protect information and data.**  
 There are three main safeguards that we have used to protect information and data. The first is that we have protected against insecurities in the site by using the system security measures mentioned in Q21 above. The second is that during the retrieval of the users password during signup, the Devise rubygem that we are using uses another gem Bcrypt to encrypt their password and then store that password encrypted in our database. Thirdly we have deployed our website on Heroku which has a reputation for security and ensures that our data is not physically accessible to attacks.
 
-
 **23. Research what your legal obligations are in relation to handling user data.**  
 MentorApp collects and records a variety of data provided by the user - such as their email addresses, names, phone numbers, and even IP addresses. As we our website deals with sensitive personal information, we are legally obliged to adhere to Australia’s *Privacy Act 1988 (Privacy Act)*. Two noteworthy principles are 1) the website must not collective sensitive information about an individual unless it is reasonably necessary to the websites function, and 2) that the website or entity that runs it must not disclose the sensitive information provided to it to other parties. See clauses 3.3a and 6.1 [here](https://www.oaic.gov.au/individuals/privacy-fact-sheets/general/privacy-fact-sheet-17-australian-privacy-principles#part-2-collection-of-personal-information).
-
 
 # Share Our App [#](#table-of-contents)
 * [Link to website](https://secure-fjord-81769.herokuapp.com)
 * [Link to repository](https://github.com/brasscapon/Mentor-Find)
->>>>>>> origin/master
