@@ -1,5 +1,5 @@
 # MentorFind
-### [https://secure-fjord-81769.herokuapp.com](https://secure-fjord-81769.herokuapp.com)
+### Live App: [https://secure-fjord-81769.herokuapp.com](https://secure-fjord-81769.herokuapp.com)
 
 # Table of Contents
 * [About](#about)
@@ -14,6 +14,9 @@ It is difficult to find mentors both online and offline to teach skills that peo
 Traditionally to find a mentor in a skill, you would need a combination of luck, social connectivity, and the persistence at attending events to find somebody that would be willing to be your mentor. There currently exists no unifying online marketplace to connect Mentors to Mentees and vice versa. Such a marketplace would greatly improve the ease, speed, and ability for both sides of the interaction to connect.
 
 MentorFind aims to fill that void by giving mentors the ability to create services for multiple different skills and connect them to users interested in being mentored. The mentors receive payments for their time, and they can receive reviews to build up a reputation within that niche which no current two sided marketplace provides the ability to do.
+
+# Features
+
 
 # Installation & Setup
 If you would like to have a look at the code for this website and play around with it, feel free to download it and getting it up and running by doing the following.
@@ -55,9 +58,15 @@ By default the server runs on Port 3000, so to view the live site on your local 
 * **The Idea:** To begin our project, we began with the task of creating a two sided marketplace. We then did research and listed currently existing and successful 2 sided market places to familiarise ourselves, coming up with the following: gumtree, Ebay, AirBNB, Carousel, AliBaba, Amazon, Lynda, Facebook Market, Etsy, and Upwork. We proceeded by then brainstorming and we generated 1 idea each going around the circle until we had a total of 8 ideas which we were interested in. We then made a vote on our favourite idea which was MentorFind. Our other ideas were: Buying and Selling Pets, second hand tabletop games, connecting casual sports players for public matches, selling ideas, and a review based contractor site.
 * **Wireframing:** We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. When we were satisfied with the freehand drawings we converted them into digital mockups using Balsamiq. The full wireframe set can be viewed [Here](https://github.com/brasscapon/Mentor-Find/blob/master/docs/wireframes.pdf). The wireframes for our homepage is as follows:
 ![MentorFind Home Page Wireframe](https://github.com/brasscapon/Mentor-Find/blob/master/docs/homepage-wireframe.png)
+* **Database:** After drawing up our wireframes we created a freehand ERD (Entity Relationship Diagram) which described our planned database models to use, their attributes and data types, as well as the relationships between them. We received feedback from our educators and modified it 3 times to end up with this result:
+![ERD](https://github.com/brasscapon/Mentor-Find/blob/master/docs/erd.png)
 * **Tasks:** We then generated as many User Stories (in the style of Agile) as were required and imported them into Trello for us to manage our project.
+![Trello Board](https://github.com/brasscapon/Mentor-Find/blob/master/docs/trello.png)
 
-# Built With
+# User Stories
+User stories are well thought out, relevant, and comprehensively cover the needs of the app
+
+# Tools Used & Built With
 * HTML5
 * CSS3
 * Bootstrap (CSS Framework for styling)
@@ -68,7 +77,8 @@ By default the server runs on Port 3000, so to view the live site on your local 
 * Git & Github (source countrol)
 * [Heroku](https://heroku.com) (deployment)
 * [Google Fonts](https://fonts.google.com)
-* The following non-default Ruby Gems: [Textacular](https://github.com/textacular/textacular) (fuzzy search), [stripe-ruby](https://github.com/stripe/stripe-ruby) (e-payments), [carrierwave](https://github.com/carrierwaveuploader/carrierwave) + [carrierwave-aws](https://github.com/sorentwo/carrierwave-aws) (for AWS storage), [Faker](https://github.com/stympy/faker) (for generating seed data), [mini-magick](https://github.com/minimagick/minimagick) (for file uploading and resizing), [better-errors](https://github.com/BetterErrors/better_errors) (for debugging), and [jquery-rails](https://github.com/rails/jquery-rails) (for button togglging).
+* The following non-default Ruby Gems: [Textacular](https://github.com/textacular/textacular) (fuzzy search), [stripe-ruby](https://github.com/stripe/stripe-ruby) (e-payments), [carrierwave](https://github.com/carrierwaveuploader/carrierwave) + [carrierwave-aws](https://github.com/sorentwo/carrierwave-aws) (for AWS storage), [Faker](https://github.com/stympy/faker) (for generating seed data), [mini-magick](https://github.com/minimagick/minimagick) (for file uploading and resizing), [better-errors](https://github.com/BetterErrors/better_errors) (for debugging), and [jquery-rails](https://github.com/rails/jquery-rails) (for button toggling).
+* The team used [Slack](https://slack.com) to communicate with eachother.
 
 # Authors
 * [Adam Demirel](https://github.com/brasscapon)
