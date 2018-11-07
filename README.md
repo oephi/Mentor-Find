@@ -122,9 +122,10 @@ The database relations consit of users, skills, interests, services, purchases, 
 
 ## SINAN
 **16. Provide Wireframes for your App.**  
-
+Included in the docs.
 **17. Describe the way tasks are allocated and tracked in your project.**  
-Tasks are located at models and t
+We used Trello and Slack to allocate and track tasks. We connected our Trello to Slack so that we could be updated to all the changes at Trello. We qualified users experience, errors, code breaks and questions to create our tasks. The flexiblty of Trello allowed and easier access to list tasks, especially
+when we had to differentiate what was necessary  and what was a stretch.
 
 **18. Discuss how Agile methodology is being implemented in your project?**  
 We started with an idea and fallowed with planing it with mockups.Afterwards we took our time figuring out essential databases we need to create in order to keep it simple and clean. A small talk and research was done to figure out what gems will be used . We drew our Wireframes to finalise our plans we matched database with the actions we had on Wireframes.As we progressively code our way through our application we tested every git merge to make sure the code does not break along the way.
@@ -133,7 +134,7 @@ We started with an idea and fallowed with planing it with mockups.Afterwards we 
 We used git and github as our Source control. There is 3 production stages of git and it helps you to verify changes with your recent code if it conflicts. In git you can keep track of your updates by update title and notes and git push time. To connect we used GitHub, we kept our main code/master there where Adam worked as admin and looked after every repository and merge request.
 
 **20. Provide an overview and description of your Testing process.**  
-
+Every developer took their time testing their code locally. Our Source control give error for any code that conflicts with master. After each GitHub merge another test was done. Finally we test the general application daily to figure out bugs and have users view.
 
 
 
