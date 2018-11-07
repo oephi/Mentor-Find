@@ -1,5 +1,16 @@
-# Mentor-Find
-A rails app connecting mentors to those seeking to be mentored, in anything and everything.
+# MentorFind
+### [https://secure-fjord-81769.herokuapp.com](https://secure-fjord-81769.herokuapp.com)
+
+# Table of Contents
+* [About](#about)
+* [Installation & Setup](#installation-&-setup)
+
+# About
+It is difficult to find mentors both online and offline to teach skills that people seek. It is even more difficult to market yourself as a mentor and find clients.
+
+Traditionally to find a mentor in a skill, you would need a combination of luck, social connectivity, and the persistence at attending events to find somebody that would be willing to be your mentor. There currently exists no unifying online marketplace to connect Mentors to Mentees and vice versa. Such a marketplace would greatly improve the ease, speed, and ability for both sides of the interaction to connect.
+
+MentorFind aims to fill that void by giving mentors the ability to create services for multiple different skills and connect them to users interested in being mentored. The mentors receive payments for their time, and they can receive reviews to build up a reputation within that niche which no current two sided marketplace provides the ability to do.
 
 # Installation & Setup
 1) `git clone git@github.com:brasscapon/Mentor-Find.git`
@@ -26,7 +37,9 @@ MentorFind was developed locally on each developers computer and then we gained 
 **5. Identify and describe the software to be used in your App.**  
 Our application is and was built with Ruby on Rails. We chose Rails as our web development framework because it allowed us to do a lot of powerful things right out of the box, some of which include: a convention for structuring our application and the location for files, an MVC architecture (see Q8 for more info), convenient routing of HTTP requests, a built-in Web Server, ERB which allows us to embed Ruby code within our HTML code to determine the logic of the page, a huge library of RubyGems which we have the option of including, and most importantly an Object Relational Mapping system (called ActiveRecord) which allows us to conveniently interact with a database of our choice with Ruby syntax. Rails also gives us the ability to do other core tasks like use HTML, CSS, and JS.
 
-**6. Identify the database to be used in your App and provide a justification for your choice.**
+## Ryan  
+**6. Identify the database to be used in your App and provide a justification for your choice.**  
+
 We used Postgresql for our database.  Besides postgresql being the industry standard for and open source database, the advantage it has over other choices (like MYSQL, MariaDB and Firebird) is that it isn’t just a relational database but it’s also object-relational.  This is what makes Postgresql flexible and robust.
 
 **7. Identify and describe the production database setup (i.e. postgres instance).**  
