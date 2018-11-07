@@ -36,6 +36,7 @@ class PurchasesController < ApplicationController
       customer.source = params[:stripeToken]
       customer.save
 
+      # Stripe charge instatiation.  This gets sent to stripe
       charge = Stripe::Charge.create(
         :customer             => current_user.customer_id,
         :amount               => @amount,
@@ -46,6 +47,7 @@ class PurchasesController < ApplicationController
         :metadata             => {'service_id' => params[:service_values][:id]}
       )
 
+        # Instanatiating purchase information into application database for purchase history
        @purchase = Purchase.create(
         service_id: charge.metadata.service_id,
         user_id: current_user.id,
