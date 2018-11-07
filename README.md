@@ -55,7 +55,20 @@ By default the server runs on Port 3000, so to view the live site on your local 
 * **The Idea:** To begin our project, we began with the task of creating a two sided marketplace. We then did research and listed currently existing and successful 2 sided market places to familiarise ourselves, coming up with the following: gumtree, Ebay, AirBNB, Carousel, AliBaba, Amazon, Lynda, Facebook Market, Etsy, and Upwork. We proceeded by then brainstorming and we generated 1 idea each going around the circle until we had a total of 8 ideas which we were interested in. We then made a vote on our favourite idea which was MentorFind. Our other ideas were: Buying and Selling Pets, second hand tabletop games, connecting casual sports players for public matches, selling ideas, and a review based contractor site.
 * **Wireframing:** We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. When we were satisfied with the freehand drawings we converted them into digital mockups using Balsamiq. The full wireframe set can be viewed [Here](https://github.com/brasscapon/Mentor-Find/blob/master/docs/wireframes.pdf). The wireframes for our homepage is as follows:
 ![MentorFind Home Page Wireframe](https://github.com/brasscapon/Mentor-Find/blob/master/docs/homepage-wireframe.png)
-* We then generated as many User Stories (in the style of Agile) as were required and imported them into Trello for us to manage our project.
+* **Tasks:** We then generated as many User Stories (in the style of Agile) as were required and imported them into Trello for us to manage our project.
+
+# Built With
+* HTML5
+* CSS3
+* Bootstrap (CSS Framework for styling)
+* Ruby on Rails 5.2.1
+* Ruby 2.5.1
+* Visual Studio Code (text editor)
+* [Trello](https://trello.com) (for project management)
+* Git & Github (source countrol)
+* [Heroku](https://heroku.com) (deployment)
+* [Google Fonts](https://fonts.google.com)
+* The following non-default Ruby Gems: [Textacular](https://github.com/textacular/textacular) (fuzzy search), [stripe-ruby](https://github.com/stripe/stripe-ruby) (e-payments), [carrierwave](https://github.com/carrierwaveuploader/carrierwave) + [carrierwave-aws](https://github.com/sorentwo/carrierwave-aws) (for AWS storage), [Faker](https://github.com/stympy/faker) (for generating seed data), [mini-magick](https://github.com/minimagick/minimagick) (for file uploading and resizing), [better-errors](https://github.com/BetterErrors/better_errors) (for debugging), and [jquery-rails](https://github.com/rails/jquery-rails) (for button togglging).
 
 # Authors
 * [Adam Demirel](https://github.com/brasscapon)
@@ -69,10 +82,8 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 You are permitted to modify, alter, create copies, and distribute this project freely. We would love to see it expanded by other developers to include a larger dataset of questions and answers and improve on the application's functionality.
 
 # Acknowledgement
-
-# Share Our App
-* [Link to website](https://secure-fjord-81769.herokuapp.com)
-* [Link to repository](https://github.com/brasscapon/Mentor-Find)
+* Thanks to our peers and educators for helping us to identify and fix bugs when all hope seemed lost - In particular Garret Blankenship, James Lane, and James Holman.
+* To StackExchange and IRC for providing additional support.
 
 # Questions & Answers
 This project was motivated by a class assignment, as as a requirement of it answers to the specified questions are below.
@@ -168,3 +179,8 @@ There are three main safeguards that we have used to protect information and dat
 
 **23. Research what your legal obligations are in relation to handling user data.**  
 MentorApp collects and records a variety of data provided by the user - such as their email addresses, names, phone numbers, and even IP addresses. As we our website deals with sensitive personal information, we are legally obliged to adhere to Australia’s *Privacy Act 1988 (Privacy Act)*. Two noteworthy principles are 1) the website must not collective sensitive information about an individual unless it is reasonably necessary to the websites function, and 2) that the website or entity that runs it must not disclose the sensitive information provided to it to other parties. See clauses 3.3a and 6.1 [here](https://www.oaic.gov.au/individuals/privacy-fact-sheets/general/privacy-fact-sheet-17-australian-privacy-principles#part-2-collection-of-personal-information).
+
+
+# Share Our App
+* [Link to website](https://secure-fjord-81769.herokuapp.com)
+* [Link to repository](https://github.com/brasscapon/Mentor-Find)
