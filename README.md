@@ -80,6 +80,19 @@ User stories are well thought out, relevant, and comprehensively cover the needs
 * The following non-default Ruby Gems: [Textacular](https://github.com/textacular/textacular) (fuzzy search), [stripe-ruby](https://github.com/stripe/stripe-ruby) (e-payments), [carrierwave](https://github.com/carrierwaveuploader/carrierwave) + [carrierwave-aws](https://github.com/sorentwo/carrierwave-aws) (for AWS storage), [Faker](https://github.com/stympy/faker) (for generating seed data), [mini-magick](https://github.com/minimagick/minimagick) (for file uploading and resizing), [better-errors](https://github.com/BetterErrors/better_errors) (for debugging), and [jquery-rails](https://github.com/rails/jquery-rails) (for button toggling).
 * The team used [Slack](https://slack.com) to communicate with eachother.
 
+# Project Timeline
+As students we were allocated 10 days to complete this 2 sided marketplace project. Here is how we structured our time to meet our goals (keeping in mind that we continually reprioritised which tasks were the most important in the style of Agile methodology):
+* Day 1: We brainstormed ideas, created wireframes, and began working on our ERD.
+* Day 2: We finalised our ERD and generated the app, and added Devise.
+* Day 3: We generated all of the models and their respective associations and created a navbar as well as some of the main views.
+* Day 4: We hooked up routes, created services and mentor profiles, cleaned up the errors in the feeds view, and linked everything up - hyperlinks, database calls, and controller actions.
+* Day 5: We worked on the design, added flas messages, and fixed some bugs.
+* Day 6: We worked on fixing params and interest filtering bugs, and added fuzzy search.
+* Day 7: We added Stripe, AWS capability, and fixed some bugsg.
+* Day 8: We added some style, some minor features such as prices on user cards, and resolved some errors by adding default profile images.
+* Day 9: We created a landing page, deployed to Heroku, worked on the README, and fixed some more bugs.
+* Day 10: TODO
+
 # Authors
 * [Adam Demirel](https://github.com/brasscapon)
 * [Mike McCallum](https://github.com/mikemgm)
