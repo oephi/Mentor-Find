@@ -1,0 +1,96 @@
+<div class="profile-container">
+  <h1 class= "profile-heading inline"><%= @user.name %></h1> 
+  <div class="inline edit-profile"><%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-outline-primary" if @user.id == current_user.id %></div>
+
+  <div> 
+    <%= image_tag(@user.avatar_url, class:"profile-image") unless current_user.avatar_url.nil?  %>
+  </div> <br>
+
+  <div>
+    <h2>About Me</h2>
+    <%= @user.description %> 
+  </div> <br>
+
+  <div>
+    <h2>My Services Provided</h2>
+    <ul>
+      <% @services.each do |service| %>
+        <li>
+          <%= link_to service.skill.name.titleize, service_path(service) %>
+        </li>
+      <% end %>
+    </ul>
+  </div> <br>
+
+
+  <div id="myGroup">
+    <p>
+      <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#reviews-left" aria-expanded="false" aria-controls="reviews-left" data-parent="#myGroup">Reviews Left</button>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reviews-received" aria-expanded="false" aria-controls="reviews-received"  data-parent="#myGroup">Reviews Received</button>
+    </p>
+
+    <div class="collapse multi-collapse" id="reviews-left">
+      <div class="card-body">
+        <% if @left_error %>
+          <%= @left_error %>
+        <% else %>
+           <% @reviews_left.each do |review| %> 
+               <div class="card">
+                 <div class="card-header">
+                   <span>To <%= link_to review.service.user.name, profile_path(review.service.user.id) %></span> 
+                   for 
+                   <%= link_to review.service.skill.name, service_path(review.service.id) %>
+                   <span class="float-right"><%= 'Posted on ' + review.created_at.to_date.to_s%></span>
+                 </div>
+                   
+                 <div class="card-body">
+                    <p class="card-text"><%= review.content %></p>
+                    <% if review.user.id == current_user.id %>
+                      <p class="float-right">
+                       <%= link_to 'Edit Review', edit_review_path(review) %> | 
+                       <%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </p>
+                     <% end %>
+                 </div>
+               </div><br>  
+           <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="collapse multi-collapse show" id="reviews-received">
+      <div class="card-body">
+        <% if @received_error %>
+          <%= @received_error %>
+        <% else %>
+          <% @reviews_received.each do |review| %> 
+            <div class="card">
+              <div class="card-header">
+                <span>By <%= link_to review.user.name, profile_path(review.user.id) %></span> 
+                for
+                 <%= link_to review.service.skill.name, service_path(review.service_id) %>
+                <span class="float-right"><%= 'Posted on ' + review.created_at.to_date.to_s%></span>
+              </div>
+
+              <div class="card-body"> 
+                <p class="card-text"><%= review.content %></p>
+                <% if review.user.id == current_user.id %>
+                  <p class="float-right">
+                    <%= link_to 'Edit Review', edit_review_path(review) %> | 
+                    <%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  </p>
+                <% end %>
+              </div>
+            </div><br>  
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  let group = $('#myGroup');
+  group.on('show.bs.collapse', function() { group.find('.collapse').collapse('hide') });
+</script>

@@ -1,0 +1,38 @@
+<div class="purchase-container">
+
+    <% if current_user %>
+    <h1>Your Purchase History</h1>
+
+    <% if @purchases.class == String %>
+    <% @flash %>
+    <ul>
+        <li>There's nothing here.</li>
+    </ul>
+    <% else %>
+    <ul>
+        <% @purchases.each do |purchase| %>
+        <div class="card">
+            <div class="card-header text-white bg-success">
+                Paid <strong>
+                    <%= link_to purchase.service.user.name, service_path(purchase.service.id), class: "name" %></strong>
+                on <strong>
+                    <%= purchase.created_at.to_date %></strong>
+            </div>
+
+            <div class="card-body purchase">
+                <li class="purchases">
+                    <%= image_tag purchase.service.user.avatar_url %> <br><br>
+                    <strong>Skill</strong>:
+                    <%= purchase.service.skill.name %><br>
+                    <strong>Price</strong>: $
+                    <%= purchase.price %>/h<br>
+                    <strong>Number</strong>:
+                    <%= purchase.service.user.phone%>
+                </li>
+            </div>
+        </div><br>
+        <% end %>
+    </ul>
+    <% end %>
+    <% end %>
+</div>
