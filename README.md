@@ -37,14 +37,13 @@ MentorFind was developed locally on each developers computer and then we gained 
 **5. Identify and describe the software to be used in your App.**  
 Our application is and was built with Ruby on Rails. We chose Rails as our web development framework because it allowed us to do a lot of powerful things right out of the box, some of which include: a convention for structuring our application and the location for files, an MVC architecture (see Q8 for more info), convenient routing of HTTP requests, a built-in Web Server, ERB which allows us to embed Ruby code within our HTML code to determine the logic of the page, a huge library of RubyGems which we have the option of including, and most importantly an Object Relational Mapping system (called ActiveRecord) which allows us to conveniently interact with a database of our choice with Ruby syntax. Rails also gives us the ability to do other core tasks like use HTML, CSS, and JS.
 
-
-
-
 ## Ryan  
 **6. Identify the database to be used in your App and provide a justification for your choice.**  
+
 We used Postgresql for our database.  Besides postgresql being the industry standard for and open source database, the advantage it has over other choices (like MYSQL, MariaDB and Firebird) is that it isn’t just a relational database but it’s also object-relational.  This is what makes Postgresql flexible and robust.
 
 **7. Identify and describe the production database setup (i.e. postgres instance).**  
+
 
 **8. Describe the architecture of your App.**  
 Our application is written using the Rails framework which utilises the MVC architectural paradigm.  We chose rails due to it’s use of “Convention over Configuration”, which demands a common work flow between programming environment setups negating the need for pre-established design patterns.
@@ -56,7 +55,6 @@ Mentor-Find basically allows people to find other people.  For this to occur, we
 People who want to be mentors provide certain services.  These services are linked to the mentors by relating each service to them through the database.  The same service can be provided by different mentors so each service is uniquely linked to each different mentor by placing that relationship in its own database-table called a **joint-table*. This makes accessing each mentor-service easy to handle by the *ServiceController*, which acts as the logic between what the user sees, and what they want to access from the database.
 
 The application also has a purchase history which allows the information from each purchase to be kept locally in the application database and then filtered according to which user is logged in.  A user cannot view another’s purchases or purchase details due to each user having a unique identification code.  This is assigned at a user registration and is cross-referenced each time they make a request to the database.  
-
 
 **10. Detail any third party services that your App will use.**  
 The third party services utilised by Mentor-Find is Stripe and AWS. 

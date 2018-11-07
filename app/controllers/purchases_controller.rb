@@ -36,25 +36,30 @@ class PurchasesController < ApplicationController
       customer.source = params[:stripeToken]
       customer.save
 
+      # Stripe charge instatiation.  This gets sent to stripe
       charge = Stripe::Charge.create(
         :customer             => current_user.customer_id,
         :amount               => @amount,
         :description          => 'Rails Stripe customer',
         :currency             => 'aud',
         :statement_descriptor => 'Custom descriptor',
-        :capture              => false,
+        :receipt_email        => current_user.email,
         :metadata             => {'service_id' => params[:service_values][:id]}
       )
 
-       Purchase.create(
+        # Instanatiating purchase information into application database for purchase history
+       @purchase = Purchase.create(
         service_id: charge.metadata.service_id,
         user_id: current_user.id,
         charge_id: charge.id,
         price: (charge.amount / 100)
-        )
-        # byebug
+        )  
+      
+        @purchase.save
         
-      redirect_to root_path
+        flash[:notice] = "Your payment to #{ @purchase.service.user.name } was successful!  Your Mentor will be in touch with you shortly."
+      redirect_to purchases_path
+
 
     rescue Stripe::CardError => e
       flash[:error] = e.message

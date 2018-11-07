@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
     # end
 
     def show
-        @user = Service.find(params[:id]).user
+        @user = User.find(params[:id])
         @services = Service.where(user_id: @user.id)
 
         @service_ids = Service.where(user_id: @user.id).pluck(:id)
