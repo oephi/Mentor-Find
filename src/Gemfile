@@ -71,4 +71,4 @@ gem "bundler", "= 1.17.1"
 gem "better_errors", "~> 2.5"
 
 
-gem "mailgun-ruby", "~> 1.1"
+gem "mailgun-ruby", "~> 1.1" #TODO: remove
