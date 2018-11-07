@@ -72,6 +72,10 @@ By default the server runs on Port 3000, so to view the live site on your local 
 * **Tasks:** We then generated as many User Stories (in the style of Agile) as were required and imported them into Trello for us to manage our project.
 ![Trello Board](https://github.com/brasscapon/Mentor-Find/blob/master/docs/trello.png)
 
+# User Flow
+The app was designed for the user to flow through it roughly as follows:
+![MentorFind User Flow](https://github.com/brasscapon/Mentor-Find/blob/master/docs/user-flow.png)
+
 # User Stories
 User stories are well thought out, relevant, and comprehensively cover the needs of the app
 
