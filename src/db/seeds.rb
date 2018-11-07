@@ -10,7 +10,7 @@
 for i in 1..100 do
     User.create( 
         name: Faker::FunnyName.two_word_name, 
-        remote_avatar_url: Faker::LoremFlickr.image("250x250"),
+        # remote_avatar_url: Faker::LoremFlickr.image("250x250"),
         city: Faker::Address.full_address, 
         phone: Faker::PhoneNumber.phone_number,
         email: Faker::Internet.email,
@@ -47,10 +47,10 @@ for i in 1..100
 end 
 
 
-for i in 1..100
-    Purchase.create(
-        service_id: i, 
-        user_id: i, 
-        charge_id: 123, 
-        price: rand(50))
-end
+# for i in 1..100
+#     Purchase.create(
+#         service_id: i, 
+#         user_id: i, 
+#         charge_id: 123, 
+#         price: rand(50))
+# end
