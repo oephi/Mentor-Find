@@ -70,24 +70,24 @@ margin-bottom: 1rem;
     width: 50%;
 } 
 
-#fixed img{
-    // background-image: no-repeat center center fixed;
-    display: table;
-    height: 60vh;
-    width: 100%;
-    position: relative;
-    background-size: cover;
+#fixed{
+    background-image: linear-gradient(rgba(11, 129, 158, 0.6),rgba(170, 59, 221, 0.2)), url("fixed.jpg");
+    background-attachment: fixed;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 65vh;
 
 } 
 
 .bs-calltoaction{
-    position: relative;
+    position: absolute;
     width:auto;
     padding: 15px 25px;
     border: 1px solid black;
-    margin-top: 10px;
+    margin-top: 130px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 5px; 
 }
 .bs-calltoaction > .row{
     display:table;
@@ -123,13 +123,20 @@ margin-bottom: 1rem;
 
         .cta-button{
             padding-top: 10px;
-            padding-bottom: 10px;
+            padding-bottom: 10px; 
+
+            a {	
+                color: #000;	
+                 &:visited {	
+                  color: #fff;	
+                }	
+            }
         }
         .bs-calltoaction.bs-calltoaction-primary{
             color: #fff;
             background-color: #337ab7;
             border-color: #2e6da4;
-        }
+        } 
 
 // .card-img-top{
 //     border-radius: 50%;
