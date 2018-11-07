@@ -16,7 +16,16 @@ Traditionally to find a mentor in a skill, you would need a combination of luck,
 MentorFind aims to fill that void by giving mentors the ability to create services for multiple different skills and connect them to users interested in being mentored. The mentors receive payments for their time, and they can receive reviews to build up a reputation within that niche which no current two sided marketplace provides the ability to do.
 
 # Features
-
+The *primary* features of our app are the following:
+* Authenticated user accounts which persists their data
+* Profile image uploading
+* Sorting the feed of mentors via 'interest' tags
+* Searching the mentor categories via fuzzy search
+* Paying the mentor using Stripe
+* The ability to leave reviews on a mentors service page
+* The ability to be a mentor at multiple skills
+* The ability to be both a mentor and a mentee
+* A purchase history with mentors numbers and details
 
 # Installation & Setup
 If you would like to have a look at the code for this website and play around with it, feel free to download it and getting it up and running by doing the following.
@@ -91,7 +100,7 @@ As students we were allocated 10 days to complete this 2 sided marketplace proje
 * Day 7: We added Stripe, AWS capability, and fixed some bugsg.
 * Day 8: We added some style, some minor features such as prices on user cards, and resolved some errors by adding default profile images.
 * Day 9: We created a landing page, deployed to Heroku, worked on the README, and fixed some more bugs.
-* Day 10: TODO
+* Day 10: 
 
 # Authors
 * [Adam Demirel](https://github.com/brasscapon)
