@@ -4,6 +4,7 @@
 # Table of Contents
 * [About](#about)
 * [Installation & Setup](#installation-&-setup)
+* [Project Management](#project-management)
 
 # About
 It is difficult to find mentors both online and offline to teach skills that people seek. It is even more difficult to market yourself as a mentor and find clients.
@@ -48,6 +49,10 @@ rails s
 It should now be good to go. 
 By default the server runs on Port 3000, so to view the live site on your local machine, head to [localhost:3000](http://localhost:3000)
 
+# Project Management
+* **The Idea:** To begin our project, we began with the task of creating a two sided marketplace. We then did research and listed currently existing and successful 2 sided market places to familiarise ourselves, coming up with the following: gumtree, Ebay, AirBNB, Carousel, AliBaba, Amazon, Lynda, Facebook Market, Etsy, and Upwork. We proceeded by then brainstorming and we generated 1 idea each going around the circle until we had a total of 8 ideas which we were interested in. We then made a vote on our favourite idea which was MentorFind. Our other ideas were: Buying and Selling Pets, second hand tabletop games, connecting casual sports players for public matches, selling ideas, and a review based contractor site.
+* **Wireframing:** We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. The full wireframe set can be viewed [Here](). Some of our wireframes are as follows:
+![]()
 
 
 # Questions & Answers
