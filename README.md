@@ -13,14 +13,45 @@ Traditionally to find a mentor in a skill, you would need a combination of luck,
 MentorFind aims to fill that void by giving mentors the ability to create services for multiple different skills and connect them to users interested in being mentored. The mentors receive payments for their time, and they can receive reviews to build up a reputation within that niche which no current two sided marketplace provides the ability to do.
 
 # Installation & Setup
-1) `git clone git@github.com:brasscapon/Mentor-Find.git`
-2) `bundle install`
-3) `rails db:create` (inside the directory)
-4) `rails db:migrate`
+If you would like to have a look at the code for this website and play around with it, feel free to download it and getting it up and running by doing the following.
+```
+git clone git@github.com:brasscapon/Mentor-Find.git mentor-find
+```
+
+Then navigate to the directory with the commandline.
+
+```
+cd ~/code/mentor-find
+```
+Your directory will likely be different.
+
+Inside the commandline at that directory, run the following to install all the libraries
+```
+bundle install
+```
+
+Then create the database
+```
+rails db:create
+```
+
+and run the migrations
+```
+rails db:migrate
+```
+
+Then lastly boot up the rails server with
+```
+rails s
+```
+
+It should now be good to go. 
+By default the server runs on Port 3000, so to view the live site on your local machine, head to [localhost:3000](http://localhost:3000)
 
 
 
 # Questions & Answers
+This project was motivated by a class assignment, as as a requirement of it answers to the specified questions are below.
 
 **1. What is the need (i.e. challenge) that you will be addressing in your project?**  
 It is difficult to find mentors both online and offline to teach skills that people seek. It is even more difficult to market yourself as a mentor and find clients.
