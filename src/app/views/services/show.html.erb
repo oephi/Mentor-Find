@@ -72,11 +72,11 @@
 <h1>Reviews</h1>
 
 
-<% if @service.user_id != current_user.id && (@reviews.pluck(:user_id).count(current_user.id) < 1)%>
+<% if @service.user_id != current_user.id && (@reviews.pluck(:user_id).count(current_user.id) < 1) && current_user.purchases.where(service_id: @service.id).exists? %>
   <%= render 'reviews/leave_review', review: @review %>
 <% end %>
 
-
+<% console %>
 <% @reviews.each do |review| %>
 <div class="reviews-card">
   <div class="card">
