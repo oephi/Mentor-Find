@@ -69,3 +69,5 @@ gem "carrierwave-aws", "~> 1.3"
 
 gem "mini_magick", "~> 4.9"
 gem "bundler", "= 1.17.1"
+
+gem "mailgun-ruby", "~> 1.1"

@@ -68,17 +68,28 @@ Our data structure is similar to Airbnb Experiences, where customers can search 
 
 
 **12. Discuss the database relations to be implemented.   WHY PICK THEM?**
-The database relations consit of users, skills, interests, services, purchases, and reviews. We created a user model in order for a customer to access their saved personalized data. This data has access to their interests, skills, and services models. The user can search for something they wish to be taught in
+The database relations consit of users, skills, interests, services, purchases, and reviews. We created a user model in order for a customer to access their saved personalized data. This data has access to their interest, skill, and service models. A user can search for something they wish to be mentored in creating an interest. A user can become a mentor and add the skills they wish to teach others, creating skills and services. A user can purchase other user's services and then can write reviews about the purchased services. 
 
 
 **13. Describe your project’s models in terms of the relationships (active record associations) they have with each other. ACTUAL RELATIONSHIP BETWEEN THEM**
+In Mentor Find, a user has many interests, services, purchases and reviews. Therefore, interests, services, purchases and reviews all belong to a user. A user also has many skills through interests because a user who is a mentor, has the skills to offer other users seeking that interst. Therefore a skill has many interests and services. 
+So, a service we've said belongs to a user and skill, it also has many purchases and reviews because the service will be bought and reviwed by multiple users.  
 
 
 14. Provide your database schema design.
+**LINK TO ERD
 
+**15. Provide User stories for your App.**
 
-15. Provide User stories for your App.
-
+-I am a user and I want to access a signup page so that I can register an account at mentorfind. 
+-I am a user and I want to access a login page so that I can authorize my access. 
+-I am a user and I want to be able to see my own profile page. 
+-I am a user and I want to be able to upload a picture of myself to my profile so that my mentor or mentee knows what I look like.
+-I am a user and I want the home page to have an unsorted feed of mentors in my related categories that I have chosen. 
+-I am a mentee and I want to be able to add categories that I want to see mentors of. 
+-I am a user and I want the mentors profile_overview to have a list of their services that link to the appropriate service_profiles so that I can see what they have available
+-I am a user and I want to see a service profile of the mentor to see information about them and pay them. 
+-I am a mentee and I want to be able to pay the mentor using stripe which connects to my credit card.
 
 
 

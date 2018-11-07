@@ -47,11 +47,114 @@ h3{
 }
 }
 
-
-.hero{
-    height: 30%;
+.padding{
+    padding-bottom: 2rem;
 }
+
+
+.social{
+padding-top: 2rem;
+
+
+
+hr{
+border-top: 2px solid #b4b4b4;
+width: 95%;
+margin-top: .3rem;
+margin-bottom: 1rem;
+}
+}
+.card{
+    margin:auto;
+    text-align: center;
+    width: 50%;
+} 
+
+#fixed img{
+    // background-image: no-repeat center center fixed;
+    display: table;
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+
+} 
+
+.bs-calltoaction{
+    position: relative;
+    width:auto;
+    padding: 15px 25px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.bs-calltoaction > .row{
+    display:table;
+    width: calc(100% + 30px);
+}
+ 
+    .bs-calltoaction > .row > [class^="col-"],
+    .bs-calltoaction > .row > [class*=" col-"]{
+        float:none;
+        display:table-cell;
+        vertical-align:middle;
+    }
+
+        .cta-contents{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+            .cta-title{
+                margin: 0 auto 15px;
+                padding: 0;
+                text-align: center
+            }
+
+            .cta-desc{
+                padding: 0; 
+                text-align: center;
+            }
+
+            .cta-desc p:last-child{
+                margin-bottom: 0;
+            }
+
+        .cta-button{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .bs-calltoaction.bs-calltoaction-primary{
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+
+// .card-img-top{
+//     border-radius: 50%;
+    
+// }
+
 
 .sales-team-logo-item{
     display:inline;
+}
+
+
+
+
+
+
+// ---- MEDIA QUERIES ---
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 576px){
+    
 }
