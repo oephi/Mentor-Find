@@ -5,6 +5,8 @@
 * [About](#about)
 * [Installation & Setup](#installation-&-setup)
 * [Project Management](#project-management)
+* [Share](#share-our-app)
+* [Questions & Answers](#questions-&-answers)
 
 # About
 It is difficult to find mentors both online and offline to teach skills that people seek. It is even more difficult to market yourself as a mentor and find clients.
@@ -51,9 +53,26 @@ By default the server runs on Port 3000, so to view the live site on your local 
 
 # Project Management
 * **The Idea:** To begin our project, we began with the task of creating a two sided marketplace. We then did research and listed currently existing and successful 2 sided market places to familiarise ourselves, coming up with the following: gumtree, Ebay, AirBNB, Carousel, AliBaba, Amazon, Lynda, Facebook Market, Etsy, and Upwork. We proceeded by then brainstorming and we generated 1 idea each going around the circle until we had a total of 8 ideas which we were interested in. We then made a vote on our favourite idea which was MentorFind. Our other ideas were: Buying and Selling Pets, second hand tabletop games, connecting casual sports players for public matches, selling ideas, and a review based contractor site.
-* **Wireframing:** We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. The full wireframe set can be viewed [Here](). Some of our wireframes are as follows:
-![]()
+* **Wireframing:** We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. When we were satisfied with the freehand drawings we converted them into digital mockups using Balsamiq. The full wireframe set can be viewed [Here](https://github.com/brasscapon/Mentor-Find/blob/master/docs/wireframes.pdf). The wireframes for our homepage is as follows:
+![MentorFind Home Page Wireframe](https://github.com/brasscapon/Mentor-Find/blob/master/docs/homepage-wireframe.png)
+* We then generated as many User Stories (in the style of Agile) as were required and imported them into Trello for us to manage our project.
 
+# Authors
+* [Adam Demirel](https://github.com/brasscapon)
+* [Mike McCallum](https://github.com/mikemgm)
+* [Ryan Sickle](https://github.com/oephi)
+* [Sinan Canselen](https://github.com/canselen)
+
+# License
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](https://github.com/brasscapon/Mentor-Find/blob/master/src/LICENSE) file for details.
+
+You are permitted to modify, alter, create copies, and distribute this project freely. We would love to see it expanded by other developers to include a larger dataset of questions and answers and improve on the application's functionality.
+
+# Acknowledgement
+
+# Share Our App
+* [Link to website](https://secure-fjord-81769.herokuapp.com)
+* [Link to repository](https://github.com/brasscapon/Mentor-Find)
 
 # Questions & Answers
 This project was motivated by a class assignment, as as a requirement of it answers to the specified questions are below.
