@@ -28,11 +28,16 @@ class InterestsController < ApplicationController
     # @user.skills.create(name: params[:interest])
     # @interest = Interest.new(interest_params)
 
-    if Skill.exists?(name: params[:interest]) then  #add strong params here
+    if Skill.exists?(name: params[:interest]) #TODO: add strong params here
       @skill = Skill.find_by(name: params[:interest]).id
-      @user.interests.create(skill_id: @skill)
     else
       @user.skills.create(name: params[:interest]).id
+    end
+
+    unless @user.skills.pluck(:name).include?(params[:interest]) #TODO: strong params here as well.
+      @user.interests.create(skill_id: @skill)
+    else
+      flash[:alert] = "You're already interested in that." #TODO: why is this showing??
     end
 
     redirect_back fallback_location: root_path

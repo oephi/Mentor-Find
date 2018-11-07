@@ -34,9 +34,13 @@
 <div class="container2">
   <% @sample.each do |service| %>
     <div class="card m-2" style="width: 18rem;">
-      <%= link_to image_tag(service.user.avatar_url, class: "card-img-top mx-auto"), service_path(service) %>
+      <%= link_to image_tag(service.user.avatar_url, class: "card-img-top"), service_path(service) %>
       <div class="card-body">
-        <h4><%= link_to service.user.name, service_path(service), class: "card-title" %></h4>
+        <h4><%= link_to service.user.name.titleize, service_path(service), class: "card-title" %></h4>
+        <% if @true %>
+          <strong><%= service.skill.name.titleize  %></strong>
+        <% end %>
+
         <p class="card-text"><%= truncate(service.description, length: 200) %></p>
         <p class="price">$<%= service.price %>/h</p>
 

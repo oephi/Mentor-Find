@@ -6,11 +6,13 @@ class FeedsController < ApplicationController
             @sample = Service.all.sample(99) # old: order("RANDOM()").take(99)
             @category = "Mentors From All Categories"
             @class = 'active'
+            @true = true
         
         elsif params[:interest] == "all"
             @category = "Mentors From My Interests"
             # @test = User.find(current_user.id).interests.pluck(:skill_id)
             @sample = Service.where(skill_id: User.find(current_user.id).interests.pluck(:skill_id).to_a).sample(99)
+            @true = true
 
         elsif params[:interest] # run this when interest parameter is present:
             @sample = Service.where(skill_id: Skill.find_by(name: params[:interest]).id)
