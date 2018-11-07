@@ -2,19 +2,19 @@
 ### Live App: [https://secure-fjord-81769.herokuapp.com](https://secure-fjord-81769.herokuapp.com)
 
 # #Table of Contents
-* [About](#about)
-* [Features](#features)
-* [Installation & Setup](#installation-&-setup)
-* [Project Management](#project-management)
-* [User Flow](#user-flow)
-* [User Stories](#user-stories)
-* [Tools Used & Built With](#tools-used-&-built-with)
-* [Project Timeline](#project-timeline)
-* [Authors](#authors)
-* [License](#license)
-* [Acknowledgement](#acknowledgement)
-* [Questions & Answers](#questions-&-answers)
-* [Share](#share-our-app)
+* [About](#about-)
+* [Features](#features-)
+* [Installation & Setup](#installation-&-setup-)
+* [Project Management](#project-management-)
+* [User Flow](#user-flow-)
+* [User Stories](#user-stories-)
+* [Tools Used & Built With](#tools-used-&-built-with-)
+* [Project Timeline](#project-timeline-)
+* [Authors](#authors-)
+* [License](#license-)
+* [Acknowledgement](#acknowledgement-)
+* [Questions & Answers](#questions-&-answers-)
+* [Share](#share-our-app-)
 
 # About [#](#table-of-contents)
 It is difficult to find mentors both online and offline to teach skills that people seek. It is even more difficult to market yourself as a mentor and find clients.
@@ -115,17 +115,17 @@ Here are our User Stories (in the style of Agile Methodology) which we wrote to 
 * The team used [Slack](https://slack.com) to communicate with eachother.
 
 # Project Timeline [#](#table-of-contents)
-As students we were allocated 10 days to complete this 2 sided marketplace project. Here is how we structured our time to meet our goals (keeping in mind that we continually reprioritised which tasks were the most important in the style of Agile methodology):
+As students we were allocated 9 weekdays to complete this 2 sided marketplace project. Here is how we structured our time to meet our goals (keeping in mind that we continually reprioritised which tasks were the most important in the style of Agile methodology):
 * Day 1: We brainstormed ideas, created wireframes, and began working on our ERD.
 * Day 2: We finalised our ERD and generated the app, and added Devise.
 * Day 3: We generated all of the models and their respective associations and created a navbar as well as some of the main views.
 * Day 4: We hooked up routes, created services and mentor profiles, cleaned up the errors in the feeds view, and linked everything up - hyperlinks, database calls, and controller actions.
-* Day 5: We worked on the design, added flas messages, and fixed some bugs.
-* Day 6: We worked on fixing params and interest filtering bugs, and added fuzzy search.
-* Day 7: We added Stripe, AWS capability, and fixed some bugsg.
-* Day 8: We added some style, some minor features such as prices on user cards, and resolved some errors by adding default profile images.
-* Day 9: We created a landing page, deployed to Heroku, worked on the README, and fixed some more bugs.
-* Day 10: 
+* (weekend) We worked on the design, added flash messages, and fixed some bugs.
+* Day 5: We worked on fixing params and interest filtering bugs, and added fuzzy search.
+* Day 6: We added Stripe, AWS capability, and fixed some bugsg.
+* Day 7: We added some style, some minor features such as prices on user cards, and resolved some errors by adding default profile images.
+* Day 8: We created a landing page, deployed to Heroku, worked on the README, and fixed some more bugs.
+* Day 9: 
 
 # Authors [#](#table-of-contents)
 * [Adam Demirel](https://github.com/brasscapon)
