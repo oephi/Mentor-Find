@@ -86,7 +86,7 @@ You are permitted to modify, alter, create copies, and distribute this project f
 * To StackExchange and IRC for providing additional support.
 
 # Questions & Answers
-This project was motivated by a class assignment, as as a requirement of it answers to the specified questions are below.
+This project was motivated by a class assignment, and as a requirement of it answers to the specified questions are below.
 
 **1. What is the need (i.e. challenge) that you will be addressing in your project?**  
 It is difficult to find mentors both online and offline to teach skills that people seek. It is even more difficult to market yourself as a mentor and find clients.
