@@ -85,7 +85,20 @@ The app was designed for the user to flow through it roughly as follows:
 ![MentorFind User Flow](https://github.com/brasscapon/Mentor-Find/blob/master/docs/user-flow.png)
 
 # User Stories [#](#table-of-contents)
-User stories are well thought out, relevant, and comprehensively cover the needs of the app
+Here are our User Stories (in the style of Agile Methodology) which we wrote to inform the expected needs of a user interacting with our app:
+* I am a mentor/mentee and I want to be able to register an account so that I can store my information separate to other users.
+* I am a mentor/mentee and I want to be able to login/logout so that I can switch accounts and authorize myself when needed.
+* I am a mentor and I want to be able to create a 'service' which allows me to specify a price/description/skill so that I can advertise myself to others.
+* I am a mentee and I want to be able to see a list of mentors in random categories so that I can expose myself to skills I wasn't aware that I wanted to learn.
+* I am a mentee and I want to be able to use a search bar to search the skill categories being mentored by name and return a filtered list.
+* I am a mentee and I want to be able to add an 'interest' tag permanently so that I can click it and filter the mentors feed by term without needing to continually search for that term.
+* I am a mentor/mentee and I want to be able to be paid/pay for a service so that I gain access to an allocated amount of a mentors time to be scheduled.
+* I am a mentee and I want to be given the mentors contact number and email so that I can get in touch after a purchase.
+* I am a mentee and I want to be able to see a list of of purchase history.
+* I am a mentee and I want to be able to edit/delete reviews that I leave on service pages.
+* I am a mentor/mentee and I want to be able to upload and edit a profile picture of myself so that others know what I look like.
+* I am a mentor/mentee and I want to have a profile page so that I can have an a high level list of all of my reviews left/received as well as a general non-skill/interest specific description of myself.
+* I am a mentor and I want my profile to display a list of all of my services I provide so that users can find out other skills that I'm teaching.
 
 # Tools Used & Built With [#](#table-of-contents)
 * HTML5
