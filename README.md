@@ -16,7 +16,16 @@ Traditionally to find a mentor in a skill, you would need a combination of luck,
 MentorFind aims to fill that void by giving mentors the ability to create services for multiple different skills and connect them to users interested in being mentored. The mentors receive payments for their time, and they can receive reviews to build up a reputation within that niche which no current two sided marketplace provides the ability to do.
 
 # Features
-
+The *primary* features of our app are the following:
+* Authenticated user accounts which persists their data
+* Profile image uploading
+* Sorting the feed of mentors via 'interest' tags
+* Searching the mentor categories via fuzzy search
+* Paying the mentor using Stripe
+* The ability to leave reviews on a mentors service page
+* The ability to be a mentor at multiple skills
+* The ability to be both a mentor and a mentee
+* A purchase history with mentors numbers and details
 
 # Installation & Setup
 If you would like to have a look at the code for this website and play around with it, feel free to download it and getting it up and running by doing the following.
@@ -56,7 +65,7 @@ By default the server runs on Port 3000, so to view the live site on your local 
 
 # Project Management
 * **The Idea:** To begin our project, we began with the task of creating a two sided marketplace. We then did research and listed currently existing and successful 2 sided market places to familiarise ourselves, coming up with the following: gumtree, Ebay, AirBNB, Carousel, AliBaba, Amazon, Lynda, Facebook Market, Etsy, and Upwork. We proceeded by then brainstorming and we generated 1 idea each going around the circle until we had a total of 8 ideas which we were interested in. We then made a vote on our favourite idea which was MentorFind. Our other ideas were: Buying and Selling Pets, second hand tabletop games, connecting casual sports players for public matches, selling ideas, and a review based contractor site.
-* **Wireframing:** We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. When we were satisfied with the freehand drawings we converted them into digital mockups using Balsamiq. The full wireframe set can be viewed [Here](https://github.com/brasscapon/Mentor-Find/blob/master/docs/wireframes.pdf). The wireframes for our homepage is as follows:
+* **Wireframing:** We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. When we were satisfied with the freehand drawings we converted them into digital mockups using Balsamiq. The full wireframe set can be viewed [Here](https://github.com/brasscapon/Mentor-Find/blob/master/docs/wireframes.pdf). The wireframes for our homepage are as follows:
 ![MentorFind Home Page Wireframe](https://github.com/brasscapon/Mentor-Find/blob/master/docs/homepage-wireframe.png)
 * **Database:** After drawing up our wireframes we created a freehand ERD (Entity Relationship Diagram) which described our planned database models to use, their attributes and data types, as well as the relationships between them. We received feedback from our educators and modified it 3 times to end up with this result:
 ![ERD](https://github.com/brasscapon/Mentor-Find/blob/master/docs/erd.png)
