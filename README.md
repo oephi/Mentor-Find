@@ -1,21 +1,29 @@
 # MentorFind
 ### Live App: [https://secure-fjord-81769.herokuapp.com](https://secure-fjord-81769.herokuapp.com)
 
-# Table of Contents
+# #Table of Contents
 * [About](#about)
+* [Features](#features)
 * [Installation & Setup](#installation-&-setup)
 * [Project Management](#project-management)
-* [Share](#share-our-app)
+* [User Flow](#user-flow)
+* [User Stories](#user-stories)
+* [Tools Used & Built With](#tools-used-&-built-with)
+* [Project Timeline](#project-timeline)
+* [Authors](#authors)
+* [License](#license)
+* [Acknowledgement](#acknowledgement)
 * [Questions & Answers](#questions-&-answers)
+* [Share](#share-our-app)
 
-# About
+# About [#](#table-of-contents)
 It is difficult to find mentors both online and offline to teach skills that people seek. It is even more difficult to market yourself as a mentor and find clients.
 
 Traditionally to find a mentor in a skill, you would need a combination of luck, social connectivity, and the persistence at attending events to find somebody that would be willing to be your mentor. There currently exists no unifying online marketplace to connect Mentors to Mentees and vice versa. Such a marketplace would greatly improve the ease, speed, and ability for both sides of the interaction to connect.
 
 MentorFind aims to fill that void by giving mentors the ability to create services for multiple different skills and connect them to users interested in being mentored. The mentors receive payments for their time, and they can receive reviews to build up a reputation within that niche which no current two sided marketplace provides the ability to do.
 
-# Features
+# Features [#](#table-of-contents)
 The *primary* features of our app are the following:
 * Authenticated user accounts which persists their data
 * Profile image uploading
@@ -27,7 +35,7 @@ The *primary* features of our app are the following:
 * The ability to be both a mentor and a mentee
 * A purchase history with mentors numbers and details
 
-# Installation & Setup
+# Installation & Setup [#](#table-of-contents)
 If you would like to have a look at the code for this website and play around with it, feel free to download it and getting it up and running by doing the following.
 ```
 git clone git@github.com:brasscapon/Mentor-Find.git mentor-find
@@ -63,7 +71,7 @@ rails s
 It should now be good to go. 
 By default the server runs on Port 3000, so to view the live site on your local machine, head to [localhost:3000](http://localhost:3000)
 
-# Project Management
+# Project Management [#](#table-of-contents)
 * **The Idea:** To begin our project, we began with the task of creating a two sided marketplace. We then did research and listed currently existing and successful 2 sided market places to familiarise ourselves, coming up with the following: gumtree, Ebay, AirBNB, Carousel, AliBaba, Amazon, Lynda, Facebook Market, Etsy, and Upwork. We proceeded by then brainstorming and we generated 1 idea each going around the circle until we had a total of 8 ideas which we were interested in. We then made a vote on our favourite idea which was MentorFind. Our other ideas were: Buying and Selling Pets, second hand tabletop games, connecting casual sports players for public matches, selling ideas, and a review based contractor site.
 * **Wireframing:** We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. When we were satisfied with the freehand drawings we converted them into digital mockups using Balsamiq. The full wireframe set can be viewed [Here](https://github.com/brasscapon/Mentor-Find/blob/master/docs/wireframes.pdf). The wireframes for our homepage is as follows:
 ![MentorFind Home Page Wireframe](https://github.com/brasscapon/Mentor-Find/blob/master/docs/homepage-wireframe.png)
@@ -72,14 +80,27 @@ By default the server runs on Port 3000, so to view the live site on your local 
 * **Tasks:** We then generated as many User Stories (in the style of Agile) as were required and imported them into Trello for us to manage our project.
 ![Trello Board](https://github.com/brasscapon/Mentor-Find/blob/master/docs/trello.png)
 
-# User Flow
+# User Flow [#](#table-of-contents)
 The app was designed for the user to flow through it roughly as follows:
 ![MentorFind User Flow](https://github.com/brasscapon/Mentor-Find/blob/master/docs/user-flow.png)
 
-# User Stories
-User stories are well thought out, relevant, and comprehensively cover the needs of the app
+# User Stories [#](#table-of-contents)
+Here are our User Stories (in the style of Agile Methodology) which we wrote to inform the expected needs of a user interacting with our app:
+* I am a mentor/mentee and I want to be able to register an account so that I can store my information separate to other users.
+* I am a mentor/mentee and I want to be able to login/logout so that I can switch accounts and authorize myself when needed.
+* I am a mentor and I want to be able to create a 'service' which allows me to specify a price/description/skill so that I can advertise myself to others.
+* I am a mentee and I want to be able to see a list of mentors in random categories so that I can expose myself to skills I wasn't aware that I wanted to learn.
+* I am a mentee and I want to be able to use a search bar to search the skill categories being mentored by name and return a filtered list.
+* I am a mentee and I want to be able to add an 'interest' tag permanently so that I can click it and filter the mentors feed by term without needing to continually search for that term.
+* I am a mentor/mentee and I want to be able to be paid/pay for a service so that I gain access to an allocated amount of a mentors time to be scheduled.
+* I am a mentee and I want to be given the mentors contact number and email so that I can get in touch after a purchase.
+* I am a mentee and I want to be able to see a list of of purchase history.
+* I am a mentee and I want to be able to edit/delete reviews that I leave on service pages.
+* I am a mentor/mentee and I want to be able to upload and edit a profile picture of myself so that others know what I look like.
+* I am a mentor/mentee and I want to have a profile page so that I can have an a high level list of all of my reviews left/received as well as a general non-skill/interest specific description of myself.
+* I am a mentor and I want my profile to display a list of all of my services I provide so that users can find out other skills that I'm teaching.
 
-# Tools Used & Built With
+# Tools Used & Built With [#](#table-of-contents)
 * HTML5
 * CSS3
 * Bootstrap (CSS Framework for styling)
@@ -93,7 +114,7 @@ User stories are well thought out, relevant, and comprehensively cover the needs
 * The following non-default Ruby Gems: [Textacular](https://github.com/textacular/textacular) (fuzzy search), [stripe-ruby](https://github.com/stripe/stripe-ruby) (e-payments), [carrierwave](https://github.com/carrierwaveuploader/carrierwave) + [carrierwave-aws](https://github.com/sorentwo/carrierwave-aws) (for AWS storage), [Faker](https://github.com/stympy/faker) (for generating seed data), [mini-magick](https://github.com/minimagick/minimagick) (for file uploading and resizing), [better-errors](https://github.com/BetterErrors/better_errors) (for debugging), and [jquery-rails](https://github.com/rails/jquery-rails) (for button toggling).
 * The team used [Slack](https://slack.com) to communicate with eachother.
 
-# Project Timeline
+# Project Timeline [#](#table-of-contents)
 As students we were allocated 10 days to complete this 2 sided marketplace project. Here is how we structured our time to meet our goals (keeping in mind that we continually reprioritised which tasks were the most important in the style of Agile methodology):
 * Day 1: We brainstormed ideas, created wireframes, and began working on our ERD.
 * Day 2: We finalised our ERD and generated the app, and added Devise.
@@ -106,22 +127,22 @@ As students we were allocated 10 days to complete this 2 sided marketplace proje
 * Day 9: We created a landing page, deployed to Heroku, worked on the README, and fixed some more bugs.
 * Day 10: 
 
-# Authors
+# Authors [#](#table-of-contents)
 * [Adam Demirel](https://github.com/brasscapon)
 * [Mike McCallum](https://github.com/mikemgm)
 * [Ryan Sickle](https://github.com/oephi)
 * [Sinan Canselen](https://github.com/canselen)
 
-# License
+# License [#](#table-of-contents)
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](https://github.com/brasscapon/Mentor-Find/blob/master/src/LICENSE) file for details.
 
 You are permitted to modify, alter, create copies, and distribute this project freely. We would love to see it expanded by other developers to include a larger dataset of questions and answers and improve on the application's functionality.
 
-# Acknowledgement
+# Acknowledgement [#](#table-of-contents)
 * Thanks to our peers and educators for helping us to identify and fix bugs when all hope seemed lost - In particular Garret Blankenship, James Lane, and James Holman.
 * To StackExchange and IRC for providing additional support.
 
-# Questions & Answers
+# Questions & Answers [#](#table-of-contents)
 This project was motivated by a class assignment, and as a requirement of it answers to the specified questions are below.
 
 **1. What is the need (i.e. challenge) that you will be addressing in your project?**  
@@ -217,6 +238,6 @@ There are three main safeguards that we have used to protect information and dat
 MentorApp collects and records a variety of data provided by the user - such as their email addresses, names, phone numbers, and even IP addresses. As we our website deals with sensitive personal information, we are legally obliged to adhere to Australia’s *Privacy Act 1988 (Privacy Act)*. Two noteworthy principles are 1) the website must not collective sensitive information about an individual unless it is reasonably necessary to the websites function, and 2) that the website or entity that runs it must not disclose the sensitive information provided to it to other parties. See clauses 3.3a and 6.1 [here](https://www.oaic.gov.au/individuals/privacy-fact-sheets/general/privacy-fact-sheet-17-australian-privacy-principles#part-2-collection-of-personal-information).
 
 
-# Share Our App
+# Share Our App [#](#table-of-contents)
 * [Link to website](https://secure-fjord-81769.herokuapp.com)
 * [Link to repository](https://github.com/brasscapon/Mentor-Find)
