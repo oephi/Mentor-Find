@@ -105,19 +105,11 @@ So, a service we've said belongs to a user and skill, it also has many purchases
 
 
 14. Provide your database schema design.
-**LINK TO
+* [Schema Design](#database)
 
 **15. Provide User stories for your App.**
 
--I am a user and I want to access a signup page so that I can register an account at mentorfind. 
--I am a user and I want to access a login page so that I can authorize my access. 
--I am a user and I want to be able to see my own profile page. 
--I am a user and I want to be able to upload a picture of myself to my profile so that my mentor or mentee knows what I look like.
--I am a user and I want the home page to have an unsorted feed of mentors in my related categories that I have chosen. 
--I am a mentee and I want to be able to add categories that I want to see mentors of. 
--I am a user and I want the mentors profile_overview to have a list of their services that link to the appropriate service_profiles so that I can see what they have available
--I am a user and I want to see a service profile of the mentor to see information about them and pay them. 
--I am a mentee and I want to be able to pay the mentor using stripe which connects to my credit card.
+* [User Stories](#user-stories-)
 
 
 
@@ -195,6 +187,7 @@ By default the server runs on Port 3000, so to view the live site on your local 
 * **Wireframing:** We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. When we were satisfied with the freehand drawings we converted them into digital mockups using Balsamiq. The full wireframe set can be viewed [Here](https://github.com/brasscapon/Mentor-Find/blob/master/docs/wireframes.pdf). The wireframes for our homepage is as follows:
 ![MentorFind Home Page Wireframe](https://github.com/brasscapon/Mentor-Find/blob/master/docs/homepage-wireframe.png)
 * **Database:** After drawing up our wireframes we created a freehand ERD (Entity Relationship Diagram) which described our planned database models to use, their attributes and data types, as well as the relationships between them. We received feedback from our educators and modified it 3 times to end up with this result:
+### Database 
 ![ERD](https://github.com/brasscapon/Mentor-Find/blob/master/docs/erd.png)
 * **Tasks:** We then generated as many User Stories (in the style of Agile) as were required and imported them into Trello for us to manage our project.
 ![Trello Board](https://github.com/brasscapon/Mentor-Find/blob/master/docs/trello.png)
@@ -218,7 +211,7 @@ Here are our User Stories (in the style of Agile Methodology) which we wrote to 
 * I am a mentor/mentee and I want to be able to upload and edit a profile picture of myself so that others know what I look like.
 * I am a mentor/mentee and I want to have a profile page so that I can have an a high level list of all of my reviews left/received as well as a general non-skill/interest specific description of myself.
 * I am a mentor and I want my profile to display a list of all of my services I provide so that users can find out other skills that I'm teaching.
-
+### User_Stories
 
 
 # Tools Used & Built With [#](#table-of-contents)
