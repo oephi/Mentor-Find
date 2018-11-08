@@ -12,7 +12,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="<% 'body' unless current_page?('/landing_page') %>" >
+  <body>
+  <div class="<%='body' unless current_page?('/landing_page') %>">
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/messages' %> <%# renders the flash messages %> 
     <% unless current_page?("/landing_page") %>
@@ -22,6 +23,6 @@
     <% else %>
         <%= yield %>
     <%end%>
-      
+      </div>
   </body>
 </html>
