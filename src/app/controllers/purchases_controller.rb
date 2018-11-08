@@ -12,22 +12,16 @@ class PurchasesController < ApplicationController
     end    
   end
 
-  # GET /purchases/1
-  # GET /purchases/1.json
   def show 
   end
 
-  # GET /purchases/new
   def new
     @service = Service.new(skill_id: params[:service_id])    
   end
 
-  # GET /purchases/1/edit
   def edit
   end
 
-  # POST /purchases
-  # POST /purchases.json
   def create
       # Amount in cents
       @amount = (params[:service_values][:price].to_f * 100).round
@@ -67,8 +61,6 @@ class PurchasesController < ApplicationController
 
   end
 
-  # PATCH/PUT /purchases/1
-  # PATCH/PUT /purchases/1.json
   def update
     respond_to do |format|
       if @purchase.update(purchase_params)
@@ -81,8 +73,6 @@ class PurchasesController < ApplicationController
     end
   end
 
-  # DELETE /purchases/1
-  # DELETE /purchases/1.json
   def destroy
     @purchase.destroy
     respond_to do |format|
@@ -92,7 +82,6 @@ class PurchasesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_purchase
       @purchase = Purchase.find(params[:id])
     end
