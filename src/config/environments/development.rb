@@ -68,14 +68,17 @@ Rails.application.configure do
   # password:             Rails.application.credentials.smtp[:gmail][:password],
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  config.action_mailer.delivery_method = :mailgun
-  
-  # config.action_mailer.smtp_settings = {
-  # address:              'smtp.gmail.com',
-  # port:                 587,
-  # api_key:               Rails.application.credentials.mailgun[:api_key],
-  # domain:                Rails.application.credentials.mailgun[:domain],
-  # authentication:       'plain',
-  # enable_starttls_auto: true }
+  config.action_mailer.delivery_method = :smtp
+
+    # api_key:               Rails.application.credentials.[:gmail][:api_key],
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:                Rails.application.credentials.smtp[:gmail][:domain],
+  user_name:             Rails.application.credentials.smtp[:gmail][:username],
+  password:              Rails.application.credentials.smtp[:gmail][:password]
+  authentication:       'plain',
+  enable_starttls_auto: true
+ }
 
 end
