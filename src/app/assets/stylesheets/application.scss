@@ -19,7 +19,7 @@
 @import url('https://fonts.googleapis.com/css?family=Patua+One');
 @import url('https://fonts.googleapis.com/css?family=Questrial');
 
-body {
+.body {
     margin: 100px 0 0 0;
     padding: 0; 
 
@@ -41,7 +41,7 @@ body {
 
 .hide {
     display: none;
-}
+} 
 
 .field_with_errors {	
   padding: 2px;	

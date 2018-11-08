@@ -1,3 +1,5 @@
+
+
 .carousel-inner img{
     width: 100%;
     height: 100%;
@@ -26,11 +28,16 @@ h3{
     padding-bottom: 2rem;
 }
 
+#cta{
+    // background-color: aqua
+    background-image: linear-gradient(rgba(85, 41, 205, 0.87),rgba(20, 9, 70, 0.76)); 
+    color: white; 
+
+    
+}
 
 .social{
 padding-top: 2rem;
-
-
 
 hr{
 border-top: 2px solid #b4b4b4;
@@ -39,6 +46,7 @@ margin-top: .3rem;
 margin-bottom: 1rem;
 }
 }
+
 .card{
     margin:auto;
     text-align: center;
@@ -54,6 +62,17 @@ margin-bottom: 1rem;
     height: 65vh;
 
 } 
+
+.col-lg-6{
+    margin-top: 4rem;
+p{
+    margin-top: 3rem;
+    font-size: 15px;
+}
+img{
+    max-width: 30%;
+}
+}
 
 .bs-calltoaction{
     position: absolute;
@@ -89,11 +108,13 @@ margin-bottom: 1rem;
 
             .cta-desc{
                 padding: 0; 
-                text-align: center;
+                text-align: center; 
+                
             }
 
             .cta-desc p:last-child{
                 margin-bottom: 0;
+                font-size: 20px;
             }
 
         .cta-button{
@@ -123,20 +144,105 @@ margin-bottom: 1rem;
     display:inline;
 }
 
+.network a{
+    font-size: 4.5em;
+    padding: 3rem;
 
+.fa-facebook{
+    color: #3b5998;
+}
+.fa-twitter{
+    color: #00aced;
+}
+.fa-instagram{
+    color: #517fa4;
+}
+.fa-youtube{
+    color:#bb0000
+}
+.fa-reddit{
+    color:#ff4301
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover,
+.fa-youtube:hover,
+.fa-reddit:hover {
+    color: #d5d5d5;
+}
+}
+
+footer{
+    background-color: #636363;
+    color:#d5d5d5;
+    padding-top: 2rem;
+}
+hr.light{
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+footer a{
+    color:#d5d5d5;
+}
+hr.light-100{
+    border-top: 1px solid #d5d5d5;
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
 
 
 
 
 // ---- MEDIA QUERIES ---
 @media (max-width: 992px){
-
+    .network a{
+        font-size: 4em;
+        padding: 2rem;
+    }
 }
 
 @media (max-width: 768px){
-    
+    .carousel-caption{ 
+        top: 45%;
+        
+    } 
+    .carousel-caption h1{
+        font-size: 350% 
+    }
+    h3{
+        font-size: 140%;
+        font-weight: 400;
+        padding-bottom: .2rem;
+    }
+    .display-4{
+        font-size: 200%;
+    }
+    .network a{
+        font-size: 2.5em;
+        padding: 1.2rem;
+    }
 }
 
 @media (max-width: 576px){
-    
+    .carousel-caption{ 
+        top: 40%;
+        
+    } 
+    .carousel-caption h1{
+        font-size: 250% 
+    }
+    h3{
+        font-size: 110%;
+    }
+    .carousel-indicators{
+        display: none;
+    }
+    .network a{
+        font-size: 2em;
+        padding: .7rem;
+    }
 }
