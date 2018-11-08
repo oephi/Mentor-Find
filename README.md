@@ -202,11 +202,11 @@ The database relations consit of users, skills, interests, services, purchases, 
 In Mentor Find, a user has many interests, services, purchases and reviews. Therefore, interests, services, purchases and reviews all belong to a user. A user also has many skills through interests because a user who is a mentor, has the skills to offer other users seeking that interst. Therefore a skill has many interests and services. 
 So, a service we've said belongs to a user and skill, it also has many purchases and reviews because the service will be bought and reviwed by multiple users.  
 
-**14. Provide your database schema design.** 
+**14. Provide your database schema design.**  
 Please refer to our ERD [here](#database).
 
 **15. Provide User stories for your App.**  
-See [here](#user-stories).
+See [here](#user-stories-).
 
 **16. Provide Wireframes for your App.**  
 See [here](#wireframes). 
