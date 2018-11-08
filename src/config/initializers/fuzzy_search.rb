@@ -1,1 +1,0 @@
-# ActiveRecord::Base.connection.execute("SELECT set_limit(0.9);")
