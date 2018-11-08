@@ -1,9 +1,142 @@
-.container{
-    background{
-        background-size:cover;
-    }
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
 }
 
-.header{
-    color: red;
+.carousel-caption{
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%)
+} 
+
+.carousel-caption h1{
+    font-size: 500%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 15px #000; 
+
+h3{
+    font-size: 200%;
+    font-weight: 500;
+    text-shadow: 1px 1px 10px #000; 
+    padding-bottom: 1rem;
+}
+}
+
+.padding{
+    padding-bottom: 2rem;
+}
+
+
+.social{
+padding-top: 2rem;
+
+
+
+hr{
+border-top: 2px solid #b4b4b4;
+width: 95%;
+margin-top: .3rem;
+margin-bottom: 1rem;
+}
+}
+.card{
+    margin:auto;
+    text-align: center;
+    width: 50%;
+} 
+
+#fixed{
+    background-image: linear-gradient(rgba(11, 129, 158, 0.6),rgba(170, 59, 221, 0.2)), url("fixed.jpg");
+    background-attachment: fixed;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 65vh;
+
+} 
+
+.bs-calltoaction{
+    position: absolute;
+    width:auto;
+    padding: 15px 25px;
+    border: 1px solid black;
+    margin-top: 130px;
+    margin-bottom: 10px;
+    border-radius: 5px; 
+}
+.bs-calltoaction > .row{
+    display:table;
+    width: calc(100% + 30px);
+}
+ 
+    .bs-calltoaction > .row > [class^="col-"],
+    .bs-calltoaction > .row > [class*=" col-"]{
+        float:none;
+        display:table-cell;
+        vertical-align:middle;
+    }
+
+        .cta-contents{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+            .cta-title{
+                margin: 0 auto 15px;
+                padding: 0;
+                text-align: center
+            }
+
+            .cta-desc{
+                padding: 0; 
+                text-align: center;
+            }
+
+            .cta-desc p:last-child{
+                margin-bottom: 0;
+            }
+
+        .cta-button{
+            padding-top: 10px;
+            padding-bottom: 10px; 
+
+            a {	
+                color: #000;	
+                 &:visited {	
+                  color: #fff;	
+                }	
+            }
+        }
+        .bs-calltoaction.bs-calltoaction-primary{
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        } 
+
+// .card-img-top{
+//     border-radius: 50%;
+    
+// }
+
+
+.sales-team-logo-item{
+    display:inline;
+}
+
+
+
+
+
+
+// ---- MEDIA QUERIES ---
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 576px){
+    
 }

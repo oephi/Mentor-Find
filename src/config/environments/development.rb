@@ -59,6 +59,15 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+<<<<<<< HEAD:config/environments/development.rb
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  # address:              'smtp.gmail.com',
+  # port:                 587,
+  # domain:               Rails.application.credentials.smtp[:gmail][:domain],
+  # user_name:            Rails.application.credentials.smtp[:gmail][:username],
+  # password:             Rails.application.credentials.smtp[:gmail][:password],
+=======
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   config.action_mailer.delivery_method = :smtp
@@ -70,10 +79,8 @@ Rails.application.configure do
   domain:                Rails.application.credentials.smtp[:gmail][:domain],
   user_name:             Rails.application.credentials.smtp[:gmail][:username],
   password:              Rails.application.credentials.smtp[:gmail][:password]
-  
-  }
-  
-  # puts "testing aws credentials ----------------- "
-  # puts Rails.application.credentials.smtp[:gmail]
+  authentication:       'plain',
+  enable_starttls_auto: true
+ }
 
 end
