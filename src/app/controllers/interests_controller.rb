@@ -1,20 +1,6 @@
 class InterestsController < ApplicationController
   before_action :set_interest, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @interests = Interest.all
-  end
-
-  def show
-  end
-
-  def new
-    @interest = Interest.new
-  end
-
-  def edit
-  end
-
   def create
     if params[:interest].empty?
       flash[:alert] = "Interest can't be empty."

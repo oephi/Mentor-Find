@@ -1,18 +1,9 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @services = Service.all
-  end 
-
   def show
     @reviews = @service.reviews
     @review = Review.new
-  end
-
-  def new
-    @service = Service.new()
-    @skill = Skill.new()
   end
   
   def edit
@@ -36,8 +27,6 @@ class ServicesController < ApplicationController
         format.html { render :new }
       end
     end
-
-   #Make this render to Service.last once the view is setup
   end
 
 
@@ -53,8 +42,6 @@ class ServicesController < ApplicationController
     end
   end
 
-  # DELETE /services/1
-  # DELETE /services/1.json
   def destroy
     @service.destroy
     respond_to do |format|
