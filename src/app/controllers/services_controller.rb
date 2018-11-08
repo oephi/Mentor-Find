@@ -1,28 +1,20 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
 
-  # GET /services
-  # GET /services.json
   def index
     @services = Service.all
   end 
 
-
-
-  # GET /services/1
-  # GET /services/1.json
-def show
+  def show
     @reviews = @service.reviews
     @review = Review.new
   end
 
-  # GET /services/new
   def new
     @service = Service.new()
     @skill = Skill.new()
   end
   
-  # GET /services/1/edit
   def edit
   end
   
@@ -48,8 +40,7 @@ def show
    #Make this render to Service.last once the view is setup
   end
 
-  # PATCH/PUT /services/1
-  # PATCH/PUT /services/1.json
+
   def update
     respond_to do |format|
       if @service.update(service_params)
