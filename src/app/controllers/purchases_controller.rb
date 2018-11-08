@@ -3,23 +3,12 @@ class PurchasesController < ApplicationController
 
   def index
     purchases = Purchase.where(user_id: current_user.id)
-
     if purchases.empty?
       @purchases = "It looks like you haven't made any purchases yet."
       @flash = flash.now[:error] = "It looks like you haven't made any purchases yet."
     else
       @purchases = Purchase.where(user_id: current_user.id)
     end    
-  end
-
-  def show 
-  end
-
-  def new
-    @service = Service.new(skill_id: params[:service_id])    
-  end
-
-  def edit
   end
 
   def create
@@ -53,12 +42,10 @@ class PurchasesController < ApplicationController
         
         flash[:notice] = "Your payment to #{ @purchase.service.user.name } was successful!  Your Mentor will be in touch with you shortly."
       redirect_to purchases_path
-
-
+      
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_charge_path
-
   end
 
   def update
