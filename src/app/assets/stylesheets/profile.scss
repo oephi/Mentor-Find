@@ -1,3 +1,16 @@
+.profile-container {
+    margin: 0 auto 1em auto; 
+    width: 50%;
+
+    p {
+        font-size: 18px;
+    }
+
+    .description {
+        word-wrap: break-word;
+    }
+}
+
 .inline {
     display: inline;
 }
@@ -5,3 +18,7 @@
 .edit-profile {
     float: right;
 }
+
+.file-upload {
+    width: 100%; 
+    text-align: left; }
