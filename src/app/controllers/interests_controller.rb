@@ -16,12 +16,12 @@ class InterestsController < ApplicationController
   end
 
   def create
-    if Skill.exists?(name: interest_params[:interest])
-      @skill = Skill.find_by(name: interest_params[:interest]).id
+    if Skill.exists?(name: params[:interest])
+      @skill = Skill.find_by(name: params[:interest]).id
       flash[:alert] = "You're already interested in that."
     else
       @skill = current_user.skills.create(name: interest_params[:interest]).id
-      flash[:notice] = "You've successfully added #{interest_params[:interest]} to your interest list."
+      flash[:notice] = "You've successfully added #{params[:interest]} to your interest list."
     end
 
     redirect_to root_path
@@ -52,6 +52,6 @@ class InterestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def interest_params
-      params.require(:interest).permit(:interest)
+      params.permit(:interest)
     end
 end
