@@ -9,8 +9,8 @@
     <h2 class="interest-heading">Interests</h2>
     <ul>
       <%= form_with(url: interests_path, method: "post") do %>
-        <%= text_field_tag :link, nil, name: "interest", placeholder: "Add Interest", class: "form-control" %>
-        <%= submit_tag nil, style: "display: none;" %> 
+        <%= text_field_tag :link, nil, name: "[interest]interest", placeholder: "Add Interest", class: "form-control" %>
+        <%= submit_tag nil, class: "hide" %> 
       <% end %>
 
       <li>
@@ -31,7 +31,7 @@
 </div>
 
 
-<div class="container2">
+<div class="cards-container">
   <% @sample.each do |service| %>
     <div class="card m-2" style="width: 18rem;">
       <%= link_to image_tag(service.user.avatar_url, class: "card-img-top"), service_path(service) %>
