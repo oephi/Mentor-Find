@@ -167,13 +167,11 @@ MentorFind was developed locally on each developers computer and then we gained 
 **5. Identify and describe the software to be used in your App.**  
 Our application is and was built with Ruby on Rails. We chose Rails as our web development framework because it allowed us to do a lot of powerful things right out of the box, some of which include: a convention for structuring our application and the location for files, an MVC architecture (see Q8 for more info), convenient routing of HTTP requests, a built-in Web Server, ERB which allows us to embed Ruby code within our HTML code to determine the logic of the page, a huge library of RubyGems which we have the option of including, and most importantly an Object Relational Mapping system (called ActiveRecord) which allows us to conveniently interact with a database of our choice with Ruby syntax. Rails also gives us the ability to do other core tasks like use HTML, CSS, and JS.
 
-## Ryan  
 **6. Identify the database to be used in your App and provide a justification for your choice.**  
-
 We used Postgresql for our database.  Besides postgresql being the industry standard for and open source database, the advantage it has over other choices (like MYSQL, MariaDB and Firebird) is that it isn’t just a relational database but it’s also object-relational.  This is what makes Postgresql flexible and robust.
 
 **7. Identify and describe the production database setup (i.e. postgres instance).**  
-Our postgres instance is setup to handle one to many relationships using 6 tables.  Please refer to our ERD above.
+Our postgres instance is setup to handle one to many relationships using 6 tables.  Please refer to our ERD [here](#database).
 
 **8. Describe the architecture of your App.**  
 Our application is written using the Rails framework which utilises the MVC architectural paradigm.  We chose rails due to it’s use of “Convention over Configuration”, which demands a common work flow between programming environment setups negating the need for pre-established design patterns.
@@ -197,20 +195,18 @@ AWS is a secure cloud services platform that allows easy leveraging of cloud bas
 Our data structure is similar to Airbnb Experiences, where customers can search for a service(in this case an experience) offered by a person, and charges them a fee for the service provided. Mentor Find enables customers to search for an activity, service, or skill they are interested in and find mentors whom are willing to teach for an hourly fee.  
 
 
-**12. Discuss the database relations to be implemented.   WHY PICK THEM?**
+**12. Discuss the database relations to be implemented.**  
 The database relations consit of users, skills, interests, services, purchases, and reviews. We created a user model in order for a customer to access their saved personalized data. This data has access to their interest, skill, and service models. A user can search for something they wish to be mentored in creating an interest. A user can become a mentor and add the skills they wish to teach others, creating skills and services. A user can purchase other user's services and then can write reviews about the purchased services. 
 
-**13. Describe your project’s models in terms of the relationships (active record associations) they have with each other. ACTUAL RELATIONSHIP BETWEEN THEM**
+**13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.**  
 In Mentor Find, a user has many interests, services, purchases and reviews. Therefore, interests, services, purchases and reviews all belong to a user. A user also has many skills through interests because a user who is a mentor, has the skills to offer other users seeking that interst. Therefore a skill has many interests and services. 
 So, a service we've said belongs to a user and skill, it also has many purchases and reviews because the service will be bought and reviwed by multiple users.  
 
-14. Provide your database schema design.
-**LINK TO ERD
-> link to the erd
-See section x 
+**14. Provide your database schema design.**  
+Please refer to our ERD [here](#database).
 
 **15. Provide User stories for your App.**  
-See [here](#user-stories).
+See [here](#user-stories-).
 
 **16. Provide Wireframes for your App.**  
 See [here](#wireframes). 
@@ -228,7 +224,7 @@ We used git and github as our Source control. There is 3 production stages of gi
 **20. Provide an overview and description of your Testing process.**  
 Every developer took their time testing their code locally. Our Source control give error for any code that conflicts with master. After each GitHub merge another test was done. Finally we test the general application daily to figure out bugs and have users view.
 
-**21. Discuss and analyse requirements related to information system security.** 
+**21. Discuss and analyse requirements related to information system security.**  
 There are a few major guidelines that we followed to protect our website against attacks from malicious parties. The first level is that we used Heroku to deploy our website which provides us with an SSL certificate, ensuring our site is HTTPS. What HTTPS does is encrypt our data between the server and the user which prevents a specific attack occuring called the *man in the middle attack* whereby our unencrypted data is intercepted by a third party. The second major defense we implemented was sanitizing our input parameters by using Rails strong parameters helper methods which restricts which model attributes can be updated, thereby prevent us from an attack called *SQL injection* where an attacker queries our database in a way we did not intend.
 
 **22. Discuss methods you will use to protect information and data.**  
