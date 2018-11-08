@@ -1,5 +1,5 @@
 <h1 class="mentor-heading">
-  <%= @category %>
+  <%= @category.titleize %>
 </h1>
 
 <div class="feed-container">
@@ -22,7 +22,7 @@
 
       <% @interests.each do |interest| %>
       <li>
-        <%= link_to interest.name, root_path(interest: interest.name), class: "#{'active' if params[:interest] == interest.name}" %>
+        <%= link_to interest.name.titleize, root_path(interest: interest.name), class: "#{'active' if params[:interest] == interest.name}" %>
         <%= link_to(" x", interest_path(interest), method: :delete, class: 'red-x', data: { confirm: "Are you sure that you want to remove #{interest.name} from your interests?" }) %>
       </li>
       <% end %>
@@ -37,7 +37,7 @@
       <%= link_to image_tag(service.user.avatar_url, class: "card-img-top"), service_path(service) %>
       <div class="card-body">
         <h4>
-          <%= link_to service.user.name, service_path(service), class: "card-title" %>
+          <%= link_to service.user.name.titleize, service_path(service), class: "card-title" %>
         </h4>
         <% if @true %>
         <strong>

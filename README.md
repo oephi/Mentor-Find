@@ -1,5 +1,5 @@
 # MentorFind
-### Live App: [https://secure-fjord-81769.herokuapp.com](https://secure-fjord-81769.herokuapp.com)
+### Live App: [https://secure-reef-43701.herokuapp.com](https://secure-reef-43701.herokuapp.com)
 
 # #Table of Contents
 * [About](#about-)
@@ -132,7 +132,7 @@ As students we were allocated 9 weekdays to complete this 2 sided marketplace pr
 * Day 6: We added Stripe, AWS capability, and fixed some bugsg.
 * Day 7: We added some style, some minor features such as prices on user cards, and resolved some errors by adding default profile images.
 * Day 8: We created a landing page, deployed to Heroku, worked on the README, and fixed some more bugs.
-* Day 9: 
+* Day 9: We finished finished answering Q&A's, finished the README, fixed bugs, deployed to Heroku, cleaned code bloat, cleaned code indentation, finished the landing page, and created a presentation.
 
 # Authors [#](#table-of-contents)
 * [Adam Demirel](https://github.com/brasscapon)
