@@ -1,7 +1,7 @@
     <% unless current_page?('/landing_page') %>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <%= link_to "MENTOR FIND", root_path, class: "navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-toggle="collaps  data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="fals  aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="fals  aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -21,7 +21,7 @@
 
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
           <%= form_tag(root_path, method: "get", class: "form-inline my-2 my-lg-0") do %>
-            <%= text_field_tag("[feed]Search", nil, placeholder: "Find a mentor at...", class: "form-control mr-sm-2") %>
+            <%= text_field_tag("search", nil, placeholder: "Find a mentor at...", class: "form-control mr-sm-2") %>
             <%= submit_tag("Search", class: "btn btn-outline-success my-2 my-sm-0") %>
           <% end %> 
         <% end %> 
@@ -29,3 +29,7 @@
         </div>
       </nav>
         <% end %> 
+
+
+
+        

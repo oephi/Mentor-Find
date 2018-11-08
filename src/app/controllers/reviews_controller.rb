@@ -1,17 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @reviews = Review.all
-  end
-
-  def show
-  end
-
-  def new
-    @review = Review.new
-  end
-
   def edit
   end
 
@@ -22,7 +11,7 @@ class ReviewsController < ApplicationController
       if @review.save
         format.html { redirect_to service_path(params[:review][:service_id]), notice: 'Review was successfully created.' }
       else
-        format.html { render :new }
+        format.html { redirect_back fallback_location: root_path, alert: "Review can't be blank" }
       end
     end
   end

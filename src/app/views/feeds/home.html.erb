@@ -1,5 +1,5 @@
 <h1 class="mentor-heading">
-  <%= @category %>
+  <%= @category.titleize %>
 </h1>
 
 <div class="feed-container">
@@ -8,7 +8,7 @@
     <h2 class="interest-heading">Interests</h2>
     <ul>
       <%= form_with(url: interests_path, method: "post") do %>
-      <%= text_field_tag :link, nil, name: "[feed]interest", placeholder: "Add Interest", class: "form-control" %>
+      <%= text_field_tag :link, nil, name: "interest", placeholder: "Add Interest", class: "form-control" %>
       <%= submit_tag nil, class: "hide" %>
       <% end %>
 
@@ -41,7 +41,7 @@
         </h4>
         <% if @true %>
         <strong>
-          <%= service.skill.name.titleize  %></strong>
+          <%= service.skill.name  %></strong>
         <% end %>
 
         <p class="card-text">

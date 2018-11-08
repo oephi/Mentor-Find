@@ -16,7 +16,7 @@
     <%= form.text_field :skill, class: "form-control", placeholder: "Skill", value: "" %>
   </div>
 
-  <div class="field custom-radio"> <!-- "column" -->
+  <div class="field custom-radio">
     <h5>Experience Level</h5>
   <div class="form-check">
     <%= form.radio_button :experience, Service.experiences.keys[0], id: "radio0", class: "custom-control-input", :checked => true %>
@@ -37,10 +37,6 @@
   <div class="form-check">
     <%= form.radio_button :experience, Service.experiences.keys[4], id: "radio4", class: "custom-control-input" %>
     <%= form.label Service.experiences.keys[4], Service.experiences.keys[4].titleize, for: "radio4", class: "custom-control-label" %>
-    
-  </div>
-    <%#= form.collection_radio_buttons :experience, Service.experiences.keys[0] %>
-  </div>
 
   <div class="field">
     <%= form.label :description, class: "sr-only" %>

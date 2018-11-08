@@ -9,6 +9,7 @@ class Service < ApplicationRecord
     # Validates price to be integer and more than zero
     validates :user_id, :skill_id, :description, :price, presence: true
     validates :price, numericality: { only_integer: true, greater_than: 0,  }
+    validates :description, length: { minimum: 50 }
 end
 
 
