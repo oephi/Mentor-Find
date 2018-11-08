@@ -21,63 +21,49 @@
 
 body {
     margin: 100px 0 0 0;
-    padding: 0;
- }
+    padding: 0; 
 
-.feed-container {
-    display: flex;
-    margin-bottom: 1em;
-}
-
-.container2 {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 0;
-    align-items: flex-start;
-}
+    a:hover {
+        background-color: transparent; // resets bootstrap's black background color
+        text-decoration: none; }}
 
 .alert {
     width: 25%;
     margin: 5em auto 1em;
-    text-align: center;
-}
+    text-align: center; }
 
 .devise-container, .form-group {
     margin: 0 auto; 
-    width: 35%;
-}
-
-.profile-container {
-        margin: 0 auto 1em auto; 
-        width: 50%;
-
-        p {
-            font-size: 18px;
-        }
-
-        .description {
-            word-wrap: break-word;
-        }
-}
+    width: 35%; }
 
 .margin-bottom {
-    margin-bottom: 1em;
+    margin-bottom: 1em; }
+
+.hide {
+    display: none;
 }
 
+.field_with_errors {	
+  padding: 2px;	
+  background-color: red;	
+  display: table;	}	
 
+#error_explanation {	
+  width: 450px;	
+  padding: 7px 7px 0;	
+  margin-bottom: 20px;	
+  background-color: #f0f0f0;	
+  border: 2px solid red;	
+  
+  h2 {	
+   text-align: left;	
+   font-weight: bold;	
+   padding: 5px 5px 5px 15px;	
+   font-size: 12px;	
+   margin: -7px -7px 0;	
+   background-color: #c00;	
+   color: #fff;	}	
 
-
-
-.interest-heading {
-    font-family: 'Questrial', sans-serif;
-} 
-
-.file-upload {
-    width: 100%; 
-    text-align: left;
-}
-
-.price {
-    float: right;
-    font-size: .8em;
-}
+  ul li {	
+      font-size: 12px;	
+      list-style: square; }}	

@@ -2,15 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.services-show {
-    display: flex;
-    flex-direction: column;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-}
 
 .profile-image {
     max-height: 250px;
@@ -21,27 +12,23 @@
     padding: 2px;
     border: 1px solid black;
     margin-top: 1em;
-    display: inline-block;
-}
+    display: inline-block; }
+
+.services-show {
+    display: flex;
+    flex-direction: column; }
 
 .profile {
-    display: inline-block;
-}
+    display: inline-block; }
 
 .radio-buttons {
-    display: inline;
-}
+    display: inline; }
 
 .reviews-card {
-    margin: 2em 0 2em 0
-}
+    margin: 2em 0 2em 0; }
 
 .reviews-card-container {
-    margin: 5em 0 0 0  
-}
-
+    margin: 5em 0 0 0; }
 
 button:not(.collapsed) {
-
-    font-weight: 700;
-}
+    font-weight: 700; }
