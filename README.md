@@ -23,6 +23,8 @@ Traditionally to find a mentor in a skill, you would need a combination of luck,
 
 MentorFind aims to fill that void by giving mentors the ability to create services for multiple different skills and connect them to users interested in being mentored. The mentors receive payments for their time, and they can receive reviews to build up a reputation within that niche which no current two sided marketplace provides the ability to do.
 
+![MentorFind Website Overview](https://github.com/brasscapon/Mentor-Find/blob/master/docs/user_flow.gif)
+
 # Installation & Setup [#](#table-of-contents)
 If you would like to have a look at the code for this website and play around with it, feel free to download it and getting it up and running by doing the following.
 ```
