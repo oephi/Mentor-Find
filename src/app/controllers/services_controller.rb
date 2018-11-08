@@ -31,7 +31,7 @@ class ServicesController < ApplicationController
     
     respond_to do |format|
       if @service.save
-        format.html { redirect_to root_path, notice: 'Service was successfully created.' }
+        format.html { redirect_to @service, notice: 'Service was successfully created.' }
       else
         format.html { render :new }
       end
