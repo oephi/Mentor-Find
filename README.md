@@ -23,6 +23,8 @@ Traditionally to find a mentor in a skill, you would need a combination of luck,
 
 MentorFind aims to fill that void by giving mentors the ability to create services for multiple different skills and connect them to users interested in being mentored. The mentors receive payments for their time, and they can receive reviews to build up a reputation within that niche which no current two sided marketplace provides the ability to do.
 
+![MentorFind Website Overview](https://github.com/brasscapon/Mentor-Find/blob/master/docs/user_flow.gif)
+
 # Features [#](#table-of-contents)
 The *primary* features of our app are the following:
 * Authenticated user accounts which persists their data
@@ -226,10 +228,8 @@ We used git and github as our Source control. There is 3 production stages of gi
 **20. Provide an overview and description of your Testing process.**  
 Every developer took their time testing their code locally. Our Source control give error for any code that conflicts with master. After each GitHub merge another test was done. Finally we test the general application daily to figure out bugs and have users view.
 
-**21. Discuss and analyse requirements related to information system security.**  
-- https
-- sql injections
-- data sanitization
+**21. Discuss and analyse requirements related to information system security.** 
+There are a few major guidelines that we followed to protect our website against attacks from malicious parties. The first level is that we used Heroku to deploy our website which provides us with an SSL certificate, ensuring our site is HTTPS. What HTTPS does is encrypt our data between the server and the user which prevents a specific attack occuring called the *man in the middle attack* whereby our unencrypted data is intercepted by a third party. The second major defense we implemented was sanitizing our input parameters by using Rails strong parameters helper methods which restricts which model attributes can be updated, thereby prevent us from an attack called *SQL injection* where an attacker queries our database in a way we did not intend.
 
 **22. Discuss methods you will use to protect information and data.**  
 There are three main safeguards that we have used to protect information and data. The first is that we have protected against insecurities in the site by using the system security measures mentioned in Q21 above. The second is that during the retrieval of the users password during signup, the Devise rubygem that we are using uses another gem Bcrypt to encrypt their password and then store that password encrypted in our database. Thirdly we have deployed our website on Heroku which has a reputation for security and ensures that our data is not physically accessible to attacks.
