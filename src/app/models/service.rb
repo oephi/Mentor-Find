@@ -9,5 +9,3 @@ class Service < ApplicationRecord
   # Validates price to be integer and more than zero
   validates :price, numericality: { only_integer: true, greater_than: 0,  }
 end
-
-
