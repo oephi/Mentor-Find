@@ -1,3 +1,4 @@
+    <% unless current_page?('/landing_page') %>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <%= link_to "MENTOR FIND", root_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-toggle="collaps  data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="fals  aria-label="Toggle navigation">
@@ -22,7 +23,9 @@
           <%= form_tag(root_path, method: "get", class: "form-inline my-2 my-lg-0") do %>
             <%= text_field_tag(:search, nil, placeholder: "Find a mentor at...", class: "form-control mr-sm-2") %>
             <%= submit_tag("Search", class: "btn btn-outline-success my-2 my-sm-0") %>
-          <% end %>
-        <% end %>
+          <% end %> 
+        <% end %> 
+
         </div>
       </nav>
+        <% end %> 
