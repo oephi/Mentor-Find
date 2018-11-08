@@ -6,7 +6,7 @@ class Service < ApplicationRecord
   has_many :reviews
   has_many :purchases 
 
-    # Validates price to be integer and more than zero
+  # Validates price to be integer and more than zero
   validates :price, numericality: { only_integer: true, greater_than: 0,  }
 end
 
