@@ -36,6 +36,7 @@ The *primary* features of our app are the following:
 * The ability to be a mentor at multiple skills
 * The ability to be both a mentor and a mentee
 * A purchase history with mentors numbers and details
+* We connected Devises mailer helpers to gmail's SMTP servers so that we could send password reset emails.
 
 # Installation & Setup [#](#table-of-contents)
 If you would like to have a look at the code for this website and play around with it, feel free to download it and getting it up and running by doing the following.
