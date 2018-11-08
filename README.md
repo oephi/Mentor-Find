@@ -167,13 +167,11 @@ MentorFind was developed locally on each developers computer and then we gained 
 **5. Identify and describe the software to be used in your App.**  
 Our application is and was built with Ruby on Rails. We chose Rails as our web development framework because it allowed us to do a lot of powerful things right out of the box, some of which include: a convention for structuring our application and the location for files, an MVC architecture (see Q8 for more info), convenient routing of HTTP requests, a built-in Web Server, ERB which allows us to embed Ruby code within our HTML code to determine the logic of the page, a huge library of RubyGems which we have the option of including, and most importantly an Object Relational Mapping system (called ActiveRecord) which allows us to conveniently interact with a database of our choice with Ruby syntax. Rails also gives us the ability to do other core tasks like use HTML, CSS, and JS.
 
-## Ryan  
 **6. Identify the database to be used in your App and provide a justification for your choice.**  
-
 We used Postgresql for our database.  Besides postgresql being the industry standard for and open source database, the advantage it has over other choices (like MYSQL, MariaDB and Firebird) is that it isn’t just a relational database but it’s also object-relational.  This is what makes Postgresql flexible and robust.
 
 **7. Identify and describe the production database setup (i.e. postgres instance).**  
-Our postgres instance is setup to handle one to many relationships using 6 tables.  Please refer to our ERD above.
+Our postgres instance is setup to handle one to many relationships using 6 tables.  Please refer to our ERD [here](#database).
 
 **8. Describe the architecture of your App.**  
 Our application is written using the Rails framework which utilises the MVC architectural paradigm.  We chose rails due to it’s use of “Convention over Configuration”, which demands a common work flow between programming environment setups negating the need for pre-established design patterns.
@@ -204,10 +202,8 @@ The database relations consit of users, skills, interests, services, purchases, 
 In Mentor Find, a user has many interests, services, purchases and reviews. Therefore, interests, services, purchases and reviews all belong to a user. A user also has many skills through interests because a user who is a mentor, has the skills to offer other users seeking that interst. Therefore a skill has many interests and services. 
 So, a service we've said belongs to a user and skill, it also has many purchases and reviews because the service will be bought and reviwed by multiple users.  
 
-14. Provide your database schema design.
-**LINK TO ERD
-> link to the erd
-See section x 
+14. Provide your database schema design.  
+Please refer to our ERD [here](#database).
 
 **15. Provide User stories for your App.**  
 See [here](#user-stories).
