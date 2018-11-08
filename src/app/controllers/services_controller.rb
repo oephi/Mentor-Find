@@ -1,6 +1,10 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
 
+  def new
+    @service = Service.new
+  end
+
   def show
     @reviews = @service.reviews
     @review = Review.new
