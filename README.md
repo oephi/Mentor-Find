@@ -60,12 +60,16 @@ It should now be good to go.
 By default the server runs on Port 3000, so to view the live site on your local machine, head to [localhost:3000](http://localhost:3000)
 
 # Project Management [#](#table-of-contents)
-* **The Idea:** To begin our project, we began with the task of creating a two sided marketplace. We then did research and listed currently existing and successful 2 sided market places to familiarise ourselves, coming up with the following: gumtree, Ebay, AirBNB, Carousel, AliBaba, Amazon, Lynda, Facebook Market, Etsy, and Upwork. We proceeded by then brainstorming and we generated 1 idea each going around the circle until we had a total of 8 ideas which we were interested in. We then made a vote on our favourite idea which was MentorFind. Our other ideas were: Buying and Selling Pets, second hand tabletop games, connecting casual sports players for public matches, selling ideas, and a review based contractor site.
-* **Wireframing:** We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. When we were satisfied with the freehand drawings we converted them into digital mockups using Balsamiq. The full wireframe set can be viewed [Here](https://github.com/brasscapon/Mentor-Find/blob/master/docs/wireframes.pdf). The wireframes for our homepage is as follows:
+### The Idea
+* To begin our project, we began with the task of creating a two sided marketplace. We then did research and listed currently existing and successful 2 sided market places to familiarise ourselves, coming up with the following: gumtree, Ebay, AirBNB, Carousel, AliBaba, Amazon, Lynda, Facebook Market, Etsy, and Upwork. We proceeded by then brainstorming and we generated 1 idea each going around the circle until we had a total of 8 ideas which we were interested in. We then made a vote on our favourite idea which was MentorFind. Our other ideas were: Buying and Selling Pets, second hand tabletop games, connecting casual sports players for public matches, selling ideas, and a review based contractor site.
+### Wireframes 
+* We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. When we were satisfied with the freehand drawings we converted them into digital mockups using Balsamiq. The full wireframe set can be viewed [Here](https://github.com/brasscapon/Mentor-Find/blob/master/docs/wireframes.pdf). The wireframes for our homepage is as follows:
 ![MentorFind Home Page Wireframe](https://github.com/brasscapon/Mentor-Find/blob/master/docs/homepage-wireframe.png)
-* **Database:** After drawing up our wireframes we created a freehand ERD (Entity Relationship Diagram) which described our planned database models to use, their attributes and data types, as well as the relationships between them. We received feedback from our educators and modified it 3 times to end up with this result:
+### Database
+* After drawing up our wireframes we created a freehand ERD (Entity Relationship Diagram) which described our planned database models to use, their attributes and data types, as well as the relationships between them. We received feedback from our educators and modified it 3 times to end up with this result:
 ![ERD](https://github.com/brasscapon/Mentor-Find/blob/master/docs/erd.png)
-* **Tasks:** We then generated as many User Stories (in the style of Agile) as were required and imported them into Trello for us to manage our project.
+### Tasks
+* We then generated as many User Stories (in the style of Agile) as were required and imported them into Trello for us to manage our project.
 ![Trello Board](https://github.com/brasscapon/Mentor-Find/blob/master/docs/trello.png)
 
 # User Flow [#](#table-of-contents)
@@ -174,11 +178,6 @@ Stripe is a service that allows for easy and secure payment handling and is easi
 
 AWS is a secure cloud services platform that allows easy leveraging of cloud based products and solutions.  Mentor-Find uses AWS for the secure storing of images and is accessed via a gem called Carrierwave. 
 
-
-
-
-
-#MIKE
 **11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).**
 Our data structure is similar to Airbnb Experiences, where customers can search for a service(in this case an experience) offered by a person, and charges them a fee for the service provided. Mentor Find enables customers to search for an activity, service, or skill they are interested in and find mentors whom are willing to teach for an hourly fee.  
 
@@ -186,22 +185,20 @@ Our data structure is similar to Airbnb Experiences, where customers can search 
 **12. Discuss the database relations to be implemented.   WHY PICK THEM?**
 The database relations consit of users, skills, interests, services, purchases, and reviews. We created a user model in order for a customer to access their saved personalized data. This data has access to their interest, skill, and service models. A user can search for something they wish to be mentored in creating an interest. A user can become a mentor and add the skills they wish to teach others, creating skills and services. A user can purchase other user's services and then can write reviews about the purchased services. 
 
-
 **13. Describe your project’s models in terms of the relationships (active record associations) they have with each other. ACTUAL RELATIONSHIP BETWEEN THEM**
 In Mentor Find, a user has many interests, services, purchases and reviews. Therefore, interests, services, purchases and reviews all belong to a user. A user also has many skills through interests because a user who is a mentor, has the skills to offer other users seeking that interst. Therefore a skill has many interests and services. 
 So, a service we've said belongs to a user and skill, it also has many purchases and reviews because the service will be bought and reviwed by multiple users.  
-
 
 14. Provide your database schema design.
 **LINK TO ERD
 > link to the erd
 See section x 
 
-**15. Provide User stories for your App.**
-See section x
+**15. Provide User stories for your App.**  
+See [here](#user-stories).
 
 **16. Provide Wireframes for your App.**  
-Included in the docs.
+See [here](#wireframes). 
 
 **17. Describe the way tasks are allocated and tracked in your project.**  
 We used Trello and Slack to allocate and track tasks. We connected our Trello to Slack so that we could be updated to all the changes at Trello. We qualified users experience, errors, code breaks and questions to create our tasks. The flexiblty of Trello allowed and easier access to list tasks, especially
@@ -216,7 +213,6 @@ We used git and github as our Source control. There is 3 production stages of gi
 **20. Provide an overview and description of your Testing process.**  
 Every developer took their time testing their code locally. Our Source control give error for any code that conflicts with master. After each GitHub merge another test was done. Finally we test the general application daily to figure out bugs and have users view.
 
-## ALL
 **21. Discuss and analyse requirements related to information system security.**  
 - https
 - sql injections
