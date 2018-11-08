@@ -5,38 +5,23 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 # Ignore bundler config.
 /src/.bundle
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 # Ignore all logfiles and tempfiles.
 /src/log/*
 /src/tmp/*
 !/src/log/.keep
 !/src/tmp/.keep
-<<<<<<< Updated upstream
+
 
 # Ignore uploaded files in development
 /src/storage/*
 !/src/storage/.keep
-
 /src/node_modules
 /src/yarn-error.log
-
+/src/public/assets
 /src/public/assets
 /src/public/uploads
-=======
-# Ignore uploaded files in development
-/src/storage/*
-!/src/storage/.keep
-/src/node_modules
-/src/yarn-error.log
-/src/public/assets
->>>>>>> Stashed changes
+
 .byebug_history
 # Ignore master key for decrypting credentials and more.
-<<<<<<< Updated upstream
 /src/config/master.key
-=======
-/src/config/master.key
->>>>>>> Stashed changes
