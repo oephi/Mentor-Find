@@ -171,7 +171,7 @@ Our application is and was built with Ruby on Rails. We chose Rails as our web d
 We used Postgresql for our database.  Besides postgresql being the industry standard for and open source database, the advantage it has over other choices (like MYSQL, MariaDB and Firebird) is that it isn’t just a relational database but it’s also object-relational.  This is what makes Postgresql flexible and robust.
 
 **7. Identify and describe the production database setup (i.e. postgres instance).**  
-
+Our postgres instance is setup to handle one to many relationships using 6 tables.  Please refer to our ERD above.
 
 **8. Describe the architecture of your App.**  
 Our application is written using the Rails framework which utilises the MVC architectural paradigm.  We chose rails due to it’s use of “Convention over Configuration”, which demands a common work flow between programming environment setups negating the need for pre-established design patterns.
