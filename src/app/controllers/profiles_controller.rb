@@ -19,15 +19,10 @@ class ProfilesController < ApplicationController
             @reviews_received
         end
 
-
-        # byebug
         if @user.reviews.empty?
             @left_error = "They haven't left any."
         else
             @reviews_left = @user.reviews
         end
-
-
     end
-
 end

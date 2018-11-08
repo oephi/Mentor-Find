@@ -26,7 +26,7 @@ for i in 1..100
     )
     Interest.create(
         user_id: User.find(i).id,
-        skill_id: Skill.find(i).id, 
+        skill_id: Skill.find(i).id
     )
     Service.create(
         user_id: User.find(i).id,
@@ -42,11 +42,15 @@ for i in 1..100
     Review.create(
         content: Faker::Lorem.paragraph(2),
         user_id: User.find(rand(1..20)).id,
-        service_id: Service.find(rand(1..20)).id
+        service_id: Service.find(rand(1..50)).id
     ) 
 end 
 
 
-for i in 1..100
-    Purchase.create(service_id: i, user_id: i, charge_id: 123, price: rand(50))
-end
+# for i in 1..100
+#     Purchase.create(
+#         service_id: i, 
+#         user_id: i, 
+#         charge_id: 123, 
+#         price: rand(50))
+# end

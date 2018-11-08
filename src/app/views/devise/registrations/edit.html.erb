@@ -6,16 +6,10 @@
 
 <div class="field custom-file file-field ">
         <div class="btn btn-primary btn-sm float-left file-upload">
-            <input type="file" name="user[avatar]">
+            <%= f.file_field :avatar%>
         </div>
        
     </div>
-<!--
-   <div class="field custom-file"> 
-    <%= f.label :Profile_Image, class: "custom-file-label" %>
-    <%= f.file_field :avatar, class: "custom-file-input" %>    
-  </div> 
--->
 
   <div class="field">
     <%= f.label :email, class: "sr-only" %>
