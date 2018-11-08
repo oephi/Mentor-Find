@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/profile', to: 'profiles#show'
   get '/landing_page', to: 'landing_pages#home'
 
-  root to: "feeds#home" # For Devise to work, ensure you have defined root_url to *something*.
+  root to: "feeds#home", feed: {interest: "all"} # For Devise to work, ensure you have defined root_url to *something*.
 
 
 

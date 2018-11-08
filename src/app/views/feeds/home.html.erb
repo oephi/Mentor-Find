@@ -8,7 +8,7 @@
     <h2 class="interest-heading">Interests</h2>
     <ul>
       <%= form_with(url: interests_path, method: "post") do %>
-      <%= text_field_tag :link, nil, name: "[interest]interest", placeholder: "Add Interest", class: "form-control" %>
+      <%= text_field_tag :link, nil, name: "[feed]interest", placeholder: "Add Interest", class: "form-control" %>
       <%= submit_tag nil, class: "hide" %>
       <% end %>
 
