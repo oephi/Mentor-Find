@@ -14,14 +14,14 @@
   
   <div class="field">
     <%= form.label :skill, class: "sr-only" %>
-    <%= form.text_field :skill, class: "form-control", placeholder: "Skill" %>
+    <%= form.text_field :skill, class: "form-control", placeholder: "Skill", value: "" %>
   </div>
 
-
+<% console %>
   <div class="field custom-radio"> <!-- "column" -->
     <h5>Experience Level</h5>
   <div class="form-check">
-    <%= form.radio_button :experience, Service.experiences.keys[0], id: "radio0", class: "custom-control-input" %>
+    <%= form.radio_button :experience, Service.experiences.keys[0], id: "radio0", class: "custom-control-input", :checked => true %>
     <%= form.label Service.experiences.keys[0], Service.experiences.keys[0].titleize, for: "radio0", class: "custom-control-label" %>
   </div>
   <div class="form-check">

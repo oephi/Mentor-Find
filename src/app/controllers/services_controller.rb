@@ -12,7 +12,6 @@ class ServicesController < ApplicationController
   # GET /services/1
   # GET /services/1.json
 def show
-    # @review = Review.new
     @reviews = @service.reviews
     @review = Review.new
   end
@@ -29,28 +28,18 @@ def show
   
   def create
     @service = current_user.services.new(service_params)
-
-    if Skill.where(name: params[:service][:skill_id]).present?
-      @skill = Skill.find_by(name: params[:service][:skill_id])
-    elsif !Skill.where(name: params[:service][:skill_id]).present? 
-      @skill = Skill.create(name: params[:service][:skill_id])
-    end
-
     
-    @service = Service.create(
-          user_id: current_user.id, 
-          experience: service_params[:experience], 
-          description: service_params[:description], 
-          price: service_params[:price],
-          skill_id: @skill
-    )
-
-    @service.save
-
-    #TODO: Add a flash message here
+    if Skill.where(name: params[:service][:skill]).present?
+      @skill = Skill.find_by(name: params[:service][:skill])
+    elsif !Skill.where(name: params[:service][:skill]).present? 
+      @skill = Skill.create(name: params[:service][:skill])
+    end
+    
+    @service.skill_id = @skill.id
+    
     respond_to do |format|
       if @service.save
-        format.html { redirect_to root_path, notice: 'Review was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Service was successfully created.' }
       else
         format.html { render :new }
       end
@@ -58,10 +47,6 @@ def show
 
    #Make this render to Service.last once the view is setup
   end
-
-
-
-
 
   # PATCH/PUT /services/1
   # PATCH/PUT /services/1.json
@@ -91,10 +76,6 @@ def show
   end
 
   private
-    def service_params
-      params.require(:service).permit(:skill_id, :experience, :description, :price, :user_id)
-    end
-
     # Use callbacks to share common setup or constraints between actions.
     def set_service
       @service = Service.find(params[:id])
@@ -102,6 +83,6 @@ def show
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.require(:service).permit(:user_id, :skill_id, :experience, :description, :price)
+      params.require(:service).permit(:user_id, :experience, :description, :price)
     end
 end
