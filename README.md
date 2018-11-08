@@ -105,7 +105,7 @@ So, a service we've said belongs to a user and skill, it also has many purchases
 
 
 14. Provide your database schema design.
-**LINK TO ERD
+**LINK TO
 
 **15. Provide User stories for your App.**
 
@@ -156,7 +156,7 @@ The *primary* features of our app are the following:
 # Installation & Setup [#](#table-of-contents)
 <<<<<<< HEAD
 >>>>>>> cb53fd75f94b827dd07b0583715f1c20af527d3f
-=======
+
 >>>>>>> ed24bccf9dc938f9a7967fe29ea039b3f07dcce1
 If you would like to have a look at the code for this website and play around with it, feel free to download it and getting it up and running by doing the following.
 ```
