@@ -82,4 +82,4 @@ production:
   <<: *default
   database: Mentor-Find_production
   username: Mentor-Find
-  password: <%= ENV['MENTOR-FIND2_DATABASE_PASSWORD'] %>
+  password: <%= ENV['MENTOR-FIND_DATABASE_PASSWORD'] %>
