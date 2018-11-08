@@ -21,7 +21,10 @@ class FeedsController < ApplicationController
             @category = "#{params[:search].titleize} Mentors"
             @search = Skill.fuzzy_search(params[:search])
    
-            if @search.empty?
+            if params[:search].strip.empty?
+                flash[:alert] = "Search can't be empty."
+                redirect_to root_path(interest: "random")
+            elsif @search.empty?
                 flash[:error] = "Sorry there are no mentors for that category yet."
                 redirect_to root_path(interest: "random")
             else
