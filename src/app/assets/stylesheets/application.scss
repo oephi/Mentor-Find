@@ -66,4 +66,17 @@ body {
 
   ul li {	
       font-size: 12px;	
-      list-style: square; }}	
+      list-style: square; }}
+    
+a {	
+    color: #000;	
+     &:visited {	
+      color: #666;	
+    }	
+     &:hover {	
+      color: #fff;	
+      }	
+
+    &.active {
+      font-weight: 700;
+      color: #1F6ABC; }}	
