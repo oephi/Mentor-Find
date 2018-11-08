@@ -16,9 +16,13 @@ class InterestsController < ApplicationController
   end
 
   def create
-    if Skill.exists?(name: params[:interest])
-      @skill = Skill.find_by(name: params[:interest]).id
+    if params[:interest].empty?
+      flash[:alert] = "Interest can't be empty."
+    elsif Skill.exists?(name: params[:interest])
+      @skill = Skill.find_by(name: interest_params[:interest]).id
       flash[:alert] = "You're already interested in that."
+    elsif interest_params[:interest].strip.downcase.empty?
+      flash[:alert] = "Interest can't be blank."
     else
       @skill = current_user.skills.create(name: interest_params[:interest]).id
       flash[:notice] = "You've successfully added #{params[:interest]} to your interest list."
