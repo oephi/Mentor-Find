@@ -25,6 +25,18 @@ MentorFind aims to fill that void by giving mentors the ability to create servic
 
 ![MentorFind Website Overview](https://github.com/brasscapon/Mentor-Find/blob/master/docs/user_flow.gif)
 
+# Features [#](#table-of-contents)
+The *primary* features of our app are the following:
+* Authenticated user accounts which persists their data
+* Profile image uploading
+* Sorting the feed of mentors via 'interest' tags
+* Searching the mentor categories via fuzzy search
+* Paying the mentor using Stripe
+* The ability to leave reviews on a mentors service page
+* The ability to be a mentor at multiple skills
+* The ability to be both a mentor and a mentee
+* A purchase history with mentors numbers and details
+
 # Installation & Setup [#](#table-of-contents)
 If you would like to have a look at the code for this website and play around with it, feel free to download it and getting it up and running by doing the following.
 ```
@@ -67,6 +79,7 @@ By default the server runs on Port 3000, so to view the live site on your local 
 ### Wireframes 
 * We then freehand drew some wireframes for what we wanted the web pages and our user flow to look. We modified it as new ideas were generated. When we were satisfied with the freehand drawings we converted them into digital mockups using Balsamiq. The full wireframe set can be viewed [Here](https://github.com/brasscapon/Mentor-Find/blob/master/docs/wireframes.pdf). The wireframes for our homepage is as follows:
 ![MentorFind Home Page Wireframe](https://github.com/brasscapon/Mentor-Find/blob/master/docs/homepage-wireframe.png)
+
 ### Database
 * After drawing up our wireframes we created a freehand ERD (Entity Relationship Diagram) which described our planned database models to use, their attributes and data types, as well as the relationships between them. We received feedback from our educators and modified it 3 times to end up with this result:
 ![ERD](https://github.com/brasscapon/Mentor-Find/blob/master/docs/erd.png)
@@ -160,7 +173,7 @@ Our application is and was built with Ruby on Rails. We chose Rails as our web d
 We used Postgresql for our database.  Besides postgresql being the industry standard for and open source database, the advantage it has over other choices (like MYSQL, MariaDB and Firebird) is that it isn’t just a relational database but it’s also object-relational.  This is what makes Postgresql flexible and robust.
 
 **7. Identify and describe the production database setup (i.e. postgres instance).**  
-
+Our postgres instance is setup to handle one to many relationships using 6 tables.  Please refer to our ERD above.
 
 **8. Describe the architecture of your App.**  
 Our application is written using the Rails framework which utilises the MVC architectural paradigm.  We chose rails due to it’s use of “Convention over Configuration”, which demands a common work flow between programming environment setups negating the need for pre-established design patterns.
