@@ -8,13 +8,10 @@ Rails.application.routes.draw do
   resources :charges
   resources :profiles
 
-  devise_for :users 
+  devise_for :users
 
   get '/profile', to: 'profiles#show'
   get '/landing_page', to: 'landing_pages#home'
 
   root to: "feeds#home", feed: {interest: "all"} # For Devise to work, ensure you have defined root_url to *something*.
-
-
-
 end
